@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📚 Giáo Án Tổng Hợp Hè 2026 – Lớp 6</title>
+<style>
+:root {
+  --math:#2563eb; --math-l:#dbeafe;
+  --mathx:#1d4ed8; --mathx-l:#e0e7ff;
+  --phys:#7c3aed; --phys-l:#ede9fe;
+  --chem:#0d9488; --chem-l:#ccfbf1;
+  --bio:#16a34a; --bio-l:#dcfce7;
+  --eng:#db2777; --eng-l:#fce7f3;
+  --write:#ea580c; --write-l:#ffedd5;
+  --khtn:#0891b2; --khtn-l:#cffafe;
+  --offline:#6b7280; --offline-l:#f3f4f6;
+  --rest:#d97706; --rest-l:#fef9c3;
+  --van:#b91c1c; --van-l:#fef2f2;
+  --gray:#6b7280; --dark:#1f2937; --green:#16a34a;
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:'Segoe UI',Arial,sans-serif; background:#f0f4f8; color:#1f2937; }
+.header { background:linear-gradient(135deg,#1e3a8a 0%,#7c3aed 45%,#0d9488 100%); color:white; padding:26px 20px; text-align:center; }
+.header h1 { font-size:1.7rem; font-weight:800; }
+.header p { opacity:.9; margin:4px 0; font-size:.88rem; }
+.badges { display:flex; flex-wrap:wrap; gap:8px; justify-content:center; margin-top:12px; }
+.badge { background:rgba(255,255,255,.2); border:1px solid rgba(255,255,255,.4); padding:5px 13px; border-radius:20px; font-size:.78rem; font-weight:600; }
+.nav { background:white; border-bottom:2px solid #e5e7eb; position:sticky; top:0; z-index:100; display:flex; overflow-x:auto; padding:0 10px; }
+.nav button { padding:12px 16px; border:none; background:none; cursor:pointer; font-size:.82rem; font-weight:700; color:var(--gray); border-bottom:3px solid transparent; white-space:nowrap; }
+.nav button.active { color:var(--math); border-bottom-color:var(--math); }
+.nav button:hover { color:var(--math); background:var(--math-l); }
+.main { max-width:1200px; margin:0 auto; padding:18px 12px; }
+.tab { display:none; }
+.tab.active { display:block; }
+.card { background:white; border-radius:14px; padding:20px; box-shadow:0 2px 10px rgba(0,0,0,.07); margin-bottom:16px; }
+.today-date { font-size:1.3rem; font-weight:800; color:var(--dark); }
+.today-sub { font-size:.85rem; color:var(--gray); margin-top:2px; }
+.date-nav { display:flex; gap:8px; align-items:center; margin:12px 0; flex-wrap:wrap; }
+.date-nav button { background:var(--math-l); color:var(--math); border:none; padding:8px 14px; border-radius:8px; font-weight:700; cursor:pointer; font-size:.82rem; }
+.date-nav button:hover { background:var(--math); color:white; }
+.date-nav input[type=date] { padding:7px 10px; border-radius:8px; border:1.5px solid #e5e7eb; font-size:.85rem; }
+.slot { display:flex; gap:12px; padding:12px 14px; border-radius:10px; margin-bottom:10px; align-items:flex-start; border:1.5px solid #e5e7eb; }
+.slot .time { font-weight:800; font-size:.78rem; color:white; padding:5px 9px; border-radius:7px; min-width:78px; text-align:center; flex-shrink:0; }
+.slot .body { flex:1; }
+.slot .stitle { font-weight:700; font-size:.9rem; margin-bottom:3px; }
+.slot .snote { font-size:.8rem; color:var(--gray); line-height:1.5; }
+.slot .slinks { display:flex; flex-wrap:wrap; gap:6px; margin-top:6px; }
+.slot a.slink { display:inline-flex; align-items:center; gap:5px; padding:5px 10px; border-radius:7px; background:white; border:1.5px solid #e5e7eb; text-decoration:none; color:var(--dark); font-size:.78rem; }
+.slot a.slink:hover { border-color:var(--math); background:var(--math-l); }
+.vtag { font-size:.65rem; font-weight:800; padding:2px 6px; border-radius:6px; }
+.yt { background:#fee2e2; color:#dc2626; } .kh { background:#dbeafe; color:#1d4ed8; }
+.done-check { display:flex; align-items:center; gap:8px; margin-top:14px; padding:10px 14px; background:var(--bio-l); border-radius:10px; }
+.done-check input { width:20px; height:20px; accent-color:var(--green); }
+.done-check label { font-weight:700; color:var(--green); cursor:pointer; }
+.streak-box { display:flex; gap:14px; flex-wrap:wrap; margin-bottom:14px; }
+.streak-card { background:white; border-radius:12px; padding:14px 18px; text-align:center; box-shadow:0 2px 8px rgba(0,0,0,.06); flex:1; min-width:120px; }
+.streak-card .num { font-size:1.6rem; font-weight:800; color:var(--math); }
+.streak-card .lbl { font-size:.75rem; color:var(--gray); }
+.legend { display:flex; flex-wrap:wrap; gap:7px; margin-bottom:16px; }
+.chip { padding:5px 11px; border-radius:20px; font-size:.75rem; font-weight:700; }
+.tkb-wrap { overflow-x:auto; }
+.tkb { width:100%; border-collapse:collapse; font-size:.8rem; min-width:760px; }
+.tkb th { background:linear-gradient(135deg,#1e40af,#7c3aed); color:white; padding:9px 6px; text-align:center; font-weight:700; }
+.tkb td { padding:7px 5px; border:1px solid #e5e7eb; vertical-align:top; text-align:center; }
+.tkb .time-col { font-weight:800; font-size:.72rem; color:var(--gray); background:#f9fafb; width:85px; text-align:left; padding-left:7px; }
+.cell { border-radius:7px; padding:6px 7px; text-align:left; line-height:1.35; }
+.cell .sn { font-weight:800; font-size:.75rem; margin-bottom:1px; }
+.cell .sd { font-size:.68rem; opacity:.85; }
+.c-math { background:var(--math-l); color:var(--math); border:1px solid #93c5fd; }
+.c-mathx { background:var(--mathx-l); color:var(--mathx); border:1px solid #a5b4fc; }
+.c-khtn { background:var(--khtn-l); color:var(--khtn); border:1px solid #67e8f9; }
+.c-phys { background:var(--phys-l); color:var(--phys); border:1px solid #c4b5fd; }
+.c-chem { background:var(--chem-l); color:var(--chem); border:1px solid #99f6e4; }
+.c-bio { background:var(--bio-l); color:var(--bio); border:1px solid #86efac; }
+.c-eng { background:var(--eng-l); color:var(--eng); border:1px solid #f9a8d4; }
+.c-write { background:var(--write-l); color:var(--write); border:1px solid #fdba74; }
+.c-offline { background:var(--offline-l); color:var(--offline); border:1px solid #d1d5db; }
+.c-rest { background:var(--rest-l); color:var(--rest); border:1px solid #fcd34d; }
+.c-van { background:var(--van-l); color:var(--van); border:1px solid #fca5a5; }
+.lesson-list { display:flex; flex-direction:column; gap:10px; }
+.lesson-item { border:1.5px solid #e5e7eb; border-radius:9px; overflow:hidden; }
+.lhead { padding:9px 12px; background:#f9fafb; display:flex; gap:8px; align-items:center; }
+.lnum { font-size:.7rem; font-weight:800; color:white; padding:2px 8px; border-radius:6px; flex-shrink:0; }
+.ltitle { font-weight:700; font-size:.85rem; flex:1; }
+.lbody { padding:10px 12px; }
+.vlinks { display:flex; flex-direction:column; gap:5px; margin-top:4px; }
+.vlink { display:flex; align-items:center; gap:7px; padding:6px 10px; border-radius:6px; border:1.5px solid #e5e7eb; background:white; text-decoration:none; color:var(--dark); font-size:.8rem; }
+.vlink:hover { border-color:var(--math); background:var(--math-l); }
+.subj-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:16px; }
+.subj-card { background:white; border-radius:14px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.08); }
+.subj-card .chead { padding:14px 18px; color:white; }
+.subj-card .chead h2 { font-size:.98rem; font-weight:800; }
+.subj-card .chead p { font-size:.78rem; opacity:.85; margin-top:2px; }
+.subj-card .cbody { padding:14px 18px; }
+.cl label { display:flex; align-items:center; gap:9px; padding:7px 9px; border-radius:8px; cursor:pointer; font-size:.84rem; }
+.cl label:hover { background:#f3f4f6; }
+.cl input[type=checkbox] { width:17px; height:17px; accent-color:var(--math); flex-shrink:0; }
+.cl input[type=checkbox]:checked + span { text-decoration:line-through; color:var(--gray); }
+.info-box { background:#f3f4f6; border-radius:10px; padding:13px; margin-bottom:16px; font-size:.83rem; line-height:1.6; }
+.info-box strong { color:var(--dark); }
+.tblock { display:flex; gap:14px; margin-bottom:10px; align-items:flex-start; }
+.tlabel { font-size:.74rem; font-weight:800; color:white; padding:6px 8px; border-radius:8px; min-width:80px; text-align:center; flex-shrink:0; }
+.tdesc strong { display:block; font-weight:700; font-size:.87rem; margin-bottom:1px; }
+.tdesc span { color:var(--gray); font-size:.8rem; }
+@media (max-width:600px) {
+  .header h1 { font-size:1.2rem; }
+  .tkb { font-size:.7rem; }
+  .subj-grid { grid-template-columns:1fr; }
+  .streak-box { flex-direction:column; }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="font-size:2.1rem;margin-bottom:5px">📚</div>
+  <h1>Giáo Án Tổng Hợp Hè 2026 – Lớp 6</h1>
+  <p>Mở ra là biết học gì hôm nay · 10/7/2026 – 30/8/2026</p>
+  <div class="badges">
+    <span class="badge">🔬 KHTN</span>
+    <span class="badge">📐 Toán Mathx + Book 7</span>
+    <span class="badge">⚡🧪🌿 Science Quốc tế</span>
+    <span class="badge">🇬🇧 Destination B1</span>
+    <span class="badge">✍️ Great Writing</span>
+  </div>
+</div>
+
+<div class="nav">
+  <button class="active" data-tab="today">🏠 Hôm Nay</button>
+  <button data-tab="tkb">📅 TKB Tuần</button>
+  <button data-tab="khtn">🔬 KHTN</button>
+  <button data-tab="math">📐 Toán</button>
+  <button data-tab="science">⚗️ Science</button>
+  <button data-tab="english">🇬🇧 Tiếng Anh</button>
+  <button data-tab="checklist">✅ Checklist</button>
+  <button data-tab="routine">⏱️ Cách Học</button>
+</div>
+
+<div class="main">
+
+<!-- ============ TAB: HÔM NAY ============ -->
+<div id="today" class="tab active">
+  <div class="streak-box" id="streakBox"></div>
+  <div class="card">
+    <div class="date-nav">
+      <button onclick="shiftDay(-1)">← Hôm qua</button>
+      <input type="date" id="datePicker" min="2026-07-10" max="2026-08-30">
+      <button onclick="goToday()">📍 Hôm nay</button>
+      <button onclick="shiftDay(1)">Ngày mai →</button>
+    </div>
+    <div class="today-date" id="todayDateLabel"></div>
+    <div class="today-sub" id="todaySubLabel"></div>
+  </div>
+  <div id="todaySlots"></div>
+</div>
+
+<!-- ============ TAB: TKB TUẦN ============ -->
+<div id="tkb" class="tab">
+  <div class="legend">
+    <span class="chip c-khtn">🔬 KHTN (video)</span>
+    <span class="chip c-mathx">📐 Mathx (cơ bản + nâng cao)</span>
+    <span class="chip c-eng">🇬🇧 Destination B1</span>
+    <span class="chip c-math">📐 Math Book 7</span>
+    <span class="chip c-phys">⚡ Physics</span>
+    <span class="chip c-chem">🧪 Chemistry</span>
+    <span class="chip c-bio">🌿 Biology</span>
+    <span class="chip c-write">✍️ Great Writing</span>
+    <span class="chip c-van">📖 Văn / Flyer / Preply</span>
+    <span class="chip c-rest">🌅 Nghỉ / Ăn / Ngủ / Chơi</span>
+  </div>
+  <div class="card">
+  <div class="tkb-wrap">
+  <table class="tkb">
+    <thead><tr><th class="time-col">🕐 Giờ</th><th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th><th>Thứ 5</th><th>Thứ 6</th><th>Thứ 7</th><th>Chủ Nhật</th></tr></thead>
+    <tbody>
+      <tr><td class="time-col">7h–8h30</td><td colspan="7"><div class="cell c-rest"><div class="sn">🌅 Thức dậy · Ăn sáng · Giải trí</div><div class="sd">Ngủ dậy trễ mất giờ giải trí</div></div></td></tr>
+      <tr><td class="time-col">8h30–9h<br><small>30ph</small></td><td colspan="7"><div class="cell c-khtn"><div class="sn">🔬 KHTN – Xem video (mỗi ngày 1 video)</div><div class="sd">Playlist Kết nối tri thức, bắt đầu Bài 9 (video số 17) → xem tab "KHTN" để lấy link đúng ngày</div></div></td></tr>
+      <tr><td class="time-col">9h–9h15</td><td colspan="7"><div class="cell c-rest"><div class="sn">🎮 Giải lao</div></div></td></tr>
+      <tr>
+        <td class="time-col">9h15–10h15<br><small>60ph</small></td>
+        <td><div class="cell c-mathx"><div class="sn">📐 Toán cơ bản Mathx</div><div class="sd">Bài học tuần N</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🇬🇧 Destination B1</div><div class="sd">Video + sách</div></div></td>
+        <td><div class="cell c-mathx"><div class="sn">📐 Toán cơ bản Mathx</div><div class="sd">Bài học tuần N</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🇬🇧 Destination B1</div><div class="sd">Video + sách</div></div></td>
+        <td><div class="cell c-mathx"><div class="sn">📐 Toán cơ bản Mathx</div><div class="sd">Bài học tuần N</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🇬🇧 Destination B1</div><div class="sd">Video + sách</div></div></td>
+        <td><div class="cell c-rest"><div class="sn">😴 Nghỉ ngơi</div></div></td>
+      </tr>
+      <tr>
+        <td class="time-col">10h30–11h<br><small>30ph</small></td>
+        <td><div class="cell c-mathx"><div class="sn">📐 Toán nâng cao Mathx</div><div class="sd">Buổi N</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🇬🇧 Tự chấm Destination</div></div></td>
+        <td><div class="cell c-mathx"><div class="sn">📐 Toán nâng cao Mathx</div><div class="sd">Buổi N</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🇬🇧 Tự chấm Destination</div></div></td>
+        <td><div class="cell c-mathx"><div class="sn">📐 Toán nâng cao Mathx</div><div class="sd">Buổi N</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🇬🇧 Tự chấm Destination</div></div></td>
+        <td><div class="cell c-rest"><div class="sn">😴 Nghỉ ngơi</div></div></td>
+      </tr>
+      <tr><td class="time-col">11h–12h</td><td colspan="7"><div class="cell c-rest"><div class="sn">🎮 Chơi giải trí (1 tiếng)</div></div></td></tr>
+      <tr><td class="time-col">12h–14h30</td><td colspan="7"><div class="cell c-rest"><div class="sn">🍜 Cơm · Ngủ trưa</div></div></td></tr>
+      <tr>
+        <td class="time-col">14h30–15h<br><small>30ph</small></td>
+        <td><div class="cell c-math"><div class="sn">📐 Toán (Book 7) – video</div></div></td>
+        <td><div class="cell c-phys"><div class="sn">⚡ Physics – video</div></div></td>
+        <td><div class="cell c-math"><div class="sn">📐 Toán (Book 7) – video</div></div></td>
+        <td><div class="cell c-chem"><div class="sn">🧪 Chemistry – video</div></div></td>
+        <td><div class="cell c-math"><div class="sn">📐 Toán (Book 7) – video</div></div></td>
+        <td><div class="cell c-bio"><div class="sn">🌿 Biology – video</div></div></td>
+        <td><div class="cell c-rest"><div class="sn">😴 Nghỉ / Ôn tự do</div></div></td>
+      </tr>
+      <tr>
+        <td class="time-col">15h–15h30<br><small>30ph</small></td>
+        <td><div class="cell c-math"><div class="sn">📐 Toán – Đọc sách & Bài tập</div></div></td>
+        <td><div class="cell c-phys"><div class="sn">⚡ IXL Science</div></div></td>
+        <td><div class="cell c-math"><div class="sn">📐 Toán – Đọc sách & Bài tập</div></div></td>
+        <td><div class="cell c-chem"><div class="sn">🧪 IXL Chemistry</div></div></td>
+        <td><div class="cell c-math"><div class="sn">📐 Toán – Đọc sách & Bài tập</div></div></td>
+        <td><div class="cell c-bio"><div class="sn">🌿 IXL Biology</div></div></td>
+        <td><div class="cell c-rest"><div class="sn">😴 Nghỉ / Ôn tự do</div></div></td>
+      </tr>
+      <tr><td class="time-col">15h30–16h</td><td colspan="7"><div class="cell c-rest"><div class="sn">🎮 Giải lao</div></div></td></tr>
+      <tr>
+        <td class="time-col">16h–17h<br><small>60ph</small></td>
+        <td><div class="cell c-write"><div class="sn">✍️ Great Writing</div></div></td>
+        <td><div class="cell c-write"><div class="sn">✍️ Great Writing</div></div></td>
+        <td><div class="cell c-write"><div class="sn">✍️ Great Writing</div></div></td>
+        <td><div class="cell c-write"><div class="sn">✍️ Great Writing</div></div></td>
+        <td><div class="cell c-write"><div class="sn">✍️ Great Writing</div></div></td>
+        <td><div class="cell c-write"><div class="sn">✍️ Great Writing</div></div></td>
+        <td><div class="cell c-rest"><div class="sn">😴 Nghỉ ngơi</div></div></td>
+      </tr>
+      <tr><td class="time-col">17h–18h</td><td colspan="7"><div class="cell c-rest"><div class="sn">🚴 Giải trí / Vận động</div></div></td></tr>
+      <tr>
+        <td class="time-col">20h–21h<br><small>60ph</small></td>
+        <td><div class="cell c-van"><div class="sn">📖 Văn</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🎧 Flyer Ảo (Nghe/Nói PET)</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🗣️ Preply</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🎧 Flyer Ảo (Nghe/Nói PET)</div></div></td>
+        <td><div class="cell c-van"><div class="sn">📖 Đọc truyện</div></div></td>
+        <td><div class="cell c-eng"><div class="sn">🎧 Flyer Ảo (Nghe/Nói PET)</div></div></td>
+        <td><div class="cell c-rest"><div class="sn">🌙 Nghỉ ngơi</div></div></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+</div>
+
+<!-- ============ TAB: KHTN ============ -->
+<div id="khtn" class="tab">
+  <div class="info-box">
+    🔬 <strong>Môn KHTN</strong> – Học theo playlist YouTube: <a href="https://www.youtube.com/playlist?list=PLlJUddnVUABeHLnXmW9p62J03tzj-m6kb" target="_blank">Khoa học tự nhiên lớp 6 – Kết nối tri thức</a><br>
+    Buổi 1 bắt đầu từ <strong>Bài 9 (video thứ 17 trong playlist)</strong>, mỗi ngày xem 1 video tiếp theo. Playlist có 56 video (đến khoảng 18/8/2026) — sau đó ôn tập lại hoặc làm thêm bài tập SGK.<br>
+    🕐 Giờ học: <strong>8h30–9h mỗi ngày</strong>
+  </div>
+  <div class="card">
+    <div style="font-weight:700;margin-bottom:10px;">📺 Danh sách video theo ngày</div>
+    <div id="khtnList" style="max-height:600px;overflow-y:auto;"></div>
+  </div>
+</div>
+
+<!-- ============ TAB: TOÁN ============ -->
+<div id="math" class="tab">
+  <div class="info-box">
+    📐 <strong>Toán có 2 phần song song:</strong><br>
+    • <strong>Mathx (sáng, Thứ 2-4-6):</strong> Cơ bản theo SGK Kết nối tri thức + Nâng cao theo website Mathx. Bài tập làm trong sách Toán 6 Kết nối tri thức.<br>
+    • <strong>Book 7 quốc tế (chiều, Thứ 2-4-6):</strong> Maths Progress International 11–14, xem video rồi làm bài trong sách.
+  </div>
+
+  <div class="card">
+    <div style="font-weight:800;color:var(--mathx);margin-bottom:10px;">📐 Mathx – Cơ bản</div>
+    <div style="font-size:.85rem;margin-bottom:10px;">Học theo chương trình Toán 6 Kết nối tri thức. Mỗi buổi 1 bài học tuần (30ph lý thuyết + 30ph bài tập).</div>
+    <a href="https://mathx.vn/bai-hoc-tuan.html?category=64" target="_blank" class="vlink" style="max-width:340px;"><span class="vtag kh">MATHX</span>Bài học hàng tuần – Toán 6 cơ bản</a>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:800;color:var(--mathx);margin-bottom:10px;">📐 Mathx – Nâng cao (Bổ trợ và Nâng cao Toán 6)</div>
+    <div style="font-size:.85rem;margin-bottom:10px;">
+      <a href="https://mathx.vn/khoa-hoc/bo-tro-va-nang-cao-toan-6.html" target="_blank">→ Trang khóa học Mathx Nâng cao</a> · Mỗi buổi 2 video lý thuyết (~15ph/video) + ~30ph bài tập
+    </div>
+    <div class="lesson-list" id="mathxNCList"></div>
+  </div>
+
+  <div class="card">
+    <div style="font-weight:800;color:var(--math);margin-bottom:10px;">📐 Toán Book 7 – Maths Progress International 11–14</div>
+    <div style="font-size:.85rem;margin-bottom:10px;">22 buổi (Thứ 2-4-6 chiều). Video xem trước, bài tập làm trong sách giấy.</div>
+    <div class="lesson-list" id="book7List"></div>
+  </div>
+</div>
+
+<!-- ============ TAB: SCIENCE ============ -->
+<div id="science" class="tab">
+  <div class="info-box">
+    📖 Sách: <strong>Exploring Science International 11–14</strong> (Pearson) · Physics / Chemistry / Biology<br>
+    🗓️ <strong>Physics</strong>: Thứ 3 · <strong>Chemistry</strong>: Thứ 5 · <strong>Biology</strong>: Thứ 7 · 14h30–15h30 (video + IXL)
+  </div>
+  <div class="subj-grid">
+    <div class="subj-card">
+      <div class="chead" style="background:linear-gradient(135deg,#6d28d9,#7c3aed);"><h2>⚡ Vật lý – Physics</h2><p>7 buổi · các Thứ 3</p></div>
+      <div class="cbody"><div class="lesson-list" id="physicsList"></div>
+      <div style="margin-top:10px;"><a href="https://www.ixl.com/science/" target="_blank" class="vlink"><span class="vtag kh">IXL</span>IXL Science – luyện tập thêm</a></div></div>
+    </div>
+    <div class="subj-card">
+      <div class="chead" style="background:linear-gradient(135deg,#0f766e,#0d9488);"><h2>🧪 Hóa học – Chemistry</h2><p>7 buổi · các Thứ 5</p></div>
+      <div class="cbody"><div class="lesson-list" id="chemistryList"></div>
+      <div style="margin-top:10px;"><a href="https://www.ixl.com/science/" target="_blank" class="vlink"><span class="vtag kh">IXL</span>IXL Science – luyện tập thêm</a></div></div>
+    </div>
+    <div class="subj-card" style="grid-column:1/-1;">
+      <div class="chead" style="background:linear-gradient(135deg,#15803d,#16a34a);"><h2>🌿 Sinh học – Biology</h2><p>8 buổi · các Thứ 7</p></div>
+      <div class="cbody"><div class="lesson-list" id="biologyList"></div>
+      <div style="margin-top:10px;"><a href="https://www.ixl.com/science/" target="_blank" class="vlink"><span class="vtag kh">IXL</span>IXL Science – luyện tập thêm</a></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB: TIẾNG ANH ============ -->
+<div id="english" class="tab">
+  <div class="subj-grid">
+    <div class="subj-card">
+      <div class="chead" style="background:linear-gradient(135deg,#be185d,#db2777);"><h2>🇬🇧 Destination B1</h2><p>Thứ 3-5-7 · 9h15–11h</p></div>
+      <div class="cbody">
+        <div class="info-box" style="margin-bottom:10px;">📖 Học theo sách Destination B1 (đã có). Xem video lý thuyết → làm bài trong sách → tự chấm.</div>
+        <div style="font-size:.83rem;line-height:1.8;">
+          <strong>Mỗi buổi (Unit tăng dần):</strong><br>
+          1️⃣ Xem 1 video grammar hoặc vocabulary của Unit đang học<br>
+          2️⃣ Đọc lại phần đó trong sách Destination B1<br>
+          3️⃣ Làm bài tập trong sách<br>
+          4️⃣ Buổi tự chấm (10h30-11h): đối chiếu đáp án, ghi từ mới
+        </div>
+        <div class="vlinks" style="margin-top:10px;">
+          <a href="https://www.youtube.com/results?search_query=Destination+B1+grammar+unit+English" target="_blank" class="vlink"><span class="vtag yt">YT</span>Destination B1 Grammar Units</a>
+          <a href="https://www.youtube.com/results?search_query=Destination+B1+vocabulary+English+unit" target="_blank" class="vlink"><span class="vtag yt">YT</span>Destination B1 Vocabulary Units</a>
+          <a href="https://www.khanacademy.org/humanities/grammar" target="_blank" class="vlink"><span class="vtag kh">KA</span>Grammar – Khan Academy</a>
+        </div>
+      </div>
+    </div>
+    <div class="subj-card">
+      <div class="chead" style="background:linear-gradient(135deg,#c2410c,#ea580c);"><h2>✍️ Great Writing 1</h2><p>Thứ 2→Thứ 7 · 16h–17h</p></div>
+      <div class="cbody">
+        <div class="info-box" style="margin-bottom:10px;">📖 Học theo sách Great Writing 1 (đã có). Không cần video, tự đọc & làm bài trong sách.</div>
+        <div style="font-size:.83rem;line-height:1.8;">
+          📌 <strong>Chu kỳ mỗi tuần (lặp lại):</strong><br>
+          • <strong>Thứ 2:</strong> Đọc model writing + học từ vựng<br>
+          • <strong>Thứ 3:</strong> Luyện grammar structures của unit<br>
+          • <strong>Thứ 4:</strong> Làm bài tập writing exercises<br>
+          • <strong>Thứ 5:</strong> Viết draft bài viết của mình<br>
+          • <strong>Thứ 6:</strong> Chỉnh sửa & hoàn thiện bài viết<br>
+          • <strong>Thứ 7:</strong> Đọc lại tuần, chuyển sang unit mới
+        </div>
+        <div class="vlinks" style="margin-top:10px;">
+          <a href="https://www.youtube.com/results?search_query=how+to+write+a+paragraph+beginners+English" target="_blank" class="vlink"><span class="vtag yt">YT</span>How to Write a Paragraph – Beginners</a>
+        </div>
+      </div>
+    </div>
+    <div class="subj-card">
+      <div class="chead" style="background:linear-gradient(135deg,#0369a1,#0ea5e9);"><h2>🎧 Flyer Ảo & Preply</h2><p>Thứ 3,4,6 tối · 20h–21h</p></div>
+      <div class="cbody">
+        <div style="font-size:.83rem;line-height:1.8;">
+          • <strong>Thứ 3, 5, 7:</strong> Flyer Ảo – luyện Nghe/Nói trình độ PET<br>
+          • <strong>Thứ 4:</strong> Buổi học Preply với gia sư<br>
+          • <strong>Thứ 6:</strong> Đọc truyện tiếng Anh tự chọn
+        </div>
+        <div class="vlinks" style="margin-top:10px;">
+          <a href="https://flyeraso.com" target="_blank" class="vlink"><span class="vtag kh">WEB</span>flyeraso.com – Luyện Nghe/Nói PET</a>
+          <a href="https://preply.com" target="_blank" class="vlink"><span class="vtag kh">WEB</span>preply.com – Gia sư trực tuyến</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ TAB: CHECKLIST ============ -->
+<div id="checklist" class="tab">
+  <div class="info-box">✅ Đánh dấu khi bé hoàn thành mỗi buổi học. Dữ liệu được lưu lại trên trình duyệt này (kể cả khi tắt máy, mở lại vẫn còn).</div>
+
+  <div class="subj-card" style="margin-bottom:16px;">
+    <div class="chead" style="background:linear-gradient(135deg,#0891b2,#06b6d4);"><h2>🔬 KHTN</h2></div>
+    <div class="cbody"><div class="cl" id="cl-khtn"></div></div>
+  </div>
+  <div class="subj-card" style="margin-bottom:16px;">
+    <div class="chead" style="background:linear-gradient(135deg,#1d4ed8,#2563eb);"><h2>📐 Toán – Mathx & Book 7</h2></div>
+    <div class="cbody"><div class="cl" id="cl-math"></div></div>
+  </div>
+  <div class="subj-card" style="margin-bottom:16px;">
+    <div class="chead" style="background:linear-gradient(135deg,#6d28d9,#7c3aed);"><h2>⚡ Science – Physics</h2></div>
+    <div class="cbody"><div class="cl" id="cl-phys"></div></div>
+  </div>
+  <div class="subj-card" style="margin-bottom:16px;">
+    <div class="chead" style="background:linear-gradient(135deg,#0f766e,#0d9488);"><h2>🧪 Science – Chemistry</h2></div>
+    <div class="cbody"><div class="cl" id="cl-chem"></div></div>
+  </div>
+  <div class="subj-card" style="margin-bottom:16px;">
+    <div class="chead" style="background:linear-gradient(135deg,#15803d,#16a34a);"><h2>🌿 Science – Biology</h2></div>
+    <div class="cbody"><div class="cl" id="cl-bio"></div></div>
+  </div>
+  <div class="subj-card" style="margin-bottom:16px;">
+    <div class="chead" style="background:linear-gradient(135deg,#be185d,#db2777);"><h2>🇬🇧 Tiếng Anh</h2></div>
+    <div class="cbody"><div class="cl" id="cl-eng"></div></div>
+  </div>
+</div>
+
+<!-- ============ TAB: CÁCH HỌC ============ -->
+<div id="routine" class="tab">
+  <div class="card">
+    <h3 style="margin-bottom:14px;">⏱️ Nguyên tắc học mỗi buổi</h3>
+    <div class="tblock"><div class="tlabel" style="background:var(--math)">Xem video</div><div class="tdesc"><strong>🎬 Xem trước khi đọc sách</strong><span>Ghi chú từ khóa, công thức quan trọng vào vở</span></div></div>
+    <div class="tblock"><div class="tlabel" style="background:var(--write)">Đọc sách</div><div class="tdesc"><strong>📖 Đọc ví dụ mẫu</strong><span>Chú ý Worked Examples trước khi làm bài</span></div></div>
+    <div class="tblock"><div class="tlabel" style="background:var(--bio)">Bài tập</div><div class="tdesc"><strong>✏️ Làm từ dễ đến khó</strong><span>Không xem đáp án quá sớm</span></div></div>
+    <div class="tblock"><div class="tlabel" style="background:var(--chem)">Kiểm tra</div><div class="tdesc"><strong>✅ Đối chiếu & ghi lỗi sai</strong><span>Ghi vào "Sổ lỗi sai", ôn lại cuối tuần</span></div></div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:14px;">🗝️ Mẹo dùng YouTube & Khan Academy</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;">
+      <div style="background:var(--rest-l);border-radius:10px;padding:14px;">
+        <div style="font-weight:700;margin-bottom:8px;">🎬 YouTube</div>
+        <div style="font-size:.83rem;line-height:1.7;">• Bật phụ đề tiếng Anh<br>• Tốc độ 0.75x nếu khó<br>• Dừng lại ghi chú<br>• Xem lại phần chưa hiểu</div>
+      </div>
+      <div style="background:var(--math-l);border-radius:10px;padding:14px;">
+        <div style="font-weight:700;margin-bottom:8px;">📚 Khan Academy</div>
+        <div style="font-size:.83rem;line-height:1.7;">• Tạo tài khoản miễn phí<br>• Vào "Practice" sau video<br>• Dùng "Hints" khi bí<br>• Mục tiêu: Level 4 mỗi bài</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h3 style="margin-bottom:14px;">🏆 Hệ thống phần thưởng</h3>
+    <table style="width:100%;border-collapse:collapse;font-size:.85rem;">
+      <tr style="background:linear-gradient(135deg,#d97706,#f59e0b);color:white;"><th style="padding:9px 12px;text-align:left;">Hoàn thành</th><th style="padding:9px 12px;">Phần thưởng</th></tr>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">Học đủ 3 ngày liên tiếp</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">⭐ 1 sao vàng</td></tr>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;background:#f9fafb;">Học đủ 1 tuần không nghỉ</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;background:#f9fafb;">🍦 Ăn kem / món yêu thích</td></tr>
+      <tr><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">Hoàn thành 1 chương Toán / môn Science</td><td style="padding:8px 12px;border-bottom:1px solid #e5e7eb;">🎮 30 phút game / phim yêu thích</td></tr>
+      <tr><td style="padding:8px 12px;font-weight:700;">✅ Hoàn thành toàn bộ giáo án hè!</td><td style="padding:8px 12px;font-weight:700;">🏆 Phần thưởng lớn – cùng bé chọn!</td></tr>
+    </table>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<div style="text-align:center;padding:18px;color:var(--gray);font-size:.76rem;background:white;margin-top:8px;">
+  📚 Giáo Án Tổng Hợp Hè 2026 – Lớp 6 · 10/7–30/8/2026
+</div>
+
+<script>
+const APP_DATA = {"mathxNC": [["Buổi 1", ["Tập hợp", "Tập hợp Số tự nhiên"]], ["Buổi 2", ["Ghi số tự nhiên", "Ghi phép toán với số tự nhiên"]], ["Buổi 3", ["Ghi phép toán với số tự nhiên (P2)", "Ghi phép toán với số tự nhiên (P3)"]], ["Buổi 4", ["Các phép toán với số tự nhiên (P5)", "Các phép toán với số tự nhiên (P6)"]], ["Buổi 5", ["Các bài toán về lũy thừa (P1)", "Các bài toán về lũy thừa (P2)"]], ["Buổi 6", ["Các bài toán về lũy thừa (P3)", "Các bài toán về lũy thừa (P4)"]], ["Buổi 7", ["Tính chất chia hết, dấu hiệu chia hết (P1)", "Tính chất chia hết, dấu hiệu chia hết (P2)"]], ["Buổi 8", ["Tính chất chia hết, dấu hiệu chia hết (P3)", "Tính chất chia hết, dấu hiệu chia hết (P4)"]], ["Buổi 9", ["Tính chất chia hết, dấu hiệu chia hết (P5)", "Tính chất chia hết, dấu hiệu chia hết (P6)"]], ["Buổi 10", ["Tính chất chia hết, dấu hiệu chia hết (P7)", "Tính chất chia hết, dấu hiệu chia hết (P8)"]], ["Buổi 11", ["Tính chất chia hết, dấu hiệu chia hết (P9)"]], ["Buổi 12", ["Ước, bội của số tự nhiên (P1)", "Ước, bội của số tự nhiên (P2)"]], ["Buổi 13", ["Ước, bội của số tự nhiên (P3)"]], ["Buổi 14", ["Số nguyên tố (P1)", "Số nguyên tố (P2)"]], ["Buổi 15", ["Chứng minh hai số nguyên tố cùng nhau", "Ước chung, bội chung"]], ["Buổi 16", ["Ước chung lớn nhất", "Bội chung, bội chung nhỏ nhất"]], ["Buổi 17", ["Bội chung, bội chung nhỏ nhất (tiếp)"]], ["Buổi 18", ["Hình học trực quan, đếm tam giác (P1)", "Hình học trực quan, đếm tam giác (P2)"]], ["Buổi 19", ["Hình học trực quan, đếm tam giác (P3)", "Hình học trực quan, đếm hình vuông (P1)"]], ["Buổi 20", ["Hình học trực quan, đếm hình vuông (P2)"]], ["Buổi 21", ["Phép cộng, trừ số nguyên (P1)", "Phép cộng, trừ số nguyên (P2)"]], ["Buổi 22", ["Phép cộng, trừ số nguyên (P3)", "Phép cộng, trừ số nguyên (P4)"]], ["Buổi 23", ["Phép cộng, trừ số nguyên (P5)", "Phép nhân, chia số nguyên (P1)"]], ["Buổi 24", ["Phép nhân, chia số nguyên (P2)", "Phép nhân, chia số nguyên (P3)"]]], "book7": [{"title": "1.1 Averages and Range – Trung bình, Trung vị, Yếu vị", "chip": "Ch.1", "links": [["yt", "https://www.youtube.com/results?search_query=Averages+and+The+Range+GCSE+Maths", "Averages and The Range – GCSE Maths"], ["yt", "https://www.youtube.com/results?search_query=Math+Antics+Mean+Median+Mode", "Math Antics – Mean, Median and Mode"], ["kh", "https://www.khanacademy.org/math/statistics-probability/summarizing-quantitative-data/mean-median-basics/v/statistics-intro-mean-median-and-mode", "Mean, Median & Mode – Khan Academy"]]}, {"title": "1.2 More Averages – Trung bình từ bảng tần số ghép nhóm", "chip": "Ch.1", "links": [["yt", "https://www.youtube.com/results?search_query=Math+Antics+Data+And+Graphs", "Math Antics – Data And Graphs"], ["yt", "https://www.youtube.com/results?search_query=Averages+from+Grouped+Frequency+Tables+GCSE", "Averages from Grouped Tables – GCSE"]]}, {"title": "1.3 Two-way Tables & Bar Charts", "chip": "Ch.1", "links": [["yt", "https://www.youtube.com/results?search_query=What+is+a+Bar+Chart+maths", "What is a Bar Chart?"], ["yt", "https://www.youtube.com/results?search_query=Two+Way+Tables+maths+GCSE", "Two Way Tables – GCSE Maths"]]}, {"title": "1.4 More Graphs + Ôn tập Chương 1", "chip": "Ch.1", "links": [["yt", "https://www.youtube.com/results?search_query=Math+Antics+Data+And+Graphs", "Math Antics – Data And Graphs (tổng hợp)"]]}, {"title": "2.1 Rules of Divisibility – Quy tắc chia hết", "chip": "Ch.2", "links": [["yt", "https://www.youtube.com/results?search_query=Divisibility+Rules+2+3+4+5+6+9+10", "Divisibility Rules 2,3,4,5,6,9,10"], ["kh", "https://www.khanacademy.org/math/pre-algebra/pre-algebra-factors-multiples/pre-algebra-divisibility/v/basic-divisibility-tests", "Divisibility tests – Khan Academy"]]}, {"title": "2.2 Factors, Multiples, Primes, HCF, LCM", "chip": "Ch.2", "links": [["kh", "https://www.khanacademy.org/math/cc-fourth-grade-math/factors-multiples-patterns", "Factors & Multiples – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=Prime+Factorisation+GCSE+Maths", "Prime Factorisation – GCSE Maths"], ["yt", "https://www.youtube.com/results?search_query=HCF+LCM+GCSE+Maths", "HCF / LCM – GCSE Maths"], ["yt", "https://www.youtube.com/results?search_query=HCF+LCM+Venn+Diagrams+GCSE", "HCF & LCM từ Venn Diagrams"]]}, {"title": "2.3 Số âm & Số nguyên", "chip": "Ch.2", "links": [["kh", "https://www.khanacademy.org/math/cc-sixth-grade-math/cc-6th-factors-and-multiples", "Negative numbers – Khan Academy 6th grade"], ["yt", "https://www.youtube.com/results?search_query=A+Trick+for+Adding+and+Subtracting+Negative+Numbers", "Trick: Cộng trừ số âm"]]}, {"title": "2.4 Số chính phương & Căn bậc hai", "chip": "Ch.2", "links": [["yt", "https://www.youtube.com/results?search_query=what+is+square+root+math+for+kids", "THE SQUARE ROOT – Math for Kids"], ["kh", "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:radicals/v/introduction-to-square-roots", "Intro to square roots – Khan Academy"]]}, {"title": "2.5 Lũy thừa & Căn bậc ba + Ôn tập Chương 2", "chip": "Ch.2", "links": [["yt", "https://www.youtube.com/results?search_query=What+is+Cube+Root+Don+Memorise", "What is the Cube Root? – Don't Memorise"], ["kh", "https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:rational-exponents-radicals/x2f8bb11595b61c86:radicals/v/intro-to-cube-roots", "Intro to cube roots – Khan Academy"]]}, {"title": "3.1 Rút gọn biểu thức đại số", "chip": "Ch.3", "links": [["yt", "https://www.youtube.com/results?search_query=How+to+Write+Algebraic+Expressions", "How to Write Algebraic Expressions"], ["yt", "https://www.youtube.com/results?search_query=Algebraic+Fractions+Simplifying+GCSE", "Simplifying Algebraic Expressions – GCSE"]]}, {"title": "3.2 Viết & Thay số vào biểu thức + Ôn tập Chương 3", "chip": "Ch.3", "links": [["yt", "https://www.youtube.com/results?search_query=ALGEBRAIC+EXPRESSIONS+EQUATIONS+GRADE+6", "Algebraic Expressions & Equations – Grade 6"], ["yt", "https://www.youtube.com/results?search_query=Algebra+Substitution+in+Maths", "Algebra: Substitution in Maths"]]}, {"title": "4.1 Phân số cơ bản, So sánh & Rút gọn", "chip": "Ch.4", "links": [["yt", "https://www.youtube.com/results?search_query=INTRODUCTION+TO+FRACTIONS+Grade+6", "Introduction to Fractions – Grade 6"], ["kh", "https://www.khanacademy.org/math/cc-fourth-grade-math/imp-fractions-2/imp-equivalent-fractions/v/equivalent-fractions", "Equivalent fractions – Khan Academy"]]}, {"title": "4.2 Cộng trừ phân số & Hỗn số", "chip": "Ch.4", "links": [["yt", "https://www.youtube.com/results?search_query=Improper+Fractions+Mixed+Numbers+Learning+Maths", "Improper Fractions & Mixed Numbers"], ["kh", "https://www.khanacademy.org/math/cc-fifth-grade-math/add-subtract-fractions-2", "Add & Subtract Fractions – Khan Academy"]]}, {"title": "4.3 Phân số ↔ Thập phân ↔ %", "chip": "Ch.4", "links": [["yt", "https://www.youtube.com/results?search_query=Converting+Between+Fractions+Decimals+Percentages", "Converting Fractions, Decimals, Percentages"]]}, {"title": "4.4 Nhân phân số", "chip": "Ch.4", "links": [["yt", "https://www.youtube.com/results?search_query=Multiplying+Whole+Numbers+and+Fractions+Math+with+Mr+J", "Multiplying Whole Numbers & Fractions – Mr. J"], ["kh", "https://www.khanacademy.org/math/arithmetic/fraction-arithmetic", "Multiply fractions – Khan Academy"]]}, {"title": "4.5 Phép tính với hỗn số + Ôn tập Chương 4", "chip": "Ch.4", "links": [["yt", "https://www.youtube.com/results?search_query=Adding+and+Subtracting+Mixed+Numbers+Unlike+Denominators+Mr+J", "Adding & Subtracting Mixed Numbers – Mr. J"], ["yt", "https://www.youtube.com/results?search_query=Multiplying+Mixed+Numbers+and+Fractions+Mr+J", "Multiplying Mixed Numbers & Fractions – Mr. J"]]}, {"title": "5.1 Các loại góc", "chip": "Ch.5", "links": [["yt", "https://www.youtube.com/results?search_query=Types+of+Angles+Acute+Obtuse+Reflex+Math+Mr+J", "Types of Angles – Math with Mr. J"]]}, {"title": "5.2 Tam giác", "chip": "Ch.5", "links": [["yt", "https://www.youtube.com/results?search_query=GCSE+Maths+Types+of+Triangle+2026", "Types of Triangle – GCSE (2026)"], ["yt", "https://www.youtube.com/results?search_query=GCSE+Maths+5+Angle+Rules+2026", "5 Angle Rules – GCSE (2026)"]]}, {"title": "5.3–5.4 Tứ giác & Vẽ hình (Constructions) + Ôn tập Chương 5", "chip": "Ch.5", "links": [["yt", "https://www.youtube.com/results?search_query=GCSE+Maths+Types+of+Quadrilateral+2026", "Types of Quadrilateral – GCSE (2026)"], ["yt", "https://www.youtube.com/results?search_query=Constructions+GCSE+Maths", "Constructions – GCSE Maths"]]}, {"title": "6.1 Giá trị vị trí & Làm tròn", "chip": "Ch.6", "links": [["kh", "https://www.khanacademy.org/math/cc-fourth-grade-math/place-value-topic", "Place value – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=Math+Antics+Place+Value", "Math Antics – Place Value"], ["yt", "https://www.youtube.com/results?search_query=Math+Antics+Rounding", "Math Antics – Rounding"]]}, {"title": "6.3–6.5 Cộng · Trừ · Nhân · Chia số thập phân", "chip": "Ch.6", "links": [["kh", "https://www.khanacademy.org/math/cc-fifth-grade-math/add-decimals-2", "Add decimals – Khan Academy"], ["kh", "https://www.khanacademy.org/math/cc-fifth-grade-math/subtract-decimals-2", "Subtract decimals – Khan Academy"], ["kh", "https://www.khanacademy.org/math/cc-fifth-grade-math/multiply-decimals-2", "Multiply decimals – Khan Academy"], ["kh", "https://www.khanacademy.org/math/cc-fifth-grade-math/divide-decimals-2", "Divide decimals – Khan Academy"]]}, {"title": "6.6 Tổng hợp Thập phân/Phân số/% + Ôn tập tổng thể + Tổng kết", "chip": "Ch.6", "links": [["kh", "https://www.khanacademy.org/math/cc-sixth-grade-math", "Khan Academy – 6th Grade Math (tổng hợp)"]]}], "physics": [{"title": "Năng lượng cơ thể & thức ăn", "sub": "how do our bodies use energy? · comparing energy in foods · how is energy stored and moved", "links": [["kh", "https://www.khanacademy.org/science/ms-physics/x1baed5db7c1bb50b:energy", "Energy – Middle School Physics (Khan)"], ["yt", "https://www.youtube.com/results?search_query=how+does+the+body+use+energy+for+kids", "How does your body use energy?"]]}, {"title": "Nhiên liệu, vận chuyển & các nguồn năng lượng khác", "sub": "where do fuels come from? · transporting goods · other energy resources", "links": [["yt", "https://www.youtube.com/watch?v=ONRtd65LJk4", "What is a Fuel? – Khan Academy Middle School"], ["kh", "https://www.khanacademy.org/science/grade-6-science/x88f5990a7622d8f5:energy-and-energy-transfer", "Energy & Energy Transfer – Grade 6"]]}, {"title": "Sử dụng nguồn năng lượng & thay đổi thói quen", "sub": "which energy resources should we use? · how can we use less fossil fuel?", "links": [["kh", "https://www.khanacademy.org/science/class-6-science/xdbffcd373df95972:speed", "Work and Energy – UP Science Grade 6"], ["yt", "https://www.youtube.com/results?search_query=renewable+nonrenewable+energy+resources+for+kids", "Renewable vs Non-renewable Energy"], ["yt", "https://www.youtube.com/results?search_query=reducing+fossil+fuel+use+science+for+kids", "Reducing Fossil Fuel Use – Science"]]}, {"title": "Mạch điện: nối tiếp & song song", "sub": "models in science · series and parallel circuits · building robots", "links": [["kh", "https://en.khanacademy.org/science/grade-6-science/x88f5990a7622d8f5:electric-forces/x88f5990a7622d8f5:series-parallel-circuit/a/series-and-parallel-circuits", "Series & Parallel Circuits – Grade 6"], ["yt", "https://www.youtube.com/results?search_query=series+and+parallel+circuits+for+kids+KS3", "Series & Parallel Circuits – KS3"]]}, {"title": "Thay đổi dòng điện & sử dụng điện an toàn", "sub": "changing the current · using electricity safely · a world without electricity", "links": [["kh", "https://www.khanacademy.org/science/class-7-science/x0c8b40bd4b242f0b:electricity", "Electricity – UP Science Grade 7"], ["yt", "https://www.youtube.com/results?search_query=how+to+change+current+in+a+circuit+KS3+science", "Changing current in a circuit – KS3"], ["yt", "https://www.youtube.com/results?search_query=electrical+safety+for+kids+science", "Electrical Safety for Kids"]]}, {"title": "Ma sát & Áp suất", "sub": "friction: how can we control it? · pressure in sports", "links": [["yt", "https://www.youtube.com/results?search_query=what+is+friction+science+for+kids+KS3", "What is Friction? – KS3 Science"], ["kh", "https://www.khanacademy.org/science/ms-physics", "Middle School Physics – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=pressure+in+science+KS3+sports", "Pressure in Science – KS3"]]}, {"title": "Âm thanh & Sóng", "sub": "working with sound · comparing waves · animals and noise · exploring extremes", "links": [["yt", "https://www.youtube.com/results?search_query=sound+waves+science+for+kids+KS3", "Sound Waves – KS3 Science"], ["yt", "https://www.youtube.com/results?search_query=comparing+sound+waves+water+waves+KS3", "Sound vs Water Waves – KS3"], ["yt", "https://www.youtube.com/results?search_query=animals+that+use+sound+echolocation+for+kids", "Animals & Noise – Echolocation for Kids"]]}], "chemistry": [{"title": "Hỗn hợp & Khoa học pháp y", "sub": "what kinds of mixtures are there? · forensic science · solutions", "links": [["yt", "https://www.youtube.com/watch?v=rDWfLHn8PDM", "Types of mixtures – Khan Academy Middle School"], ["kh", "https://www.khanacademy.org/science/class-6-science/xdbffcd373df95972:separation-of-substances", "Separation of Substances – UP Grade 6"], ["yt", "https://www.youtube.com/results?search_query=forensic+science+for+kids+chemistry", "Forensic Science for Kids"]]}, {"title": "Kỹ thuật tách chất", "sub": "safety when heating · evaporation · chromatography · distillation · safe drinking water", "links": [["yt", "https://www.youtube.com/results?search_query=filtration+evaporation+separation+KS3+chemistry", "Filtration & Evaporation – KS3 Chemistry"], ["kh", "https://www.khanacademy.org/science/ap-chemistry-beta/x2eef969c74e0d802:intermolecular-forces-and-properties/x2eef969c74e0d802:separation-of-solutions-and-mixtures-chromatography/e/separation-of-solutions-and-mixtures-chromatography", "Chromatography – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=distillation+KS3+chemistry+for+kids", "Distillation – KS3 Chemistry"]]}, {"title": "Hóa chất trong nhà: Hiểm họa & An toàn", "sub": "hazards · controlling risk · working scientifically (planning for hazards)", "links": [["yt", "https://www.youtube.com/results?search_query=chemical+hazard+symbols+KS3+chemistry", "Hazard Symbols – KS3 Chemistry"]]}, {"title": "Axit, Kiềm & Chất chỉ thị", "sub": "indicators · acidity and alkalinity · neutralisation · chemical industry · danger at home", "links": [["yt", "https://www.youtube.com/results?search_query=acids+and+alkalis+KS3+chemistry+indicators", "Acids & Alkalis – KS3 Chemistry"], ["kh", "https://www.khanacademy.org/science/ms-chemistry", "Middle School Chemistry – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=neutralisation+chemistry+KS3+for+kids", "Neutralisation – KS3 Chemistry"]]}, {"title": "Thể rắn, lỏng, khí & Thuyết hạt", "sub": "solids, liquids and gases · hypotheses and theories · particle theory of matter", "links": [["yt", "https://www.youtube.com/results?search_query=states+of+matter+KS3+chemistry", "States of Matter – KS3"], ["kh", "https://www.khanacademy.org/science/ms-chemistry", "Middle School Chemistry – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=particle+theory+of+matter+KS3+chemistry", "Particle Theory – KS3 Chemistry"]]}, {"title": "Chuyển động Brown & Sự khuếch tán", "sub": "Brownian motion · diffusion – why do some things spread out?", "links": [["yt", "https://www.youtube.com/results?search_query=diffusion+brownian+motion+KS3+science", "Brownian Motion & Diffusion – KS3"]]}, {"title": "Áp suất không khí, Dự báo thời tiết & Rác thải", "sub": "air pressure · forecasting the weather · waste", "links": [["yt", "https://www.youtube.com/results?search_query=air+pressure+for+kids+science+KS3", "What is Air Pressure? – KS3"], ["yt", "https://www.youtube.com/results?search_query=how+meteorologists+forecast+weather+for+kids", "How Meteorologists Forecast Weather"]]}], "biology": [{"title": "Quá trình sống & Tế bào", "sub": "what do all living things do? · life processes · cells", "links": [["kh", "https://www.khanacademy.org/science/ms-biology/x0c5bb03129646fd6:cells-and-organisms", "Cells and Organisms – MS Biology"], ["yt", "https://www.youtube.com/watch?v=YE2peDF4Zqg", "Organization in the Human Body – Khan Academy"]]}, {"title": "Mô, Cơ quan, Hệ cơ quan & Kính hiển vi", "sub": "tissues · organs · organ systems · microscopes · medical doctors", "links": [["kh", "https://www.khanacademy.org/science/biology/principles-of-physiology/body-structure-and-homeostasis/a/tissues-organs-organ-systems", "Tissues, Organs & Systems – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=how+to+use+microscope+KS3+biology", "How to use a microscope – KS3 Biology"], ["yt", "https://www.youtube.com/results?search_query=organ+transplants+explained+for+kids", "Organ Transplants Explained for Kids"]]}, {"title": "Xương & Cơ bắp", "sub": "functions of the skeleton · muscles and moving · muscles & breathing/blood · artificial limbs", "links": [["yt", "https://www.youtube.com/results?search_query=functions+of+the+skeleton+KS3+biology", "Functions of the Skeleton – KS3"], ["kh", "https://www.khanacademy.org/science/ms-biology", "Middle School Biology – Khan Academy"], ["yt", "https://www.youtube.com/results?search_query=muscles+and+movement+KS3+biology", "Muscles & Movement – KS3 Biology"]]}, {"title": "Sinh sản ở động vật & con người", "sub": "animal sexual reproduction · reproductive organs · becoming pregnant · gestation and birth", "links": [["yt", "https://www.youtube.com/results?search_query=sexual+reproduction+KS3+biology+science", "Sexual Reproduction – KS3 Biology"]]}, {"title": "Tuổi dậy thì & Bảo tồn loài", "sub": "growing up: puberty and adolescence · endangered species · the work of zoos", "links": [["yt", "https://www.youtube.com/results?search_query=puberty+and+adolescence+KS3+biology", "Puberty & Adolescence – KS3 Biology"], ["yt", "https://www.youtube.com/results?search_query=endangered+species+zoos+conservation+for+kids", "Endangered Species & the Work of Zoos"]]}, {"title": "Biến dị & Biểu đồ số liệu", "sub": "variation – what is variation? · charts and graphs (bar charts, scatter graphs)", "links": [["yt", "https://www.youtube.com/results?search_query=variation+in+living+things+KS3+biology", "Variation in Living Things – KS3"], ["yt", "https://www.youtube.com/results?search_query=bar+charts+scatter+graphs+science+for+kids", "Bar Charts & Scatter Graphs in Science"]]}, {"title": "Thích nghi & Môi trường sống", "sub": "adaptations · effects of the environment on organisms · effects on the environment", "links": [["yt", "https://www.youtube.com/results?search_query=adaptations+KS3+biology+environments", "Adaptations – KS3 Biology"], ["kh", "https://www.khanacademy.org/science/ms-biology", "Middle School Biology – Khan Academy"]]}, {"title": "Ma túy, Chất kích thích & Cơ thể", "sub": "drugs – how do drugs affect our bodies? · drugs and sport", "links": [["yt", "https://www.youtube.com/results?search_query=drugs+affect+human+body+KS3+biology", "How Drugs Affect the Body – KS3"]]}]};
+const START_DATE = new Date(2026,6,10); // Jul 10 2026
+const END_DATE = new Date(2026,7,30); // Aug 30 2026
+const KHTN_PLAYLIST = "PLlJUddnVUABeHLnXmW9p62J03tzj-m6kb";
+const KHTN_FIRST_VIDEO_ID = "7AkZN7xzAsU"; // index 17
+const KHTN_TOTAL_VIDEOS = 56;
+const KHTN_START_INDEX = 17;
+
+function dayOffset(d) { return Math.round((d - START_DATE) / 86400000); }
+function fmtDate(d) { return d.getDate() + '/' + (d.getMonth()+1); }
+const WD_NAMES = ['Chủ Nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+const WD_COLORS = {0:'var(--rest)',1:'var(--math)',2:'var(--eng)',3:'var(--math)',4:'var(--chem)',5:'var(--math)',6:'var(--bio)'};
+
+function countWeekdayUpTo(d, weekdays) {
+  // count occurrences of given weekday numbers from START_DATE to d inclusive
+  let count = 0;
+  let cur = new Date(START_DATE);
+  while (cur <= d) {
+    if (weekdays.includes(cur.getDay())) count++;
+    cur.setDate(cur.getDate()+1);
+  }
+  return count;
+}
+
+function slotHTML(timeLabel, color, title, note, links) {
+  let linksHTML = '';
+  if (links && links.length) {
+    linksHTML = '<div class="slinks">' + links.map(l =>
+      `<a class="slink" href="${l.url}" target="_blank"><span class="vtag ${l.type}">${l.type.toUpperCase()}</span>${l.label}</a>`
+    ).join('') + '</div>';
+  }
+  return `<div class="slot" style="border-left:5px solid ${color}">
+    <div class="time" style="background:${color}">${timeLabel}</div>
+    <div class="body"><div class="stitle">${title}</div>${note?`<div class="snote">${note}</div>`:''}${linksHTML}</div>
+  </div>`;
+}
+
+function khtnLinkForDay(offset) {
+  const idx = KHTN_START_INDEX + offset;
+  if (idx > KHTN_START_INDEX + KHTN_TOTAL_VIDEOS - 1) return null;
+  if (idx === KHTN_START_INDEX) {
+    return `https://www.youtube.com/watch?v=${KHTN_FIRST_VIDEO_ID}&list=${KHTN_PLAYLIST}&index=${idx}`;
+  }
+  return `https://www.youtube.com/watch?list=${KHTN_PLAYLIST}&index=${idx}`;
+}
+
+function renderDay(d) {
+  const offset = dayOffset(d);
+  const wd = d.getDay(); // 0 sun .. 6 sat
+  document.getElementById('todayDateLabel').textContent = `${WD_NAMES[wd]}, ${d.getDate()}/${d.getMonth()+1}/${d.getFullYear()}`;
+  document.getElementById('datePicker').value = d.toISOString().slice(0,10);
+  const dayNum = offset + 1;
+  document.getElementById('todaySubLabel').textContent = `Ngày học thứ ${dayNum} / 52`;
+
+  let html = '';
+  html += slotHTML('7h-8h30','var(--rest)','🌅 Thức dậy · Ăn sáng · Giải trí','Ngủ dậy trễ mất giờ giải trí');
+
+  // KHTN daily
+  const khtnUrl = khtnLinkForDay(offset);
+  const khtnIdx = KHTN_START_INDEX + offset;
+  if (khtnUrl) {
+    html += slotHTML('8h30-9h','var(--khtn)','🔬 KHTN – Xem video', `Video số ${khtnIdx} trong playlist (khoảng Bài ${khtnIdx-8})`,
+      [{type:'yt', url:khtnUrl, label:'Xem video KHTN hôm nay'}]);
+  } else {
+    html += slotHTML('8h30-9h','var(--khtn)','🔬 KHTN – Ôn tập','Đã xem hết playlist! Ôn lại video cũ hoặc làm bài tập SGK KHTN.',
+      [{type:'yt', url:`https://www.youtube.com/playlist?list=${KHTN_PLAYLIST}`, label:'Xem lại playlist'}]);
+  }
+  html += slotHTML('9h-9h15','var(--rest)','🎮 Giải lao','');
+
+  if (wd===1||wd===3||wd===5) {
+    const n = countWeekdayUpTo(d, [1,3,5]);
+    html += slotHTML('9h15-10h15','var(--mathx)', `📐 Toán cơ bản Mathx – Tuần ${n}`, 'Xem lý thuyết (30ph) + làm bài tập SGK Toán 6 Kết nối tri thức (30ph)',
+      [{type:'kh', url:'https://mathx.vn/bai-hoc-tuan.html?category=64', label:`Mở Mathx – Bài học tuần ${n}`}]);
+    const nc = APP_DATA.mathxNC[n-1];
+    if (nc) {
+      html += slotHTML('10h30-11h','var(--mathx)', `📐 Toán nâng cao Mathx – ${nc[0]}`, nc[1].join(' · '),
+        [{type:'kh', url:'https://mathx.vn/khoa-hoc/bo-tro-va-nang-cao-toan-6.html', label:`Mở Mathx Nâng cao – ${nc[0]}`}]);
+    } else {
+      html += slotHTML('10h30-11h','var(--mathx)', '📐 Toán nâng cao Mathx – Ôn tập / Tự chọn', 'Đã học hết 24 buổi nâng cao – chọn chuyên đề yêu thích để ôn thêm',
+        [{type:'kh', url:'https://mathx.vn/khoa-hoc/bo-tro-va-nang-cao-toan-6.html', label:'Mở Mathx Nâng cao'}]);
+    }
+  } else if (wd===2||wd===4||wd===6) {
+    const n = countWeekdayUpTo(d, [2,4,6]);
+    html += slotHTML('9h15-10h15','var(--eng)', `🇬🇧 Destination B1 – Unit ${n}`, 'Xem 1 video grammar/vocabulary rồi làm bài trong sách',
+      [{type:'yt', url:`https://www.youtube.com/results?search_query=Destination+B1+Unit+${n}+grammar`, label:`Video Grammar Unit ${n}`},
+       {type:'yt', url:`https://www.youtube.com/results?search_query=Destination+B1+Unit+${n}+vocabulary`, label:`Video Vocabulary Unit ${n}`}]);
+    html += slotHTML('10h30-11h','var(--eng)', '🇬🇧 Tự chấm Destination', 'Đối chiếu đáp án, ghi từ mới vào sổ từ vựng');
+  } else {
+    html += slotHTML('9h15-11h','var(--rest)','😴 Chủ Nhật nghỉ ngơi','Có thể ôn lại bài tuần qua nếu muốn');
+  }
+
+  html += slotHTML('11h-12h','var(--rest)','🎮 Chơi giải trí (1 tiếng)','');
+  html += slotHTML('12h-14h30','var(--rest)','🍜 Cơm · Ngủ trưa','');
+
+  if (wd===1||wd===3||wd===5) {
+    const n = countWeekdayUpTo(d, [1,3,5]);
+    const lesson = APP_DATA.book7[n-1];
+    if (lesson) {
+      html += slotHTML('14h30-15h','var(--math)', `📐 Toán Book 7 – ${lesson.title}`, lesson.chip,
+        lesson.links.map(l=>({type:l[0],url:l[1],label:l[2]})));
+      html += slotHTML('15h-15h30','var(--math)','📐 Toán – Đọc sách & Làm bài tập','Làm bài tập trong sách Maths Progress International Book 7');
+    } else {
+      html += slotHTML('14h30-15h30','var(--math)','📐 Toán Book 7 – Ôn tập tổng thể','Đã hoàn thành 22 buổi – ôn lại các chương');
+    }
+  } else if (wd===2) {
+    const n = countWeekdayUpTo(d, [2]);
+    const g = APP_DATA.physics[(n-1) % APP_DATA.physics.length];
+    html += slotHTML('14h30-15h','var(--phys)', `⚡ Physics – ${g.title}`, g.sub, g.links.map(l=>({type:l[0],url:l[1],label:l[2]})));
+    html += slotHTML('15h-15h30','var(--phys)','⚡ IXL Science – Physics','Luyện tập thêm', [{type:'kh',url:'https://www.ixl.com/science/',label:'IXL Science'}]);
+  } else if (wd===4) {
+    const n = countWeekdayUpTo(d, [4]);
+    const g = APP_DATA.chemistry[(n-1) % APP_DATA.chemistry.length];
+    html += slotHTML('14h30-15h','var(--chem)', `🧪 Chemistry – ${g.title}`, g.sub, g.links.map(l=>({type:l[0],url:l[1],label:l[2]})));
+    html += slotHTML('15h-15h30','var(--chem)','🧪 IXL Science – Chemistry','Luyện tập thêm', [{type:'kh',url:'https://www.ixl.com/science/',label:'IXL Science'}]);
+  } else if (wd===6) {
+    const n = countWeekdayUpTo(d, [6]);
+    const g = APP_DATA.biology[(n-1) % APP_DATA.biology.length];
+    html += slotHTML('14h30-15h','var(--bio)', `🌿 Biology – ${g.title}`, g.sub, g.links.map(l=>({type:l[0],url:l[1],label:l[2]})));
+    html += slotHTML('15h-15h30','var(--bio)','🌿 IXL Science – Biology','Luyện tập thêm', [{type:'kh',url:'https://www.ixl.com/science/',label:'IXL Science'}]);
+  } else {
+    html += slotHTML('14h30-15h30','var(--rest)','😴 Chủ Nhật – Nghỉ / Ôn tự do','');
+  }
+
+  html += slotHTML('15h30-16h','var(--rest)','🎮 Giải lao','');
+
+  if (wd>=1 && wd<=6) {
+    const gwStages = ['','Đọc model writing + học từ vựng','Luyện grammar structures của unit','Làm bài tập writing exercises','Viết draft bài viết của mình','Chỉnh sửa & hoàn thiện bài viết','Đọc lại tuần, chuyển sang unit mới'];
+    html += slotHTML('16h-17h','var(--write)','✍️ Great Writing 1', gwStages[wd],
+      [{type:'yt', url:'https://www.youtube.com/results?search_query=how+to+write+a+paragraph+beginners+English', label:'How to Write a Paragraph'}]);
+  } else {
+    html += slotHTML('16h-17h','var(--rest)','😴 Chủ Nhật nghỉ ngơi','');
+  }
+
+  html += slotHTML('17h-18h','var(--rest)','🚴 Giải trí / Vận động','');
+
+  if (wd===1) html += slotHTML('20h-21h','var(--van)','📖 Văn','Học ở trường (offline)');
+  else if (wd===2 || wd===4 || wd===6) html += slotHTML('20h-21h','var(--eng)','🎧 Flyer Ảo – Luyện Nghe/Nói PET','', [{type:'kh',url:'https://flyeraso.com',label:'flyeraso.com'}]);
+  else if (wd===3) html += slotHTML('20h-21h','var(--eng)','🗣️ Preply','Buổi học với gia sư', [{type:'kh',url:'https://preply.com',label:'preply.com'}]);
+  else if (wd===5) html += slotHTML('20h-21h','var(--van)','📖 Đọc truyện','Đọc truyện tiếng Anh/Việt tự chọn');
+  else html += slotHTML('20h-21h','var(--rest)','🌙 Nghỉ ngơi','');
+
+  document.getElementById('todaySlots').innerHTML = html;
+
+  // done checkbox
+  const key = 'done_' + d.toISOString().slice(0,10);
+  const box = document.createElement('div');
+  box.className = 'done-check';
+  const isDone = localStorage.getItem(key) === '1';
+  box.innerHTML = `<input type="checkbox" id="doneBox" ${isDone?'checked':''}><label for="doneBox">✅ Đánh dấu đã hoàn thành ngày hôm nay</label>`;
+  document.getElementById('todaySlots').appendChild(box);
+  document.getElementById('doneBox').addEventListener('change', function(){
+    localStorage.setItem(key, this.checked ? '1' : '0');
+    renderStreak();
+  });
+
+  renderStreak();
+}
+
+function renderStreak() {
+  let totalDone = 0;
+  let streak = 0;
+  let cur = new Date(START_DATE);
+  let brokenStreak = false;
+  const today = new Date(currentDate);
+  while (cur <= END_DATE) {
+    const key = 'done_' + cur.toISOString().slice(0,10);
+    if (localStorage.getItem(key) === '1') totalDone++;
+    cur.setDate(cur.getDate()+1);
+  }
+  // compute current streak ending at currentDate
+  let c2 = new Date(currentDate);
+  while (c2 >= START_DATE) {
+    const key = 'done_' + c2.toISOString().slice(0,10);
+    if (localStorage.getItem(key) === '1') { streak++; c2.setDate(c2.getDate()-1); }
+    else break;
+  }
+  document.getElementById('streakBox').innerHTML = `
+    <div class="streak-card"><div class="num">${totalDone}</div><div class="lbl">Ngày đã hoàn thành</div></div>
+    <div class="streak-card"><div class="num">${streak}</div><div class="lbl">🔥 Chuỗi ngày liên tiếp</div></div>
+    <div class="streak-card"><div class="num">52</div><div class="lbl">Tổng số ngày hè</div></div>
+  `;
+}
+
+let currentDate = new Date();
+if (currentDate < START_DATE || currentDate > END_DATE) currentDate = new Date(START_DATE);
+
+function goToday() {
+  let d = new Date();
+  if (d < START_DATE || d > END_DATE) d = new Date(START_DATE);
+  currentDate = d;
+  renderDay(currentDate);
+}
+function shiftDay(delta) {
+  currentDate.setDate(currentDate.getDate()+delta);
+  if (currentDate < START_DATE) currentDate = new Date(START_DATE);
+  if (currentDate > END_DATE) currentDate = new Date(END_DATE);
+  renderDay(currentDate);
+}
+document.getElementById('datePicker').addEventListener('change', function(){
+  const parts = this.value.split('-');
+  currentDate = new Date(parseInt(parts[0]), parseInt(parts[1])-1, parseInt(parts[2]));
+  renderDay(currentDate);
+});
+
+// ---------- TAB NAV ----------
+document.querySelectorAll('.nav button').forEach(btn=>{
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+    document.querySelectorAll('.nav button').forEach(b=>b.classList.remove('active'));
+    document.getElementById(this.dataset.tab).classList.add('active');
+    this.classList.add('active');
+  });
+});
+
+// ---------- RENDER KHTN LIST ----------
+function renderKhtnList() {
+  let html = '';
+  let cur = new Date(START_DATE);
+  let i = 0;
+  while (cur <= END_DATE) {
+    const url = khtnLinkForDay(i);
+    const idx = KHTN_START_INDEX + i;
+    if (url) {
+      html += `<div class="lesson-item"><div class="lhead"><span class="lnum" style="background:var(--khtn)">Ngày ${i+1}</span><span class="ltitle">${fmtDate(cur)} – Video số ${idx} (khoảng Bài ${idx-8})</span></div>
+        <div class="lbody"><a class="vlink" href="${url}" target="_blank"><span class="vtag yt">YT</span>Xem video</a></div></div>`;
+    } else {
+      html += `<div class="lesson-item"><div class="lhead"><span class="lnum" style="background:var(--gray)">Ngày ${i+1}</span><span class="ltitle">${fmtDate(cur)} – Ôn tập (đã hết video mới)</span></div></div>`;
+    }
+    cur.setDate(cur.getDate()+1);
+    i++;
+  }
+  document.getElementById('khtnList').innerHTML = html;
+}
+
+// ---------- RENDER MATH LISTS ----------
+function renderMathLists() {
+  document.getElementById('mathxNCList').innerHTML = APP_DATA.mathxNC.map(nc=>
+    `<div class="lesson-item"><div class="lhead"><span class="lnum" style="background:var(--mathx)">${nc[0]}</span><span class="ltitle">${nc[1].join(' · ')}</span></div></div>`
+  ).join('');
+  document.getElementById('book7List').innerHTML = APP_DATA.book7.map((l,i)=>
+    `<div class="lesson-item"><div class="lhead"><span class="lnum" style="background:var(--math)">${i+1}</span><span class="ltitle">${l.title}</span></div>
+     <div class="lbody"><div class="vlinks">${l.links.map(x=>`<a class="vlink" href="${x[1]}" target="_blank"><span class="vtag ${x[0]}">${x[0].toUpperCase()}</span>${x[2]}</a>`).join('')}</div></div></div>`
+  ).join('');
+}
+
+function renderScienceLists() {
+  function render(arr, elId, color) {
+    document.getElementById(elId).innerHTML = arr.map((g,i)=>
+      `<div class="lesson-item"><div class="lhead"><span class="lnum" style="background:${color}">${i+1}</span><span class="ltitle">${g.title}</span></div>
+       <div class="lbody"><div style="font-size:.78rem;color:var(--gray);margin-bottom:6px;">${g.sub}</div><div class="vlinks">${g.links.map(x=>`<a class="vlink" href="${x[1]}" target="_blank"><span class="vtag ${x[0]}">${x[0].toUpperCase()}</span>${x[2]}</a>`).join('')}</div></div></div>`
+    ).join('');
+  }
+  render(APP_DATA.physics, 'physicsList', 'var(--phys)');
+  render(APP_DATA.chemistry, 'chemistryList', 'var(--chem)');
+  render(APP_DATA.biology, 'biologyList', 'var(--bio)');
+}
+
+// ---------- CHECKLIST ----------
+const CHECKLISTS = {
+  'cl-khtn': Array.from({length:12}, (_,i)=>`Tuần ${i+1} – Xem đủ video KHTN & làm bài SGK`),
+  'cl-math': [
+    ...APP_DATA.mathxNC.map(nc=>`Mathx Nâng cao – ${nc[0]}`),
+    ...APP_DATA.book7.map(l=>`Book 7 – ${l.title}`)
+  ],
+  'cl-phys': APP_DATA.physics.map(g=>g.title),
+  'cl-chem': APP_DATA.chemistry.map(g=>g.title),
+  'cl-bio': APP_DATA.biology.map(g=>g.title),
+  'cl-eng': [
+    ...Array.from({length:22}, (_,i)=>`Destination B1 – Unit ${i+1}`),
+    'Great Writing – Hoàn thành Unit 1-2',
+    'Great Writing – Hoàn thành Unit 3-4',
+    'Great Writing – Hoàn thành Unit 5-6',
+    'Great Writing – Hoàn thành Unit 7-8',
+    '🎉 HOÀN THÀNH TOÀN BỘ GIÁO ÁN HÈ 2026!'
+  ]
+};
+
+function renderChecklists() {
+  Object.keys(CHECKLISTS).forEach(id=>{
+    const el = document.getElementById(id);
+    el.innerHTML = CHECKLISTS[id].map((label,i)=>{
+      const key = 'cl_' + id + '_' + i;
+      const checked = localStorage.getItem(key) === '1' ? 'checked' : '';
+      return `<label><input type="checkbox" data-key="${key}" ${checked}><span>${label}</span></label>`;
+    }).join('');
+    el.querySelectorAll('input[type=checkbox]').forEach(cb=>{
+      cb.addEventListener('change', function(){
+        localStorage.setItem(this.dataset.key, this.checked?'1':'0');
+      });
+    });
+  });
+}
+
+// ---------- INIT ----------
+renderKhtnList();
+renderMathLists();
+renderScienceLists();
+renderChecklists();
+goToday();
+</script>
+</body>
+</html>
