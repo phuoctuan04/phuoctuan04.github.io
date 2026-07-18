@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>📗 Lớp 6 – Tuấn Đạt</title>
+<style>
+:root{
+  --main:#2563eb; --main-l:#dbeafe; --main-d:#1d4ed8;
+  --dark:#1f2937; --gray:#6b7280; --line:#e5e7eb;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:var(--dark);line-height:1.55;}
+a{text-decoration:none;color:inherit;}
+
+.topbar{max-width:1000px;margin:0 auto;padding:14px 16px 0;}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:.83rem;font-weight:600;color:var(--gray);
+  padding:7px 12px;border-radius:9px;border:1.5px solid var(--line);background:#fff;transition:.15s;}
+.back:hover{border-color:var(--main);color:var(--main-d);background:var(--main-l);}
+
+.header{background:linear-gradient(135deg,var(--main) 0%,var(--main-d) 100%);color:#fff;padding:30px 20px;text-align:center;
+  border-radius:18px;max-width:1000px;margin:14px auto 0;box-shadow:0 4px 16px rgba(37,99,235,.25);}
+.header .icon{font-size:2.4rem;}
+.header .grade{font-size:.74rem;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.9;margin-top:6px;}
+.header h1{font-size:1.7rem;font-weight:800;margin-top:2px;}
+.header .desc{opacity:.92;font-size:.9rem;margin-top:5px;}
+.draft{display:inline-block;margin-top:12px;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);
+  padding:5px 14px;border-radius:20px;font-size:.76rem;font-weight:700;letter-spacing:.5px;}
+
+.main{max-width:1000px;margin:0 auto;padding:22px 16px 40px;}
+.note{background:#eff6ff;border:1.5px solid var(--main);border-radius:12px;padding:14px 16px;font-size:.85rem;
+  color:#1e3a8a;margin-bottom:22px;}
+.note b{color:var(--main-d);}
+
+.section-title{font-size:1.02rem;font-weight:800;margin:24px 4px 14px;display:flex;align-items:center;gap:8px;}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
+.card{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);
+  border-top:4px solid var(--main);}
+.card h3{font-size:.98rem;font-weight:800;display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.card ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+.card li{display:flex;align-items:center;gap:9px;font-size:.85rem;color:#374151;padding:8px 10px;
+  border-radius:9px;border:1.5px solid var(--line);background:#fafafa;transition:.15s;}
+.card li .mi{flex-shrink:0;}
+.card a.li-link{color:inherit;}
+.card a.li-link li{cursor:pointer;}
+.card a.li-link:hover li{border-color:var(--main);background:var(--main-l);color:var(--main-d);}
+.arrow{margin-left:auto;color:var(--gray);font-weight:700;}
+.card a.li-link:hover .arrow{color:var(--main-d);}
+.tag{margin-left:auto;font-size:.64rem;font-weight:800;padding:3px 8px;border-radius:20px;background:#f3f4f6;color:var(--gray);}
+
+.footer{text-align:center;color:var(--gray);font-size:.8rem;padding:24px 14px;border-top:1px solid var(--line);margin-top:28px;}
+
+@media(max-width:600px){.header h1{font-size:1.35rem;}.grid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a class="back" href="../index.html">← Về trang chủ</a>
+</div>
+
+<div class="header">
+  <div class="icon">📗</div>
+  <div class="grade">Lớp 6</div>
+  <h1>Tuấn Đạt</h1>
+  <div class="desc">Bứt phá cấp 2 – Hè 2026</div>
+  <span class="draft">🌿 Đang học · Hè 2026</span>
+</div>
+
+<div class="main">
+
+  <div class="note">
+    <b>Ghi chú:</b> Tài liệu của Tuấn Đạt nằm trong thư mục
+    <b>lop6-tuan-dat/</b>. Khi có thêm file mới, chỉ cần thay mục "Sắp có" bằng link tới file tương ứng.
+  </div>
+
+  <div class="section-title">🗓️ Kế hoạch &amp; thời khóa biểu</div>
+  <div class="grid">
+    <div class="card">
+      <h3>📅 Thời khóa biểu</h3>
+      <ul>
+        <a class="li-link" href="GiaoAn_TongHop_Lop6_He2026.html">
+          <li><span class="mi">🗓️</span> TKB tuần <span class="arrow">→</span></li>
+        </a>
+        <li><span class="mi">🌞</span> Lịch học hè <span class="tag">Sắp có</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📚 Giáo án</h3>
+      <ul>
+        <a class="li-link" href="GiaoAn_TongHop_Lop6_He2026.html">
+          <li><span class="mi">📖</span> Giáo án tổng hợp Hè 2026 <span class="arrow">→</span></li>
+        </a>
+        <li><span class="mi">✅</span> Bảng theo dõi tiến độ <span class="tag">Sắp có</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-title">📖 Giáo án &amp; luyện tập theo môn</div>
+  <div class="grid">
+    <div class="card">
+      <h3>🔢 Toán</h3>
+      <ul>
+        <li><span class="mi">📖</span> Lý thuyết &amp; bài học <span class="tag">Sắp có</span></li>
+        <li><span class="mi">✏️</span> Phiếu bài tập <span class="tag">Sắp có</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔬 KHTN</h3>
+      <ul>
+        <li><span class="mi">📖</span> Lý – Hóa – Sinh <span class="tag">Sắp có</span></li>
+        <li><span class="mi">✏️</span> Bài tập &amp; thí nghiệm <span class="tag">Sắp có</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>📝 Ngữ văn</h3>
+      <ul>
+        <li><span class="mi">📖</span> Đọc hiểu &amp; tập làm văn <span class="tag">Sắp có</span></li>
+        <li><span class="mi">✍️</span> Luyện viết <span class="tag">Sắp có</span></li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>🔤 Tiếng Anh</h3>
+      <ul>
+        <li><span class="mi">📖</span> Ngữ pháp &amp; từ vựng <span class="tag">Sắp có</span></li>
+        <li><span class="mi">🎧</span> Nghe &amp; nói <span class="tag">Sắp có</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">© 2026 · Góc học tập của Tuấn Đạt 📗 · <a href="../index.html" style="color:var(--main-d);font-weight:600;">Trang chủ</a></div>
+
+</div>
+
+</body>
+</html>
