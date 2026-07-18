@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>🏠 Góc học tập gia đình – Bố Ba Con</title>
+<style>
+:root{
+  --g4:#0d9488; --g4-l:#ccfbf1; --g4-d:#0f766e;
+  --g6:#2563eb; --g6-l:#dbeafe; --g6-d:#1d4ed8;
+  --g9:#ea580c; --g9-l:#ffedd5; --g9-d:#c2410c;
+  --dark:#1f2937; --gray:#6b7280; --line:#e5e7eb;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'Segoe UI',Arial,sans-serif;background:#f0f4f8;color:var(--dark);line-height:1.55;}
+a{text-decoration:none;color:inherit;}
+
+/* Header */
+.header{background:linear-gradient(135deg,#0d9488 0%,#1d4ed8 50%,#ea580c 100%);color:#fff;padding:38px 20px 30px;text-align:center;}
+.avatar{width:88px;height:88px;border-radius:50%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);
+  display:flex;align-items:center;justify-content:center;font-size:2.6rem;margin:0 auto 12px;}
+.header h1{font-size:1.8rem;font-weight:800;}
+.header .role{opacity:.92;margin:5px 0 2px;font-size:.95rem;}
+.badges{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:14px;}
+.badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);padding:5px 14px;border-radius:20px;font-size:.78rem;font-weight:600;}
+
+/* Layout */
+.main{max-width:1080px;margin:0 auto;padding:22px 14px 40px;}
+.section-title{font-size:1.05rem;font-weight:800;color:var(--dark);margin:26px 4px 14px;display:flex;align-items:center;gap:8px;}
+
+/* About */
+.about{background:#fff;border-radius:16px;padding:22px 24px;box-shadow:0 2px 12px rgba(0,0,0,.06);}
+.about p{font-size:.92rem;color:#374151;margin-bottom:10px;}
+.about p:last-child{margin-bottom:0;}
+.about strong{color:var(--dark);}
+.contact{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
+.contact a{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:9px;border:1.5px solid var(--line);
+  background:#fff;font-size:.83rem;font-weight:600;color:var(--dark);transition:.15s;}
+.contact a:hover{border-color:var(--g6);background:var(--g6-l);color:var(--g6-d);}
+
+/* Class menu grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;}
+.class-card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 3px 14px rgba(0,0,0,.08);
+  display:flex;flex-direction:column;transition:transform .15s,box-shadow .15s;}
+.class-card:hover{transform:translateY(-4px);box-shadow:0 10px 24px rgba(0,0,0,.13);}
+.chead{padding:20px 22px;color:#fff;position:relative;}
+.chead .icon{font-size:2.1rem;margin-bottom:8px;}
+.chead .grade{font-size:.72rem;font-weight:800;letter-spacing:.5px;text-transform:uppercase;opacity:.9;}
+.chead .kid{font-size:1.35rem;font-weight:800;margin-top:2px;}
+.chead .desc{font-size:.8rem;opacity:.92;margin-top:5px;}
+.g4 .chead{background:linear-gradient(135deg,var(--g4) 0%,var(--g4-d) 100%);}
+.g6 .chead{background:linear-gradient(135deg,var(--g6) 0%,var(--g6-d) 100%);}
+.g9 .chead{background:linear-gradient(135deg,var(--g9) 0%,var(--g9-d) 100%);}
+
+.cbody{padding:14px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1;}
+.menu-link{display:flex;align-items:center;gap:11px;padding:11px 13px;border-radius:10px;border:1.5px solid var(--line);
+  background:#fff;font-size:.86rem;font-weight:600;color:var(--dark);transition:.15s;}
+.menu-link .mi{font-size:1.1rem;flex-shrink:0;}
+.menu-link .arrow{margin-left:auto;color:var(--gray);font-weight:700;}
+.g4 .menu-link:hover{border-color:var(--g4);background:var(--g4-l);color:var(--g4-d);}
+.g6 .menu-link:hover{border-color:var(--g6);background:var(--g6-l);color:var(--g6-d);}
+.g9 .menu-link:hover{border-color:var(--g9);background:var(--g9-l);color:var(--g9-d);}
+.menu-link.soon{opacity:.65;cursor:default;}
+.menu-link.soon:hover{border-color:var(--line);background:#fff;color:var(--dark);}
+.soon-tag{margin-left:auto;font-size:.65rem;font-weight:800;padding:3px 8px;border-radius:20px;background:#f3f4f6;color:var(--gray);}
+
+/* Footer */
+.footer{text-align:center;color:var(--gray);font-size:.8rem;padding:26px 14px;border-top:1px solid var(--line);margin-top:30px;}
+
+@media (max-width:600px){
+  .header h1{font-size:1.4rem;}
+  .grid{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="avatar">👨‍🏫</div>
+  <h1>Bố Ba Con</h1>
+  <div class="role">Người đồng hành học tập của các con</div>
+  <div class="badges">
+    <span class="badge">📘 Lớp 4 · Đông Trà</span>
+    <span class="badge">📗 Lớp 6 · Tuấn Đạt</span>
+    <span class="badge">📙 Lớp 9 · Tuấn Thành</span>
+  </div>
+</div>
+
+<div class="main">
+
+  <!-- VỀ TÔI -->
+  <div class="section-title">👋 Về tôi</div>
+  <div class="about">
+    <p>Xin chào! Tôi là <strong>Bố Ba Con</strong> — bố của ba bạn nhỏ. Trang này là nơi tôi tổng hợp
+      <strong>giáo án, thời khóa biểu và tài liệu học tập</strong> cho từng con, để mỗi ngày mở ra là biết hôm nay học gì.</p>
+    <p>Mỗi lớp có một khu vực riêng: <strong>Lớp 4 – Đông Trà</strong>, <strong>Lớp 6 – Tuấn Đạt</strong> và
+      <strong>Lớp 9 – Tuấn Thành</strong>. Bạn chọn menu bên dưới để đi tới phần tương ứng.</p>
+  </div>
+
+  <!-- MENU CÁC LỚP -->
+  <div class="section-title">📚 Góc học tập của các con</div>
+  <div class="grid">
+
+    <!-- LỚP 4 -->
+    <div class="class-card g4">
+      <div class="chead">
+        <div class="icon">📘</div>
+        <div class="grade">Lớp 4</div>
+        <div class="kid">Đông Trà</div>
+        <div class="desc">Nền tảng vững – học mà chơi</div>
+      </div>
+      <div class="cbody">
+        <a class="menu-link" href="lop4-dong-tra/index.html">
+          <span class="mi">📘</span> Mở trang học tập <span class="arrow">→</span>
+        </a>
+        <a class="menu-link soon"><span class="mi">🗓️</span> Thời khóa biểu <span class="soon-tag">Sắp có</span></a>
+        <a class="menu-link soon"><span class="mi">📖</span> Giáo án tổng hợp <span class="soon-tag">Sắp có</span></a>
+      </div>
+    </div>
+
+    <!-- LỚP 6 -->
+    <div class="class-card g6">
+      <div class="chead">
+        <div class="icon">📗</div>
+        <div class="grade">Lớp 6</div>
+        <div class="kid">Tuấn Đạt</div>
+        <div class="desc">Bứt phá cấp 2 – Hè 2026</div>
+      </div>
+      <div class="cbody">
+        <a class="menu-link" href="lop6-tuan-dat/GiaoAn_TongHop_Lop6_He2026.html">
+          <span class="mi">📖</span> Giáo án tổng hợp Hè 2026 <span class="arrow">→</span>
+        </a>
+        <a class="menu-link" href="lop6-tuan-dat/GiaoAn_TongHop_Lop6_He2026.html">
+          <span class="mi">🗓️</span> Thời khóa biểu tuần <span class="arrow">→</span>
+        </a>
+        <a class="menu-link soon"><span class="mi">✏️</span> Bài tập &amp; luyện tập <span class="soon-tag">Sắp có</span></a>
+      </div>
+    </div>
+
+    <!-- LỚP 9 -->
+    <div class="class-card g9">
+      <div class="chead">
+        <div class="icon">📙</div>
+        <div class="grade">Lớp 9</div>
+        <div class="kid">Tuấn Thành</div>
+        <div class="desc">Tăng tốc ôn thi vào 10</div>
+      </div>
+      <div class="cbody">
+        <a class="menu-link" href="lop9-tuan-thanh/index.html">
+          <span class="mi">📙</span> Mở trang học tập <span class="arrow">→</span>
+        </a>
+        <a class="menu-link soon"><span class="mi">🗓️</span> Thời khóa biểu <span class="soon-tag">Sắp có</span></a>
+        <a class="menu-link soon"><span class="mi">🎯</span> Ôn thi vào 10 <span class="soon-tag">Sắp có</span></a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © 2026 Bố Ba Con — Đồng hành cùng Đông Trà, Tuấn Đạt &amp; Tuấn Thành 💙
+  </div>
+
+</div>
+
+</body>
+</html>
