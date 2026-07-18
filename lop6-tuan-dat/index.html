@@ -32,6 +32,26 @@ a{text-decoration:none;color:inherit;}
   color:#1e3a8a;margin-bottom:22px;}
 .note b{color:var(--main-d);}
 
+/* FEATURED – đang tập trung */
+.feature{position:relative;overflow:hidden;display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+  background:linear-gradient(135deg,var(--main) 0%,var(--main-d) 100%);color:#fff;border-radius:16px;
+  padding:24px;box-shadow:0 8px 24px rgba(37,99,235,.3);margin-bottom:26px;transition:transform .15s,box-shadow .15s;}
+.feature:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(37,99,235,.38);}
+.feature::after{content:"";position:absolute;right:-45px;top:-45px;width:170px;height:170px;border-radius:50%;
+  background:rgba(255,255,255,.1);}
+.feature .ficon{font-size:3rem;flex-shrink:0;position:relative;z-index:1;}
+.feature .fbody{flex:1;min-width:210px;position:relative;z-index:1;}
+.feature .fbadge{display:inline-flex;align-items:center;gap:7px;background:rgba(255,255,255,.22);
+  border:1px solid rgba(255,255,255,.5);padding:4px 12px;border-radius:20px;font-size:.72rem;font-weight:800;
+  letter-spacing:.6px;margin-bottom:9px;}
+.feature .pulse{width:8px;height:8px;border-radius:50%;background:#fff;animation:pulse 1.8s infinite;}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,255,255,.65)}70%{box-shadow:0 0 0 9px rgba(255,255,255,0)}100%{box-shadow:0 0 0 0 rgba(255,255,255,0)}}
+.feature h2{font-size:1.35rem;font-weight:900;line-height:1.2;}
+.feature p{font-size:.85rem;opacity:.92;margin-top:5px;}
+.feature .fbtn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:8px;background:#fff;
+  color:var(--main-d);font-weight:800;font-size:.9rem;padding:12px 22px;border-radius:11px;white-space:nowrap;
+  box-shadow:0 3px 10px rgba(0,0,0,.16);}
+
 .section-title{font-size:1.02rem;font-weight:800;margin:24px 4px 14px;display:flex;align-items:center;gap:8px;}
 .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;}
 .card{background:#fff;border-radius:14px;padding:18px 20px;box-shadow:0 2px 12px rgba(0,0,0,.06);
@@ -74,24 +94,33 @@ a{text-decoration:none;color:inherit;}
     <b>lop6-tuan-dat/</b>. Khi có thêm file mới, chỉ cần thay mục "Sắp có" bằng link tới file tương ứng.
   </div>
 
+  <!-- ĐANG TẬP TRUNG -->
+  <a class="feature" href="giao-an-he-2026/index.html">
+    <div class="ficon">📚</div>
+    <div class="fbody">
+      <span class="fbadge"><span class="pulse"></span> 🔥 ĐANG TẬP TRUNG</span>
+      <h2>Giáo án tổng hợp Hè 2026</h2>
+      <p>Mở ra là biết học gì hôm nay · 10/7 – 30/8/2026</p>
+    </div>
+    <span class="fbtn">Mở giáo án →</span>
+  </a>
+
   <div class="section-title">🗓️ Kế hoạch &amp; thời khóa biểu</div>
   <div class="grid">
     <div class="card">
       <h3>📅 Thời khóa biểu</h3>
       <ul>
-        <a class="li-link" href="GiaoAn_TongHop_Lop6_He2026.html">
+        <a class="li-link" href="giao-an-he-2026/index.html">
           <li><span class="mi">🗓️</span> TKB tuần <span class="arrow">→</span></li>
         </a>
         <li><span class="mi">🌞</span> Lịch học hè <span class="tag">Sắp có</span></li>
       </ul>
     </div>
     <div class="card">
-      <h3>📚 Giáo án</h3>
+      <h3>📌 Theo dõi &amp; ghi chú</h3>
       <ul>
-        <a class="li-link" href="GiaoAn_TongHop_Lop6_He2026.html">
-          <li><span class="mi">📖</span> Giáo án tổng hợp Hè 2026 <span class="arrow">→</span></li>
-        </a>
         <li><span class="mi">✅</span> Bảng theo dõi tiến độ <span class="tag">Sắp có</span></li>
+        <li><span class="mi">📓</span> Nhật ký học <span class="tag">Sắp có</span></li>
       </ul>
     </div>
   </div>
