@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 9 – Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương III. Căn bậc hai và căn bậc ba</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="07-can-bac-hai-va-can-thuc-bac-hai.html">Bài 7</a>
+    <a href="08-khai-can-bac-hai-voi-phep-nhan-va-phep-chia.html">Bài 8</a>
+    <a href="09-bien-doi-don-gian-va-rut-gon-bieu-thuc-chua-can.html"><b>Bài 9</b></a>
+  </nav>
+</header>
+<main>
+<h1>Bài 9. Biến đổi đơn giản và rút gọn biểu thức chứa căn thức bậc hai</h1>
+<p class="sub">Bài quan trọng nhất của chương với đề kiểm tra: câu "rút gọn" 1,5 đến 2 điểm hầu như chỉ dùng bài này cộng với bài 7, 8.</p>
+
+<section id="dua-ra-ngoai" data-say="Mục 9.1, đưa thừa số ra ngoài dấu căn. Với b không âm, căn của a bình phương nhân b bằng giá trị tuyệt đối của a nhân căn b. Dùng mọi khi gặp căn n với n không phải số nguyên tố: tách bình phương lớn nhất ra khỏi n, để phần dưới dấu căn không còn thừa số chính phương, nhờ đó các căn đồng dạng lộ ra. Quy trình: phân tích n ra thừa số nguyên tố, hoặc nhẩm bình phương lớn nhất chia hết n, như 4, 9, 16, 25, 36, 49, 64, 81, 100; rồi viết n bằng a bình phương nhân b và đưa a ra ngoài. Ví dụ: căn 125 bằng căn của 25 nhân 5, bằng 5 căn 5. Căn 45 bằng căn của 9 nhân 5, bằng 3 căn 5. Căn 72 bằng căn của 36 nhân 2, bằng 6 căn 2. Lỗi hay gặp: tách chưa hết, viết căn 72 bằng 2 căn 18 rồi dừng, trong khi 18 vẫn chứa 9; và quên dấu giá trị tuyệt đối khi a là chữ có thể âm." data-audio="audio/09-dua-ra-ngoai.mp3">
+<h2>9.1. Đưa thừa số ra ngoài dấu căn: <span class="m"><span class="sq"><span>a²b</span></span> = |a|<span class="sq"><span>b</span></span></span></h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Với <span class="m">b ≥ 0</span>: <span class="m"><span class="sq"><span>a²·b</span></span> = |a|·<span class="sq"><span>b</span></span></span>. (Suy từ bài 8: <span class="m"><span class="sq"><span>a²b</span></span> = <span class="sq"><span>a²</span></span>·<span class="sq"><span>b</span></span></span>, rồi bài 7: <span class="m"><span class="sq"><span>a²</span></span> = |a|</span>.)</p></div>
+<h3>Khi nào dùng</h3>
+<p>Mọi khi gặp <span class="m"><span class="sq"><span>n</span></span></span> với <span class="m">n</span> không phải số nguyên tố: tách bình phương lớn nhất ra khỏi <span class="m">n</span>. Mục tiêu: phần dưới dấu căn không còn thừa số chính phương, để các căn "đồng dạng" lộ ra (xem 9.5).</p>
+<h3>Quy trình</h3>
+<ol>
+<li>Phân tích <span class="m">n</span> ra thừa số nguyên tố, hoặc nhẩm bình phương lớn nhất chia hết <span class="m">n</span> (4, 9, 16, 25, 36, 49, 64, 81, 100…).</li>
+<li>Viết <span class="m">n = a²·b</span>, đưa <span class="m">a</span> ra ngoài.</li>
+</ol>
+<div class="vd"><b>Ví dụ.</b> <span class="m"><span class="sq"><span>125</span></span> = <span class="sq"><span>25·5</span></span> = 5<span class="sq"><span>5</span></span></span>; &nbsp; <span class="m"><span class="sq"><span>45</span></span> = <span class="sq"><span>9·5</span></span> = 3<span class="sq"><span>5</span></span></span>; &nbsp; <span class="m"><span class="sq"><span>72</span></span> = <span class="sq"><span>36·2</span></span> = 6<span class="sq"><span>2</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> tách chưa hết, viết <span class="m"><span class="sq"><span>72</span></span> = 2<span class="sq"><span>18</span></span></span> rồi dừng (18 vẫn chứa 9); quên dấu giá trị tuyệt đối khi <span class="m">a</span> là chữ có thể âm.</div>
+</section>
+
+<section id="dua-vao-trong" data-say="Mục 9.2, đưa thừa số vào trong dấu căn. Với b không âm: nếu a không âm thì a căn b bằng căn của a bình phương nhân b; nếu a âm thì a căn b bằng trừ căn của a bình phương nhân b. Dùng chủ yếu để so sánh hai số có căn: đưa hết vào trong rồi so sánh số dưới căn. Ví dụ: so sánh 3 căn 5 và 2 căn 11. 3 căn 5 bằng căn 45, 2 căn 11 bằng căn 44; 45 lớn hơn 44 nên 3 căn 5 lớn hơn 2 căn 11. Lỗi hay gặp: với a âm, đưa vào trong mà quên giữ dấu trừ ở ngoài: trừ 2 căn 3 bằng trừ căn 12, không phải căn 12." data-audio="audio/09-dua-vao-trong.mp3">
+<h2>9.2. Đưa thừa số vào trong dấu căn</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Với <span class="m">b ≥ 0</span>: nếu <span class="m">a ≥ 0</span> thì <span class="m">a<span class="sq"><span>b</span></span> = <span class="sq"><span>a²b</span></span></span>; nếu <span class="m">a &lt; 0</span> thì <span class="m">a<span class="sq"><span>b</span></span> = −<span class="sq"><span>a²b</span></span></span>.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Chủ yếu để <b>so sánh</b> hai số có căn: đưa hết vào trong rồi so sánh số dưới căn.</p>
+<div class="vd"><b>Ví dụ.</b> So sánh <span class="m">3<span class="sq"><span>5</span></span></span> và <span class="m">2<span class="sq"><span>11</span></span></span>: <span class="m">3<span class="sq"><span>5</span></span> = <span class="sq"><span>45</span></span></span>, <span class="m">2<span class="sq"><span>11</span></span> = <span class="sq"><span>44</span></span></span>; <span class="m">45 &gt; 44</span> nên <span class="m">3<span class="sq"><span>5</span></span> &gt; 2<span class="sq"><span>11</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> với <span class="m">a &lt; 0</span> đưa vào trong mà quên giữ dấu trừ ở ngoài: <span class="m">−2<span class="sq"><span>3</span></span> = −<span class="sq"><span>12</span></span></span>, không phải <span class="m"><span class="sq"><span>12</span></span></span>.</div>
+</section>
+
+<section id="khu-mau" data-say="Mục 9.3, khử mẫu của biểu thức lấy căn. Với a không âm và b dương: căn của a phần b bằng căn của a nhân b, chia cho b. Dùng khi có phân số dưới dấu căn: nhân tử và mẫu với mẫu để mẫu thành bình phương, rồi đưa ra ngoài. Ví dụ: căn của 2 phần 3 bằng căn của 6 phần 9, bằng căn 6 chia 3." data-audio="audio/09-khu-mau.mp3">
+<h2>9.3. Khử mẫu của biểu thức lấy căn</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Với <span class="m">a ≥ 0</span>, <span class="m">b &gt; 0</span>: <span class="m"><span class="sq"><span><span class="frac"><span>a</span><span>b</span></span></span></span> = <span class="frac"><span><span class="sq"><span>a·b</span></span></span><span>b</span></span></span>.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Có phân số dưới dấu căn. Nhân tử và mẫu với mẫu để mẫu thành bình phương, rồi đưa ra ngoài.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m"><span class="sq"><span>2/3</span></span> = <span class="sq"><span>6/9</span></span> = <span class="sq"><span>6</span></span>/3</span>.</div>
+</section>
+
+<section id="truc-can-thuc" data-say="Mục 9.4, trục căn thức ở mẫu. Trường hợp mẫu là một căn: c chia căn a bằng c căn a chia a. Trường hợp mẫu là tổng hoặc hiệu có căn: c chia, căn a trừ căn b, bằng c nhân, căn a cộng căn b, chia cho a trừ b. Tương tự, khi mẫu là căn a cộng căn b thì nhân với căn a trừ căn b. Hai biểu thức căn a cộng căn b và căn a trừ căn b gọi là liên hợp của nhau. Nhân với liên hợp thì mẫu hết căn, nhờ hằng đẳng thức x trừ y, nhân, x cộng y, bằng x bình phương trừ y bình phương. Dùng khi mẫu số có chứa căn; bài thi luôn yêu cầu kết quả cuối không còn căn ở mẫu. Quy trình bốn bước. Một: xác định mẫu là một căn, hay tổng hiệu hai số hạng có căn. Hai: nhân cả tử và mẫu với căn đó, hoặc với liên hợp, nhớ đổi dấu giữa hai số hạng. Ba: tính mẫu, căn a bình phương trừ căn b bình phương bằng a trừ b, là số không có căn. Bốn: rút gọn phân số nếu tử và mẫu có thừa số chung. Ví dụ: 6 chia căn 2 bằng 6 căn 2 chia 2, bằng 3 căn 2. 15 chia, căn 5 trừ căn 2, bằng 15 nhân, căn 5 cộng căn 2, chia cho 5 trừ 2, bằng 5 căn 5 cộng 5 căn 2. Lỗi hay gặp: chỉ nhân mẫu mà quên nhân tử; chọn liên hợp sai dấu; tính mẫu thành căn 3 thay vì 5 trừ 2 bằng 3." data-audio="audio/09-truc-can-thuc.mp3">
+<h2>9.4. Trục căn thức ở mẫu</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ul>
+<li>Mẫu là một căn: với <span class="m">a &gt; 0</span>, <span class="m"><span class="frac"><span>c</span><span><span class="sq"><span>a</span></span></span></span> = <span class="frac"><span>c<span class="sq"><span>a</span></span></span><span>a</span></span></span>.</li>
+<li>Mẫu là tổng hoặc hiệu có căn: với <span class="m">a, b ≥ 0</span>, <span class="m">a ≠ b</span>, <span class="m"><span class="frac"><span>c</span><span><span class="sq"><span>a</span></span> − <span class="sq"><span>b</span></span></span></span> = <span class="frac"><span>c(<span class="sq"><span>a</span></span> + <span class="sq"><span>b</span></span>)</span><span>a − b</span></span></span> và <span class="m"><span class="frac"><span>c</span><span><span class="sq"><span>a</span></span> + <span class="sq"><span>b</span></span></span></span> = <span class="frac"><span>c(<span class="sq"><span>a</span></span> − <span class="sq"><span>b</span></span>)</span><span>a − b</span></span></span>.</li>
+</ul>
+<p>Biểu thức <span class="m"><span class="sq"><span>a</span></span> + <span class="sq"><span>b</span></span></span> và <span class="m"><span class="sq"><span>a</span></span> − <span class="sq"><span>b</span></span></span> gọi là <b>liên hợp</b> của nhau. Nhân với liên hợp thì mẫu hết căn nhờ <span class="m">(x − y)(x + y) = x² − y²</span>.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Mẫu số có chứa căn. Bài thi luôn yêu cầu kết quả cuối không còn căn ở mẫu.</p>
+<h3>Quy trình</h3>
+<ol>
+<li>Xác định mẫu: một căn, hay tổng/hiệu hai số hạng có căn.</li>
+<li>Nhân <b>cả tử và mẫu</b> với căn đó (trường hợp một căn) hoặc với liên hợp (đổi dấu giữa hai số hạng).</li>
+<li>Tính mẫu: <span class="m">(<span class="sq"><span>a</span></span>)² − (<span class="sq"><span>b</span></span>)² = a − b</span>, là số không có căn.</li>
+<li>Rút gọn phân số nếu tử và mẫu có thừa số chung.</li>
+</ol>
+<div class="vd"><b>Ví dụ.</b> <span class="m"><span class="frac"><span>6</span><span><span class="sq"><span>2</span></span></span></span> = <span class="frac"><span>6<span class="sq"><span>2</span></span></span><span>2</span></span> = 3<span class="sq"><span>2</span></span></span>. &nbsp; <span class="m"><span class="frac"><span>15</span><span><span class="sq"><span>5</span></span> − <span class="sq"><span>2</span></span></span></span> = <span class="frac"><span>15(<span class="sq"><span>5</span></span> + <span class="sq"><span>2</span></span>)</span><span>5 − 2</span></span> = 5<span class="sq"><span>5</span></span> + 5<span class="sq"><span>2</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> chỉ nhân mẫu, quên nhân tử; chọn liên hợp sai dấu (liên hợp của <span class="m"><span class="sq"><span>5</span></span> − <span class="sq"><span>2</span></span></span> là <span class="m"><span class="sq"><span>5</span></span> + <span class="sq"><span>2</span></span></span>, không phải <span class="m">−<span class="sq"><span>5</span></span> − <span class="sq"><span>2</span></span></span>); tính mẫu thành <span class="m"><span class="sq"><span>5</span></span> − <span class="sq"><span>2</span></span></span> hay <span class="m"><span class="sq"><span>3</span></span></span> thay vì <span class="m">5 − 2 = 3</span>.</div>
+</section>
+
+<section id="can-dong-dang" data-say="Mục 9.5, căn thức đồng dạng và rút gọn biểu thức. Các căn thức có cùng phần dưới dấu căn, sau khi đã đưa thừa số ra ngoài, gọi là đồng dạng. Cộng trừ căn đồng dạng như cộng trừ đơn thức: 3 căn 5 cộng 10 căn 5 trừ 2 căn 5 bằng 11 căn 5. Quy trình rút gọn một biểu thức chứa căn, dùng cho cả câu thi. Một: xử lý từng số hạng riêng, đưa thừa số ra ngoài, trục căn ở mẫu, khai căn dạng bình phương. Hai: viết lại biểu thức với các số hạng đã gọn, chú ý dấu trừ trước ngoặc. Ba: gom các căn đồng dạng, cộng trừ hệ số. Bốn: kiểm tra bằng máy tính, giá trị gần đúng của biểu thức ban đầu và của kết quả phải trùng nhau. Ví dụ: căn 50 trừ 3 căn 8 cộng căn 18, bằng 5 căn 2 trừ 6 căn 2 cộng 3 căn 2, bằng 2 căn 2. Lỗi hay gặp: cộng các căn không đồng dạng, như căn 2 cộng căn 3 bằng căn 5, sai; bỏ ngoặc sau dấu trừ mà không đổi dấu cả hai số hạng trong ngoặc; rút gọn xong vẫn còn căn ở mẫu." data-audio="audio/09-can-dong-dang.mp3">
+<h2>9.5. Căn thức đồng dạng và rút gọn biểu thức</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Các căn thức có cùng phần dưới dấu căn (sau khi đã đưa thừa số ra ngoài) gọi là <b>đồng dạng</b>. Cộng, trừ căn đồng dạng như cộng, trừ đơn thức: <span class="m">3<span class="sq"><span>5</span></span> + 10<span class="sq"><span>5</span></span> − 2<span class="sq"><span>5</span></span> = (3 + 10 − 2)<span class="sq"><span>5</span></span> = 11<span class="sq"><span>5</span></span></span>.</p></div>
+<h3>Quy trình rút gọn một biểu thức chứa căn (dùng cho cả câu thi)</h3>
+<ol>
+<li>Xử lý từng số hạng riêng: đưa thừa số ra ngoài (9.1), trục căn ở mẫu (9.4), khai căn dạng bình phương (bài 7, mục 7.4).</li>
+<li>Viết lại biểu thức với các số hạng đã gọn, chú ý dấu trừ trước ngoặc.</li>
+<li>Gom các căn đồng dạng, cộng trừ hệ số.</li>
+<li>Kiểm tra bằng máy tính: bấm biểu thức ban đầu và kết quả, hai giá trị gần đúng phải trùng nhau.</li>
+</ol>
+<div class="vd"><b>Ví dụ.</b> <span class="m"><span class="sq"><span>50</span></span> − 3<span class="sq"><span>8</span></span> + <span class="sq"><span>18</span></span> = 5<span class="sq"><span>2</span></span> − 6<span class="sq"><span>2</span></span> + 3<span class="sq"><span>2</span></span> = 2<span class="sq"><span>2</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> cộng căn không đồng dạng (<span class="m"><span class="sq"><span>2</span></span> + <span class="sq"><span>3</span></span> = <span class="sq"><span>5</span></span></span>, sai); bỏ ngoặc sau dấu trừ mà không đổi dấu cả hai số hạng trong ngoặc; rút gọn xong vẫn còn căn ở mẫu.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 9. Câu một: rút gọn căn 50 trừ 3 căn 8 cộng căn 18. Câu hai: so sánh 2 căn 7 và 3 căn 3. Câu ba: trục căn thức ở mẫu: 4 chia, căn 7 trừ căn 3; và 10 chia căn 5. Câu bốn: rút gọn 2 căn 3 cộng 5 căn 27 trừ một phần hai căn 48." data-audio="audio/09-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li>Rút gọn <span class="m"><span class="sq"><span>50</span></span> − 3<span class="sq"><span>8</span></span> + <span class="sq"><span>18</span></span></span>.</li>
+<li>So sánh <span class="m">2<span class="sq"><span>7</span></span></span> và <span class="m">3<span class="sq"><span>3</span></span></span>.</li>
+<li>Trục căn thức: <span class="m"><span class="frac"><span>4</span><span><span class="sq"><span>7</span></span> − <span class="sq"><span>3</span></span></span></span></span>; <span class="m"><span class="frac"><span>10</span><span><span class="sq"><span>5</span></span></span></span></span>.</li>
+<li>Rút gọn <span class="m">2<span class="sq"><span>3</span></span> + 5<span class="sq"><span>27</span></span> − <span class="frac"><span>1</span><span>2</span></span><span class="sq"><span>48</span></span></span>.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">2<span class="sq"><span>2</span></span></span>.</li>
+<li><span class="m"><span class="sq"><span>28</span></span> &gt; <span class="sq"><span>27</span></span></span> nên <span class="m">2<span class="sq"><span>7</span></span> &gt; 3<span class="sq"><span>3</span></span></span>.</li>
+<li><span class="m"><span class="sq"><span>7</span></span> + <span class="sq"><span>3</span></span></span> (mẫu <span class="m">7 − 3 = 4</span> rút với 4); <span class="m">2<span class="sq"><span>5</span></span></span>.</li>
+<li><span class="m">2<span class="sq"><span>3</span></span> + 15<span class="sq"><span>3</span></span> − 2<span class="sq"><span>3</span></span> = 15<span class="sq"><span>3</span></span></span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 5 – Bất đẳng thức và tính chất</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương II. Phương trình và bất phương trình bậc nhất một ẩn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="04-phuong-trinh-quy-ve-phuong-trinh-bac-nhat-mot-an.html">Bài 4</a>
+    <a href="05-bat-dang-thuc-va-tinh-chat.html"><b>Bài 5</b></a>
+    <a href="06-bat-phuong-trinh-bac-nhat-mot-an.html">Bài 6</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 5. Bất đẳng thức và tính chất</h1>
+<p class="sub">Bài nền cho bài 6. Điều quan trọng nhất: nhân hoặc chia hai vế với số âm thì phải đổi chiều.</p>
+
+<section id="bat-dang-thuc" data-say="Mục 5.1, bất đẳng thức. Hệ thức dạng a nhỏ hơn b, a lớn hơn b, a nhỏ hơn hoặc bằng b, a lớn hơn hoặc bằng b gọi là bất đẳng thức; a là vế trái, b là vế phải. Hai bất đẳng thức cùng chiều là hai bất đẳng thức cùng dấu nhỏ hơn hoặc cùng dấu lớn hơn. Khi dùng: đọc đề thực tế thành bất đẳng thức: không vượt quá là nhỏ hơn hoặc bằng; ít nhất là lớn hơn hoặc bằng; nhiều hơn là lớn hơn; chưa đến là nhỏ hơn. Ví dụ: số tiền phải trả không vượt quá 500 nghìn đồng, viết là T nhỏ hơn hoặc bằng 500000. Lỗi hay gặp: lẫn dấu nhỏ hơn với nhỏ hơn hoặc bằng, làm mất hoặc thêm giá trị biên." data-audio="audio/05-bat-dang-thuc.mp3">
+<h2>5.1. Bất đẳng thức</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Hệ thức dạng <span class="m">a &lt; b</span>, <span class="m">a &gt; b</span>, <span class="m">a ≤ b</span>, <span class="m">a ≥ b</span> gọi là <b>bất đẳng thức</b>; <span class="m">a</span> là vế trái, <span class="m">b</span> là vế phải. Hai bất đẳng thức <span class="m">a &lt; b</span> và <span class="m">c &lt; d</span> gọi là <b>cùng chiều</b>.</p></div>
+<h3>Khi nào dùng</h3>
+<table>
+<tr><th>Đề nói</th><th>Dấu</th></tr>
+<tr><td>không vượt quá, tối đa, nhiều nhất là</td><td class="m">≤</td></tr>
+<tr><td>ít nhất, tối thiểu, không ít hơn</td><td class="m">≥</td></tr>
+<tr><td>nhiều hơn, vượt quá</td><td class="m">&gt;</td></tr>
+<tr><td>chưa đến, ít hơn</td><td class="m">&lt;</td></tr>
+</table>
+<div class="vd"><b>Ví dụ.</b> "Số tiền phải trả không vượt quá 500 000 đồng" → <span class="m">T ≤ 500 000</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> lẫn <span class="m">&lt;</span> với <span class="m">≤</span>, làm mất hoặc thêm giá trị biên.</div>
+</section>
+
+<section id="tinh-chat" data-say="Mục 5.2, tính chất của bất đẳng thức. Tính chất bắc cầu: nếu a nhỏ hơn b và b nhỏ hơn c thì a nhỏ hơn c. Cộng: cộng cùng một số vào hai vế, bất đẳng thức không đổi chiều; nhờ đó được chuyển vế đổi dấu. Nhân với số dương: nhân hoặc chia hai vế với cùng một số dương, bất đẳng thức không đổi chiều. Nhân với số âm: nhân hoặc chia hai vế với cùng một số âm, bất đẳng thức đổi chiều. Dùng khi giải bất phương trình ở bài 6, và khi so sánh hai số. Ví dụ: từ trừ 2x nhỏ hơn 6, chia hai vế cho trừ 2, được x lớn hơn trừ 3, dấu đã đổi chiều. Lỗi hay gặp: chia cho số âm mà không đổi chiều; đây là lỗi mất điểm phổ biến nhất của chương." data-audio="audio/05-tinh-chat.mp3">
+<h2>5.2. Tính chất</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ul>
+<li><b>Bắc cầu:</b> <span class="m">a &lt; b</span> và <span class="m">b &lt; c</span> ⇒ <span class="m">a &lt; c</span>.</li>
+<li><b>Cộng:</b> <span class="m">a &lt; b ⇒ a + c &lt; b + c</span> (không đổi chiều). Hệ quả: chuyển vế đổi dấu.</li>
+<li><b>Nhân với số dương</b> <span class="m">c &gt; 0</span>: <span class="m">a &lt; b ⇒ ac &lt; bc</span> (không đổi chiều).</li>
+<li><b>Nhân với số âm</b> <span class="m">c &lt; 0</span>: <span class="m">a &lt; b ⇒ ac &gt; bc</span> (<b>đổi chiều</b>).</li>
+</ul></div>
+<h3>Khi nào dùng</h3>
+<p>Mỗi bước biến đổi bất phương trình (bài 6) đều dựa vào đây. Trước khi chia hai vế, nhìn dấu của số chia.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">−2x &lt; 6</span>, chia hai vế cho <span class="m">−2</span>: <span class="m">x &gt; −3</span> (đổi chiều). &nbsp; <span class="m">3x ≤ 12 ⇒ x ≤ 4</span> (chia cho 3 dương, giữ chiều).</div>
+<div class="loi"><b>Lỗi hay gặp:</b> chia cho số âm mà không đổi chiều. Lỗi mất điểm phổ biến nhất của chương.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 5. Câu một: viết thành bất đẳng thức: tuổi của An, gọi là x, ít nhất là 15. Câu hai: cho a nhỏ hơn b, so sánh 2a cộng 1 với 2b cộng 1; so sánh trừ 3a với trừ 3b. Câu ba: từ trừ 5x lớn hơn hoặc bằng 20, tìm x." data-audio="audio/05-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li>Viết thành bất đẳng thức: tuổi của An (<span class="m">x</span>) ít nhất là 15.</li>
+<li>Cho <span class="m">a &lt; b</span>. So sánh <span class="m">2a + 1</span> với <span class="m">2b + 1</span>; so sánh <span class="m">−3a</span> với <span class="m">−3b</span>.</li>
+<li>Từ <span class="m">−5x ≥ 20</span>, tìm <span class="m">x</span>.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">x ≥ 15</span>.</li>
+<li><span class="m">2a + 1 &lt; 2b + 1</span>; <span class="m">−3a &gt; −3b</span>.</li>
+<li><span class="m">x ≤ −4</span> (chia cho −5, đổi chiều).</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

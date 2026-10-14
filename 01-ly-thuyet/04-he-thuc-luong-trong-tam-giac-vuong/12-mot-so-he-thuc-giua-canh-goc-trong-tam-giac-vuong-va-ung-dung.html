@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 12 – Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương IV. Hệ thức lượng trong tam giác vuông</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="11-ti-so-luong-giac-cua-goc-nhon.html">Bài 11</a>
+    <a href="12-mot-so-he-thuc-giua-canh-goc-trong-tam-giac-vuong-va-ung-dung.html"><b>Bài 12</b></a>
+  </nav>
+</header>
+<main>
+<h1>Bài 12. Một số hệ thức giữa cạnh, góc trong tam giác vuông và ứng dụng</h1>
+<p class="sub">Bài "đo chiều cao, khoảng cách" trong đề (0,5 điểm) chỉ dùng một hệ thức ở đây cộng với máy tính.</p>
+
+<section id="he-thuc" data-say="Mục 12.1, hệ thức giữa cạnh và góc. Trong tam giác ABC vuông tại A, cạnh huyền a, hai cạnh góc vuông b đối diện góc B và c đối diện góc C. Cạnh góc vuông bằng cạnh huyền nhân sin góc đối, hoặc nhân cos góc kề: b bằng a sin B bằng a cos C. Cạnh góc vuông bằng cạnh góc vuông kia nhân tan góc đối, hoặc nhân cot góc kề: b bằng c tan B bằng c cot C. Cách chọn: cần cạnh góc vuông mà biết cạnh huyền thì dùng sin hoặc cos; biết cạnh góc vuông kia thì dùng tan hoặc cot. Ví dụ: tam giác ABC vuông tại A, AC bằng 1707, góc C bằng 30 độ; AB là cạnh đối của góc C, AC là cạnh kề, nên AB bằng AC nhân tan C. Lỗi hay gặp: dùng sin thay tan khi cạnh đã biết là cạnh góc vuông; lấy góc không kề cạnh đang xét." data-audio="audio/12-he-thuc.mp3">
+<h2>12.1. Hệ thức giữa cạnh và góc</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p><span class="m">ΔABC</span> vuông tại A, cạnh huyền <span class="m">a</span>, cạnh góc vuông <span class="m">b</span> (đối góc B), <span class="m">c</span> (đối góc C):</p>
+<ul>
+<li><span class="m">b = a·sin B = a·cos C</span>; &nbsp; <span class="m">c = a·sin C = a·cos B</span> (cạnh góc vuông = huyền × sin góc đối = huyền × cos góc kề).</li>
+<li><span class="m">b = c·tan B = c·cot C</span>; &nbsp; <span class="m">c = b·tan C = b·cot B</span> (cạnh góc vuông = cạnh góc vuông kia × tan góc đối = × cot góc kề).</li>
+</ul></div>
+<h3>Khi nào dùng</h3>
+<p>Cần một cạnh góc vuông: biết <b>cạnh huyền</b> → sin/cos; biết <b>cạnh góc vuông kia</b> → tan/cot. Luôn nêu "tam giác vuông tại đâu" trước khi viết hệ thức.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">ΔABC</span> vuông tại A, <span class="m">AC = 1707</span>, góc C = 30°: AB đối góc C, AC kề góc C ⇒ <span class="m">AB = AC · tan C</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> dùng sin khi cạnh đã biết là cạnh góc vuông; lấy nhầm góc.</div>
+</section>
+
+<section id="giai-tam-giac-vuong" data-say="Mục 12.2, giải tam giác vuông. Giải tam giác vuông là tính tất cả cạnh và góc còn lại khi biết hai yếu tố, trong đó có ít nhất một cạnh. Thứ tự thường dùng: tìm góc nhọn còn lại bằng 90 độ trừ góc đã biết; dùng hệ thức cạnh góc để tìm cạnh; cạnh cuối cùng có thể dùng Pythagore để kiểm tra. Ví dụ: vuông tại A, góc B bằng 40 độ, c bằng 5: góc C bằng 50 độ, b bằng 5 nhân tan 40 độ xấp xỉ 4,2, a bằng 5 chia cos 40 độ xấp xỉ 6,5. Lỗi hay gặp: dùng kết quả đã làm tròn để tính bước sau; không ghi đơn vị." data-audio="audio/12-giai-tam-giac-vuong.mp3">
+<h2>12.2. Giải tam giác vuông</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Giải tam giác vuông: tính mọi cạnh và góc còn lại khi biết hai yếu tố (có ít nhất một cạnh). Thứ tự: góc nhọn còn lại = 90° − góc đã biết → hệ thức cạnh-góc → Pythagore để kiểm tra.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Đề cho hai yếu tố của tam giác vuông và hỏi các yếu tố còn lại.</p>
+<div class="vd"><b>Ví dụ.</b> Vuông tại A, góc B = 40°, <span class="m">c = AB = 5</span>: góc C = 50°; <span class="m">b = 5·tan 40° ≈ 4,2</span>; <span class="m">a = 5 / cos 40° ≈ 6,5</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> dùng kết quả đã làm tròn để tính bước sau; thiếu đơn vị.</div>
+</section>
+
+<section id="ung-dung-do-chieu-cao" data-say="Mục 12.3, ứng dụng: đo chiều cao và khoảng cách. Mô hình: đứng ở điểm C cách chân vật A một khoảng d, nhìn đỉnh B dưới góc alpha so với mặt đất; tam giác ABC vuông tại A, chiều cao AB bằng d nhân tan alpha. Nếu biết chiều cao và khoảng cách, góc bằng shift tan của chiều cao chia khoảng cách. Nếu người quan sát có chiều cao mắt h thì cộng thêm h. Cách trình bày: vẽ hình, nêu tam giác vuông tại đâu, viết hệ thức, bấm máy, làm tròn đúng yêu cầu, trả lời có đơn vị. Ví dụ: AC bằng 1707 mét, góc C bằng 30 độ, AB bằng 1707 nhân tan 30 độ xấp xỉ 985,6, làm tròn là 986 mét. Lỗi hay gặp: nhầm góc với mặt đất và góc với phương thẳng đứng; chọn sai cạnh kề; làm tròn sai yêu cầu." data-audio="audio/12-ung-dung-do-chieu-cao.mp3">
+<h2>12.3. Ứng dụng: đo chiều cao, khoảng cách</h2>
+<div class="sgk"><div class="t">Mô hình</div>
+<p>Đứng tại C cách chân vật A một khoảng <span class="m">d</span>, nhìn đỉnh B dưới góc <span class="m">α</span> so với mặt đất: <span class="m">ΔABC</span> vuông tại A, <span class="m">AB = d·tan α</span>. Biết chiều cao và khoảng cách: <span class="m">α = </span> SHIFT tan <span class="m">(AB/AC)</span>. Có chiều cao mắt <span class="m">h</span> thì cộng thêm <span class="m">h</span>.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Mọi bài "tính chiều cao tòa nhà, cây, núi, cột cờ; khoảng cách đến tàu, đảo". Trình bày: hình vẽ → vuông tại đâu → hệ thức → bấm máy → làm tròn đúng yêu cầu → trả lời có đơn vị.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">AC = 1707</span> m, góc C = 30°: <span class="m">AB = 1707·tan 30° ≈ 985,6 ≈ 986</span> m.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> nhầm góc với mặt đất và góc với phương thẳng đứng; chọn sai cạnh kề; làm tròn sai yêu cầu.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 12. Câu một: tam giác ABC vuông tại A, BC bằng 10, góc B bằng 35 độ. Tính AB và AC, làm tròn một chữ số thập phân. Câu hai: một cái thang dài 4 mét dựa vào tường, tạo với mặt đất góc 65 độ. Hỏi chân thang cách tường bao nhiêu và thang chạm tường ở độ cao bao nhiêu? Câu ba: từ điểm cách chân tháp 50 mét nhìn đỉnh tháp dưới góc 60 độ. Tính chiều cao tháp, làm tròn hàng đơn vị." data-audio="audio/12-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">ΔABC</span> vuông tại A, <span class="m">BC = 10</span>, góc B = 35°. Tính AB, AC (làm tròn 1 chữ số thập phân).</li>
+<li>Thang dài 4 m dựa vào tường, tạo với mặt đất góc 65°. Chân thang cách tường bao nhiêu? Thang chạm tường ở độ cao bao nhiêu?</li>
+<li>Từ điểm cách chân tháp 50 m nhìn đỉnh tháp dưới góc 60°. Tính chiều cao tháp (làm tròn hàng đơn vị).</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">AC = 10·sin 35° ≈ 5,7</span>; <span class="m">AB = 10·cos 35° ≈ 8,2</span>.</li>
+<li>Cách tường <span class="m">4·cos 65° ≈ 1,7</span> m; độ cao <span class="m">4·sin 65° ≈ 3,6</span> m.</li>
+<li><span class="m">50·tan 60° = 50<span class="sq"><span>3</span></span> ≈ 86,6 ≈ 87</span> m.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 1 – Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương I. Phương trình và hệ hai phương trình bậc nhất hai ẩn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="01-khai-niem-phuong-trinh-va-he-hai-phuong-trinh-bac-nhat-hai-an.html"><b>Bài 1</b></a>
+    <a href="02-giai-he-hai-phuong-trinh-bac-nhat-hai-an.html">Bài 2</a>
+    <a href="03-giai-bai-toan-bang-cach-lap-he-phuong-trinh.html">Bài 3</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 1. Khái niệm phương trình và hệ hai phương trình bậc nhất hai ẩn</h1>
+<p class="sub">Bài nền: biết thế nào là nghiệm của phương trình hai ẩn và của hệ, để sau này kiểm tra kết quả khi giải hệ (bài 2) và khi giải toán bằng cách lập hệ (bài 3).</p>
+
+<section id="pt-bac-nhat-hai-an" data-say="Mục 1.1, phương trình bậc nhất hai ẩn. Phương trình bậc nhất hai ẩn x và y có dạng a x cộng b y bằng c, trong đó a, b, c là các số đã biết và a, b không đồng thời bằng 0. Cặp số x không, y không gọi là một nghiệm nếu thay vào thì hai vế bằng nhau. Mỗi phương trình bậc nhất hai ẩn có vô số nghiệm; trên mặt phẳng tọa độ, tập nghiệm là một đường thẳng. Ví dụ: phương trình 2x trừ 5y bằng 17 nhận cặp 1, trừ 3 làm nghiệm, vì 2 nhân 1 trừ 5 nhân trừ 3 bằng 2 cộng 15 bằng 17. Lỗi hay gặp: viết nghiệm là một số thay vì một cặp số; hoặc đổi chỗ x và y trong cặp." data-audio="audio/01-pt-bac-nhat-hai-an.mp3">
+<h2>1.1. Phương trình bậc nhất hai ẩn</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Phương trình bậc nhất hai ẩn <span class="m">x, y</span> có dạng <span class="m">ax + by = c</span>, trong đó <span class="m">a, b, c</span> là các số đã biết, <span class="m">a</span> và <span class="m">b</span> không đồng thời bằng 0.</p>
+<ul>
+<li>Cặp số <span class="m">(x₀; y₀)</span> là một <b>nghiệm</b> nếu thay <span class="m">x = x₀, y = y₀</span> vào thì hai vế bằng nhau.</li>
+<li>Mỗi phương trình bậc nhất hai ẩn có <b>vô số nghiệm</b>; tập nghiệm biểu diễn trên mặt phẳng tọa độ là một đường thẳng.</li>
+</ul></div>
+<h3>Khi nào dùng</h3>
+<p>Khi đề hỏi "cặp số nào là nghiệm", "tìm một nghiệm", hoặc khi cần thử lại kết quả sau khi giải hệ. Nghiệm luôn viết dưới dạng cặp <span class="m">(x; y)</span>, đúng thứ tự.</p>
+<div class="vd"><b>Ví dụ.</b> Phương trình <span class="m">2x − 5y = 17</span> nhận <span class="m">(1; −3)</span> làm nghiệm vì <span class="m">2·1 − 5·(−3) = 2 + 15 = 17</span>. Cặp <span class="m">(−3; 1)</span> không phải nghiệm vì <span class="m">2·(−3) − 5·1 = −11 ≠ 17</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> viết nghiệm là một số thay vì một cặp số; đổi chỗ <span class="m">x</span> và <span class="m">y</span> trong cặp.</div>
+</section>
+
+<section id="he-hai-pt" data-say="Mục 1.2, hệ hai phương trình bậc nhất hai ẩn. Hệ gồm hai phương trình bậc nhất hai ẩn viết chung trong một dấu ngoặc nhọn. Cặp số x không, y không là nghiệm của hệ khi nó là nghiệm chung của cả hai phương trình. Giải hệ là tìm tất cả các nghiệm của hệ. Dùng khi kiểm tra một cặp số có phải nghiệm của hệ không: thay vào cả hai phương trình, cả hai đều đúng mới nhận. Ví dụ: với hệ 2x trừ 5y bằng 17 và x cộng 2y bằng trừ 5, cặp 1, trừ 3 thỏa phương trình thứ nhất vì 2 cộng 15 bằng 17, thỏa phương trình thứ hai vì 1 trừ 6 bằng trừ 5, nên là nghiệm của hệ. Lỗi hay gặp: chỉ thử một phương trình rồi kết luận." data-audio="audio/01-he-hai-pt.mp3">
+<h2>1.2. Hệ hai phương trình bậc nhất hai ẩn và nghiệm của hệ</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Hệ hai phương trình bậc nhất hai ẩn có dạng <span class="m">{ ax + by = c ; a'x + b'y = c' }</span>. Cặp số <span class="m">(x₀; y₀)</span> là <b>nghiệm của hệ</b> nếu nó là nghiệm chung của cả hai phương trình. <b>Giải hệ</b> là tìm tất cả các nghiệm của hệ.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Kiểm tra một cặp số có là nghiệm của hệ: thay vào <b>cả hai</b> phương trình, cả hai đều đúng mới nhận. Đây cũng là bước "thử lại" bắt buộc sau khi giải hệ ở bài 2.</p>
+<div class="vd"><b>Ví dụ.</b> Hệ <span class="m">{ 2x − 5y = 17 ; x + 2y = −5 }</span>: cặp <span class="m">(1; −3)</span> thỏa phương trình thứ nhất (<span class="m">2 + 15 = 17</span>) và thứ hai (<span class="m">1 − 6 = −5</span>) nên là nghiệm của hệ.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> chỉ thử một phương trình rồi kết luận là nghiệm của hệ.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 1. Câu một: trong các cặp số 2, 1; 0, trừ 3; và trừ 1, trừ 5, cặp nào là nghiệm của phương trình 3x trừ y bằng 5? Câu hai: cặp số 2, trừ 1 có là nghiệm của hệ x cộng y bằng 1 và 2x trừ y bằng 5 không? Câu ba: tìm hai nghiệm của phương trình x cộng 2y bằng 4." data-audio="audio/01-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li>Trong các cặp số <span class="m">(2; 1)</span>, <span class="m">(0; −3)</span>, <span class="m">(−1; −5)</span>, cặp nào là nghiệm của <span class="m">3x − y = 5</span>?</li>
+<li>Cặp <span class="m">(2; −1)</span> có là nghiệm của hệ <span class="m">{ x + y = 1 ; 2x − y = 5 }</span> không?</li>
+<li>Tìm hai nghiệm của phương trình <span class="m">x + 2y = 4</span>.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">(2; 1)</span>: <span class="m">6 − 1 = 5</span> ✓. <span class="m">(0; −3)</span>: <span class="m">0 + 3 = 3</span> ✗. <span class="m">(−1; −5)</span>: <span class="m">−3 + 5 = 2</span> ✗.</li>
+<li>Có: <span class="m">2 + (−1) = 1</span> ✓ và <span class="m">4 + 1 = 5</span> ✓.</li>
+<li>Chẳng hạn <span class="m">(0; 2)</span> và <span class="m">(4; 0)</span>; chọn <span class="m">x</span> tùy ý rồi tính <span class="m">y = (4 − x)/2</span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

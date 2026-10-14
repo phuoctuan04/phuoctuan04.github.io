@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 6 – Bất phương trình bậc nhất một ẩn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương II. Phương trình và bất phương trình bậc nhất một ẩn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="04-phuong-trinh-quy-ve-phuong-trinh-bac-nhat-mot-an.html">Bài 4</a>
+    <a href="05-bat-dang-thuc-va-tinh-chat.html">Bài 5</a>
+    <a href="06-bat-phuong-trinh-bac-nhat-mot-an.html"><b>Bài 6</b></a>
+  </nav>
+</header>
+<main>
+<h1>Bài 6. Bất phương trình bậc nhất một ẩn</h1>
+<p class="sub">Đề kiểm tra thường ra dạng toán thực tế "nhiều nhất / ít nhất bao nhiêu" (0,75 điểm): lập bất phương trình rồi lấy số nguyên phù hợp.</p>
+
+<section id="dinh-nghia" data-say="Mục 6.1, định nghĩa. Bất phương trình bậc nhất một ẩn có dạng a x cộng b nhỏ hơn 0, hoặc lớn hơn 0, nhỏ hơn hoặc bằng 0, lớn hơn hoặc bằng 0, với a khác 0. Số x không là một nghiệm nếu thay vào được bất đẳng thức đúng. Giải bất phương trình là tìm tất cả các nghiệm; tập nghiệm thường là một khoảng, viết dạng x lớn hơn số nào đó hoặc x nhỏ hơn số nào đó. Ví dụ: 2x trừ 6 nhỏ hơn 0 có nghiệm là mọi x nhỏ hơn 3. Lỗi hay gặp: chỉ ghi một số làm nghiệm, trong khi bất phương trình có vô số nghiệm." data-audio="audio/06-dinh-nghia.mp3">
+<h2>6.1. Định nghĩa và nghiệm</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Bất phương trình bậc nhất một ẩn có dạng <span class="m">ax + b &lt; 0</span> (hoặc <span class="m">&gt; 0, ≤ 0, ≥ 0</span>), với <span class="m">a ≠ 0</span>. Số <span class="m">x₀</span> là <b>nghiệm</b> nếu thay vào được bất đẳng thức đúng. <b>Giải</b> bất phương trình là tìm tất cả các nghiệm.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Nhận dạng: có dấu <span class="m">&lt;, &gt;, ≤, ≥</span> và ẩn bậc nhất. Tập nghiệm là một khoảng (<span class="m">x &lt; 3</span>, <span class="m">x ≥ −2</span>…), không phải một số.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">2x − 6 &lt; 0</span> có nghiệm là mọi <span class="m">x &lt; 3</span>; <span class="m">x = 0</span> là một nghiệm, <span class="m">x = 5</span> không phải.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> chỉ ghi một số làm nghiệm.</div>
+</section>
+
+<section id="cach-giai" data-say="Mục 6.2, cách giải. Dùng tính chất của bất đẳng thức ở bài 5. Bước một: chuyển các hạng tử chứa x sang một vế, số sang vế kia, nhớ đổi dấu khi chuyển vế. Bước hai: thu gọn thành a x nhỏ hơn c, hoặc dấu tương ứng. Bước ba: chia hai vế cho a; nếu a dương giữ nguyên chiều, nếu a âm đổi chiều. Bước bốn: kết luận nghiệm. Ví dụ: 3 trừ 2x lớn hơn hoặc bằng 9; chuyển vế: trừ 2x lớn hơn hoặc bằng 6; chia cho trừ 2, đổi chiều: x nhỏ hơn hoặc bằng trừ 3. Vậy nghiệm của bất phương trình là x nhỏ hơn hoặc bằng trừ 3. Lỗi hay gặp: chia cho số âm không đổi chiều; chuyển vế không đổi dấu; kết luận thiếu chữ nghiệm của bất phương trình." data-audio="audio/06-cach-giai.mp3">
+<h2>6.2. Cách giải</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ol>
+<li>Chuyển vế: hạng tử chứa <span class="m">x</span> sang một vế, số sang vế kia (đổi dấu khi chuyển).</li>
+<li>Thu gọn về dạng <span class="m">ax &lt; c</span> (hoặc dấu tương ứng).</li>
+<li>Chia hai vế cho <span class="m">a</span>: <span class="m">a &gt; 0</span> giữ chiều, <span class="m">a &lt; 0</span> <b>đổi chiều</b>.</li>
+<li>Kết luận: "Nghiệm của bất phương trình là <span class="m">x … </span>".</li>
+</ol></div>
+<h3>Khi nào dùng</h3>
+<p>Mọi bất phương trình bậc nhất, kể cả bất phương trình lập từ bài toán thực tế (6.3).</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">3 − 2x ≥ 9 ⇔ −2x ≥ 6 ⇔ x ≤ −3</span> (chia cho <span class="m">−2</span>, đổi chiều). Vậy nghiệm là <span class="m">x ≤ −3</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> chia cho số âm không đổi chiều; chuyển vế không đổi dấu; kết luận thiếu.</div>
+</section>
+
+<section id="bai-toan-thuc-te" data-say="Mục 6.3, bài toán thực tế dẫn đến bất phương trình. Dấu hiệu: đề hỏi nhiều nhất, ít nhất, tối đa, tối thiểu, hoặc có ràng buộc như không vượt quá số tiền. Quy trình: Một, gọi ẩn là đại lượng cần tìm, đặt điều kiện, thường là số tự nhiên. Hai, biểu diễn các đại lượng khác theo ẩn; ví dụ tổng 32 phần quà, có x phần loại A thì có 32 trừ x phần loại B. Ba, lập bất phương trình từ ràng buộc: tổng tiền nhỏ hơn hoặc bằng số tiền có. Bốn, giải bất phương trình. Năm, chọn số nguyên: hỏi nhiều nhất thì lấy số nguyên lớn nhất thỏa mãn, hỏi ít nhất thì lấy số nguyên nhỏ nhất; thử lại; trả lời bằng câu văn. Ví dụ: x nhỏ hơn hoặc bằng 19,33, x là số tự nhiên, thì x lớn nhất bằng 19. Lỗi hay gặp: làm tròn 19,33 thành 20, vượt quá số tiền; quên ghi x là số tự nhiên lớn nhất; lập phương trình bằng thay vì bất phương trình." data-audio="audio/06-bai-toan-thuc-te.mp3">
+<h2>6.3. Bài toán thực tế: "nhiều nhất", "ít nhất"</h2>
+<div class="sgk"><div class="t">Quy trình</div>
+<ol>
+<li>Gọi ẩn là đại lượng cần tìm, đặt điều kiện (thường <span class="m">x ∈ ℕ</span>).</li>
+<li>Biểu diễn các đại lượng khác theo ẩn (tổng 32 phần, <span class="m">x</span> loại A ⇒ <span class="m">32 − x</span> loại B).</li>
+<li>Lập bất phương trình từ ràng buộc (tổng tiền <span class="m">≤</span> số tiền có).</li>
+<li>Giải bất phương trình.</li>
+<li>Chọn số nguyên: "nhiều nhất" → số nguyên <b>lớn nhất</b> thỏa mãn; "ít nhất" → số nguyên <b>nhỏ nhất</b>. Thử lại, trả lời bằng câu văn.</li>
+</ol></div>
+<h3>Khi nào dùng</h3>
+<p>Đề có từ "nhiều nhất, ít nhất, tối đa, tối thiểu, không vượt quá". Chỉ một đại lượng chưa biết ⇒ một ẩn, một bất phương trình (khác bài 3 là hai ẩn, hai phương trình).</p>
+<div class="vd"><b>Ví dụ.</b> Giải ra <span class="m">x ≤ 19,33…</span> với <span class="m">x ∈ ℕ</span> ⇒ số lớn nhất là <span class="m">x = 19</span>. Thử lại với 19 thấy tổng tiền không vượt quá, với 20 thì vượt.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> làm tròn <span class="m">19,33</span> thành 20 (vượt số tiền); quên ghi "<span class="m">x</span> là số tự nhiên lớn nhất"; lập phương trình "=" thay vì bất phương trình.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 6. Câu một: giải bất phương trình 4x trừ 7 nhỏ hơn 2x cộng 5. Câu hai: giải bất phương trình 5 trừ 3x nhỏ hơn hoặc bằng 14. Câu ba: Bạn Lan có 150 nghìn đồng, muốn mua một quyển sách giá 48 nghìn và một số cây bút giá 12 nghìn một cây. Hỏi Lan mua được nhiều nhất bao nhiêu cây bút?" data-audio="audio/06-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">4x − 7 &lt; 2x + 5</span>.</li>
+<li><span class="m">5 − 3x ≤ 14</span>.</li>
+<li>Lan có 150 000 đồng, mua một quyển sách 48 000 đồng và một số cây bút 12 000 đồng/cây. Hỏi mua được nhiều nhất bao nhiêu cây bút?</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">2x &lt; 12 ⇔ x &lt; 6</span>.</li>
+<li><span class="m">−3x ≤ 9 ⇔ x ≥ −3</span>.</li>
+<li><span class="m">48 000 + 12 000x ≤ 150 000 ⇔ x ≤ 8,5</span>; <span class="m">x ∈ ℕ</span> lớn nhất là 8. Mua được nhiều nhất 8 cây bút.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

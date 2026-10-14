@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 17 – Vị trí tương đối của hai đường tròn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương V. Đường tròn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="13-mo-dau-ve-duong-tron.html">Bài 13</a>
+    <a href="14-cung-va-day-cua-mot-duong-tron.html">Bài 14</a>
+    <a href="15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html">Bài 15</a>
+    <a href="16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html">Bài 16</a>
+    <a href="17-vi-tri-tuong-doi-cua-hai-duong-tron.html"><b>Bài 17</b></a>
+  </nav>
+</header>
+<main>
+<h1>Bài 17. Vị trí tương đối của hai đường tròn</h1>
+<p class="sub">Bài cuối tập 1. Cùng một ý với bài 16: so sánh khoảng cách giữa hai tâm với các bán kính để biết hai đường tròn có mấy điểm chung.</p>
+
+<section id="vi-tri" data-say="Mục 17.1, năm vị trí tương đối. Gọi d là khoảng cách giữa hai tâm, R và r là hai bán kính với R lớn hơn hoặc bằng r. Hai đường tròn cắt nhau, có hai điểm chung, khi R trừ r nhỏ hơn d nhỏ hơn R cộng r. Tiếp xúc ngoài, một điểm chung, khi d bằng R cộng r. Tiếp xúc trong, một điểm chung, khi d bằng R trừ r và d khác 0. Ở ngoài nhau, không có điểm chung, khi d lớn hơn R cộng r. Đựng nhau, không có điểm chung, khi d nhỏ hơn R trừ r; nếu d bằng 0 thì hai đường tròn đồng tâm. Khi tiếp xúc, tiếp điểm nằm trên đường nối tâm. Ví dụ: R bằng 5, r bằng 3: d bằng 8 thì tiếp xúc ngoài, d bằng 2 thì tiếp xúc trong, d bằng 4 thì cắt nhau, d bằng 10 thì ở ngoài nhau, d bằng 1 thì đựng nhau. Lỗi hay gặp: quên trường hợp đựng nhau; so sánh d với R hoặc r riêng lẻ thay vì với tổng và hiệu." data-audio="audio/17-vi-tri.mp3">
+<h2>17.1. Năm vị trí tương đối</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p><span class="m">d = OO'</span> là khoảng cách hai tâm, <span class="m">R ≥ r</span> là hai bán kính:</p>
+<table>
+<tr><th>Vị trí</th><th>Điều kiện</th><th>Số điểm chung</th></tr>
+<tr><td>Cắt nhau</td><td class="m">R − r &lt; d &lt; R + r</td><td>2</td></tr>
+<tr><td>Tiếp xúc ngoài</td><td class="m">d = R + r</td><td>1</td></tr>
+<tr><td>Tiếp xúc trong</td><td class="m">d = R − r (d ≠ 0)</td><td>1</td></tr>
+<tr><td>Ở ngoài nhau</td><td class="m">d &gt; R + r</td><td>0</td></tr>
+<tr><td>Đựng nhau</td><td class="m">d &lt; R − r</td><td>0 (<span class="m">d = 0</span>: đồng tâm)</td></tr>
+</table>
+<p>Khi tiếp xúc, tiếp điểm nằm trên đường nối tâm OO'.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Đề cho hai bán kính và khoảng cách hai tâm, hỏi vị trí hoặc số điểm chung. Tính <span class="m">R + r</span> và <span class="m">R − r</span> trước rồi đặt <span class="m">d</span> vào.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">R = 5, r = 3</span>: <span class="m">R + r = 8</span>, <span class="m">R − r = 2</span>. <span class="m">d = 8</span> tiếp xúc ngoài; <span class="m">d = 2</span> tiếp xúc trong; <span class="m">d = 4</span> cắt nhau; <span class="m">d = 10</span> ở ngoài nhau; <span class="m">d = 1</span> đựng nhau.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> quên trường hợp đựng nhau; so sánh <span class="m">d</span> với R hoặc r riêng lẻ thay vì với tổng và hiệu.</div>
+</section>
+
+<section id="ung-dung" data-say="Mục 17.2, ứng dụng và cách trình bày. Bài toán thực tế thường gặp: hai bánh răng hoặc hai ròng rọc tiếp xúc ngoài, khoảng cách hai trục bằng tổng hai bán kính; hình tròn nhỏ nằm trong hình tròn lớn và tiếp xúc trong, khoảng cách hai tâm bằng hiệu hai bán kính. Trình bày: ghi R, r, tính d, so sánh với R cộng r và R trừ r, kết luận vị trí và số điểm chung. Ví dụ: hai bánh xe bán kính 20 và 12 xăng ti mét tiếp xúc ngoài, khoảng cách hai trục bằng 32 xăng ti mét. Lỗi hay gặp: không ghi bước so sánh mà kết luận ngay." data-audio="audio/17-ung-dung.mp3">
+<h2>17.2. Ứng dụng và cách trình bày</h2>
+<div class="sgk"><div class="t">Mô hình hay gặp</div>
+<ul>
+<li>Hai bánh răng, hai ròng rọc, hai đồng xu chạm nhau: <b>tiếp xúc ngoài</b>, khoảng cách hai trục <span class="m">= R + r</span>.</li>
+<li>Hình tròn nhỏ nằm trong và chạm hình tròn lớn: <b>tiếp xúc trong</b>, khoảng cách hai tâm <span class="m">= R − r</span>.</li>
+</ul>
+<p>Trình bày: ghi R, r → tính d → so sánh với <span class="m">R + r</span>, <span class="m">R − r</span> → kết luận vị trí và số điểm chung.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Bài thực tế có hai vật tròn chạm nhau hoặc lồng nhau.</p>
+<div class="vd"><b>Ví dụ.</b> Hai bánh xe bán kính 20 cm và 12 cm tiếp xúc ngoài ⇒ khoảng cách hai trục <span class="m">= 32</span> cm.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> kết luận ngay mà không ghi bước so sánh.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 17. Câu một: hai đường tròn bán kính 7 và 4, khoảng cách hai tâm lần lượt là 11; 3; 6; 12; 2. Xác định vị trí tương đối trong từng trường hợp. Câu hai: hai đường tròn O bán kính 6 và O phẩy bán kính 2 tiếp xúc trong. Tính O O phẩy. Câu ba: hai đường tròn bán kính 5 và 5 có O O phẩy bằng 6. Chúng cắt nhau tại A và B; tính AB." data-audio="audio/17-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">R = 7, r = 4</span>; <span class="m">d</span> lần lượt 11; 3; 6; 12; 2. Xác định vị trí tương đối từng trường hợp.</li>
+<li><span class="m">(O; 6)</span> và <span class="m">(O'; 2)</span> tiếp xúc trong. Tính OO'.</li>
+<li><span class="m">(O; 5)</span> và <span class="m">(O'; 5)</span>, <span class="m">OO' = 6</span>, cắt nhau tại A, B. Tính AB.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li>11: tiếp xúc ngoài; 3: tiếp xúc trong; 6: cắt nhau; 12: ở ngoài nhau; 2: đựng nhau.</li>
+<li><span class="m">OO' = 6 − 2 = 4</span>.</li>
+<li>OO' là trung trực của AB, cắt AB tại trung điểm H với <span class="m">OH = 3</span>; <span class="m">AH = <span class="sq"><span>5² − 3²</span></span> = 4</span> ⇒ <span class="m">AB = 8</span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

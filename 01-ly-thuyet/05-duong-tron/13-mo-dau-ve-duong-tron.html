@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 13 – Mở đầu về đường tròn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương V. Đường tròn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="13-mo-dau-ve-duong-tron.html"><b>Bài 13</b></a>
+    <a href="14-cung-va-day-cua-mot-duong-tron.html">Bài 14</a>
+    <a href="15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html">Bài 15</a>
+    <a href="16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html">Bài 16</a>
+    <a href="17-vi-tri-tuong-doi-cua-hai-duong-tron.html">Bài 17</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 13. Mở đầu về đường tròn</h1>
+<p class="sub">Bài nền của chương V: khi nào một điểm nằm trong, trên, ngoài đường tròn, và tính đối xứng của đường tròn.</p>
+
+<section id="duong-tron" data-say="Mục 13.1, đường tròn và vị trí của một điểm. Đường tròn tâm O bán kính R, ký hiệu O chấm phẩy R, là tập hợp các điểm cách O một khoảng bằng R. Với điểm M bất kỳ: M nằm trên đường tròn khi OM bằng R; nằm trong khi OM nhỏ hơn R; nằm ngoài khi OM lớn hơn R. Dùng khi đề nói điểm A nằm ngoài đường tròn: nghĩa là OA lớn hơn R, từ đó mới kẻ được tiếp tuyến. Ví dụ: O A bằng 2R thì A nằm ngoài đường tròn. Lỗi hay gặp: lẫn đường tròn với hình tròn; đường tròn chỉ là đường viền, hình tròn gồm cả phần trong." data-audio="audio/13-duong-tron.mp3">
+<h2>13.1. Đường tròn; vị trí của một điểm</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Đường tròn tâm O bán kính R, ký hiệu <span class="m">(O; R)</span>, là tập hợp các điểm cách O một khoảng bằng R. Với điểm M: <span class="m">OM = R</span> ⇔ M nằm trên; <span class="m">OM &lt; R</span> ⇔ M nằm trong; <span class="m">OM &gt; R</span> ⇔ M nằm ngoài đường tròn.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Đề cho "điểm A nằm ngoài (O)": hiểu là <span class="m">OA &gt; R</span>, nên từ A kẻ được hai tiếp tuyến (bài 16). Đề cho <span class="m">OA = 2R</span>: A nằm ngoài, và tỉ số <span class="m">OB/OA = 1/2</span> sẽ cho góc 60°.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">(O; 3)</span>, <span class="m">OM = 5</span>: M nằm ngoài; <span class="m">ON = 3</span>: N nằm trên đường tròn.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> lẫn đường tròn (đường viền) với hình tròn (cả phần trong).</div>
+</section>
+
+<section id="doi-xung" data-say="Mục 13.2, tính đối xứng của đường tròn. Đường tròn có tâm đối xứng là tâm O: điểm đối xứng với một điểm trên đường tròn qua O cũng nằm trên đường tròn. Đường tròn có vô số trục đối xứng: mọi đường thẳng đi qua tâm đều là trục đối xứng. Dùng để suy ra hai điểm đối xứng nhau qua một đường kính thì cách đều hai đầu đường kính, và để lập luận trung trực: nếu OB bằng OC thì O nằm trên đường trung trực của BC. Ví dụ: B và C cùng thuộc O, thì OB bằng OC bằng R, nên O thuộc trung trực của dây BC. Lỗi hay gặp: nói đường tròn chỉ có một trục đối xứng." data-audio="audio/13-doi-xung.mp3">
+<h2>13.2. Tính đối xứng</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Đường tròn có <b>tâm đối xứng</b> là tâm O và có <b>vô số trục đối xứng</b>: mọi đường thẳng đi qua tâm.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Lập luận trung trực: B, C cùng thuộc (O) ⇒ <span class="m">OB = OC = R</span> ⇒ O nằm trên đường trung trực của dây BC. Kết hợp với một điểm khác cách đều B, C sẽ được cả đường trung trực.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">OB = OC</span> và <span class="m">AB = AC</span> ⇒ OA là đường trung trực của BC ⇒ <span class="m">OA ⊥ BC</span> tại trung điểm của BC.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> dùng "OA ⊥ BC" mà không nêu hai căn cứ <span class="m">OB = OC</span> và <span class="m">AB = AC</span>.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 13. Câu một: cho đường tròn O bán kính 4 xăng ti mét và các điểm M, N, P với OM bằng 3, ON bằng 4, OP bằng 6. Xác định vị trí mỗi điểm. Câu hai: cho đường tròn O và hai điểm B, C trên đường tròn, điểm A thỏa AB bằng AC. Chứng minh OA vuông góc với BC. Câu ba: trong mặt phẳng tọa độ, đường tròn tâm O gốc tọa độ bán kính 5; điểm 3, 4 có thuộc đường tròn không?" data-audio="audio/13-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">(O; 4)</span> cm; <span class="m">OM = 3, ON = 4, OP = 6</span>. Xác định vị trí M, N, P.</li>
+<li>B, C thuộc (O); điểm A có <span class="m">AB = AC</span>. Chứng minh <span class="m">OA ⊥ BC</span>.</li>
+<li>Đường tròn tâm O(0; 0) bán kính 5. Điểm (3; 4) có thuộc đường tròn không?</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li>M trong, N trên, P ngoài.</li>
+<li><span class="m">OB = OC</span> và <span class="m">AB = AC</span> ⇒ O, A cùng thuộc trung trực của BC ⇒ <span class="m">OA ⊥ BC</span>.</li>
+<li>Có, vì khoảng cách đến O là <span class="m"><span class="sq"><span>3² + 4²</span></span> = 5</span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

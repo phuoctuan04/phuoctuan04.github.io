@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 4 – Phương trình quy về phương trình bậc nhất một ẩn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương II. Phương trình và bất phương trình bậc nhất một ẩn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="04-phuong-trinh-quy-ve-phuong-trinh-bac-nhat-mot-an.html"><b>Bài 4</b></a>
+    <a href="05-bat-dang-thuc-va-tinh-chat.html">Bài 5</a>
+    <a href="06-bat-phuong-trinh-bac-nhat-mot-an.html">Bài 6</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 4. Phương trình quy về phương trình bậc nhất một ẩn</h1>
+<p class="sub">Hai dạng: phương trình tích và phương trình chứa ẩn ở mẫu. Dạng thứ hai gần như chắc chắn có trong đề kiểm tra (câu 1a).</p>
+
+<section id="pt-tich" data-say="Mục 4.1, phương trình tích. Phương trình dạng, a x cộng b, nhân, c x cộng d, bằng 0, tương đương với a x cộng b bằng 0 hoặc c x cộng d bằng 0. Nghĩa là một tích bằng 0 khi có ít nhất một thừa số bằng 0. Dấu hiệu: vế phải là 0 và vế trái là tích, hoặc phân tích được thành tích bằng cách đặt nhân tử chung, dùng hằng đẳng thức. Ví dụ: x trừ 2, nhân, 3x cộng 1, bằng 0, suy ra x bằng 2 hoặc x bằng trừ một phần ba. Lỗi hay gặp: chia hai vế cho biểu thức chứa x, làm mất nghiệm; ví dụ x bình phương bằng 3x, chia hai vế cho x thì mất nghiệm x bằng 0; phải chuyển vế thành x nhân, x trừ 3, bằng 0." data-audio="audio/04-pt-tich.mp3">
+<h2>4.1. Phương trình tích</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p><span class="m">(ax + b)(cx + d) = 0 ⇔ ax + b = 0</span> hoặc <span class="m">cx + d = 0</span>. Một tích bằng 0 khi có ít nhất một thừa số bằng 0.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Vế phải là 0 và vế trái là tích, hoặc phân tích được thành tích (đặt nhân tử chung, hằng đẳng thức). Nếu vế phải khác 0, phải chuyển hết sang một vế trước.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">(x − 2)(3x + 1) = 0 ⇔ x = 2</span> hoặc <span class="m">x = −1/3</span>. &nbsp; <span class="m">x² = 3x ⇔ x(x − 3) = 0 ⇔ x = 0</span> hoặc <span class="m">x = 3</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> chia hai vế cho biểu thức chứa <span class="m">x</span> làm mất nghiệm (từ <span class="m">x² = 3x</span> chia cho <span class="m">x</span> thì mất nghiệm <span class="m">x = 0</span>).</div>
+</section>
+
+<section id="mau-thuc-chung" data-say="Mục 4.2, mẫu thức chung. Để quy đồng, phân tích mỗi mẫu thành nhân tử; mẫu thức chung là tích các nhân tử khác nhau, mỗi nhân tử lấy với số mũ cao nhất. Nếu một mẫu đã là tích của các mẫu còn lại thì nó chính là mẫu thức chung. Ví dụ: các mẫu x trừ 2, x cộng 1, và, x trừ 2 nhân x cộng 1; mẫu thức chung là, x trừ 2, nhân, x cộng 1. Nhân tử phụ của mẫu x trừ 2 là x cộng 1, của mẫu x cộng 1 là x trừ 2, của mẫu thứ ba là 1. Lỗi hay gặp: lấy mẫu thức chung là tích cả ba mẫu, dẫn đến phương trình bậc cao không cần thiết." data-audio="audio/04-mau-thuc-chung.mp3">
+<h2>4.2. Mẫu thức chung và nhân tử phụ</h2>
+<div class="sgk"><div class="t">Nhắc lại (lớp 8)</div>
+<p>Phân tích mỗi mẫu thành nhân tử. <b>Mẫu thức chung</b> (MTC) là tích các nhân tử khác nhau, mỗi nhân tử lấy với số mũ cao nhất. <b>Nhân tử phụ</b> của một mẫu = MTC chia cho mẫu đó.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Trước khi khử mẫu ở phương trình chứa ẩn ở mẫu. Nếu một mẫu đã là tích của các mẫu còn lại thì nó chính là MTC.</p>
+<div class="vd"><b>Ví dụ.</b> Các mẫu <span class="m">x − 2</span>, <span class="m">x + 1</span>, <span class="m">(x − 2)(x + 1)</span> ⇒ MTC <span class="m">= (x − 2)(x + 1)</span>. Nhân tử phụ lần lượt là <span class="m">x + 1</span>, <span class="m">x − 2</span>, <span class="m">1</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> lấy MTC là tích cả ba mẫu, phương trình thành bậc cao không cần thiết.</div>
+</section>
+
+<section id="pt-chua-an-o-mau" data-say="Mục 4.3, phương trình chứa ẩn ở mẫu. Bốn bước. Bước một: tìm điều kiện xác định, viết tắt là Đ K X Đ: mọi mẫu thức phải khác 0. Bước hai: quy đồng mẫu hai vế rồi khử mẫu, tức là nhân cả hai vế với mẫu thức chung. Bước ba: giải phương trình vừa nhận được. Bước bốn: đối chiếu với điều kiện xác định, loại giá trị không thỏa, rồi kết luận nghiệm. Dấu hiệu: ẩn nằm dưới mẫu số. Ví dụ: 1 chia, x trừ 1, bằng 2. Điều kiện x khác 1. Khử mẫu: 1 bằng 2 nhân, x trừ 1, suy ra x bằng ba phần hai, thỏa điều kiện. Vậy phương trình có nghiệm x bằng ba phần hai. Lỗi hay gặp: quên điều kiện xác định hoặc tìm được nghiệm mà không đối chiếu, nhiều trường chấm trừ 0,25 điểm; khi khử mẫu quên nhân nhân tử phụ với cả tử; nhân chéo thiếu hạng tử khi một vế có hai phân thức." data-audio="audio/04-pt-chua-an-o-mau.mp3">
+<h2>4.3. Phương trình chứa ẩn ở mẫu</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ol>
+<li>Tìm <b>điều kiện xác định</b> (ĐKXĐ): mọi mẫu thức khác 0.</li>
+<li><b>Quy đồng</b> mẫu hai vế rồi <b>khử mẫu</b> (nhân hai vế với MTC).</li>
+<li>Giải phương trình nhận được.</li>
+<li><b>Đối chiếu</b> ĐKXĐ, loại giá trị không thỏa; kết luận nghiệm.</li>
+</ol></div>
+<h3>Khi nào dùng</h3>
+<p>Ẩn nằm dưới mẫu số. Bốn bước là bắt buộc trong bài thi; bước 1 và bước 4 thường có điểm riêng.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m"><span class="frac"><span>1</span><span>x − 1</span></span> = 2</span>. ĐKXĐ: <span class="m">x ≠ 1</span>. Khử mẫu: <span class="m">1 = 2(x − 1) ⇔ x = <span class="frac"><span>3</span><span>2</span></span></span> (thỏa ĐKXĐ). Vậy phương trình có nghiệm <span class="m">x = 3/2</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> quên ĐKXĐ hoặc không đối chiếu (nhiều trường trừ 0,25 điểm); khử mẫu quên nhân nhân tử phụ với cả tử; nhân chéo thiếu hạng tử khi một vế có hai phân thức.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 4. Câu một: giải phương trình, 2x trừ 1, nhân, x cộng 4, bằng 0. Câu hai: giải phương trình x bình phương trừ 5x bằng 0. Câu ba: giải phương trình 3 chia, x cộng 2, bằng 1 chia, x trừ 2. Câu bốn: giải phương trình 2 chia, x trừ 1, cộng 3 chia, x cộng 2, bằng, x cộng 7, chia, x trừ 1 nhân x cộng 2." data-audio="audio/04-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">(2x − 1)(x + 4) = 0</span>.</li>
+<li><span class="m">x² − 5x = 0</span>.</li>
+<li><span class="m"><span class="frac"><span>3</span><span>x + 2</span></span> = <span class="frac"><span>1</span><span>x − 2</span></span></span>.</li>
+<li><span class="m"><span class="frac"><span>2</span><span>x − 1</span></span> + <span class="frac"><span>3</span><span>x + 2</span></span> = <span class="frac"><span>x + 7</span><span>(x − 1)(x + 2)</span></span></span>.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">x = 1/2</span> hoặc <span class="m">x = −4</span>.</li>
+<li><span class="m">x(x − 5) = 0 ⇒ x = 0</span> hoặc <span class="m">x = 5</span>.</li>
+<li>ĐKXĐ <span class="m">x ≠ ±2</span>; <span class="m">3(x − 2) = x + 2 ⇔ x = 4</span> (thỏa).</li>
+<li>ĐKXĐ <span class="m">x ≠ 1, x ≠ −2</span>; <span class="m">2(x + 2) + 3(x − 1) = x + 7 ⇔ 5x + 1 = x + 7 ⇔ x = 3/2</span> (thỏa).</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

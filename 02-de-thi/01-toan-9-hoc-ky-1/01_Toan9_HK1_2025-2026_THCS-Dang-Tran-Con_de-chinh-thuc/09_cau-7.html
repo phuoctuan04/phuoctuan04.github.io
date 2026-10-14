@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Câu 7 – Đường tròn: tiếp tuyến, góc ở tâm, hình quạt – Đề Toán 9 HK1 2025–2026 THCS Đặng Trần Côn</title>
+<link rel="stylesheet" href="../../00_chung/de-thi.css">
+</head>
+<body>
+<header>
+  <nav></nav>
+  <span class="small">Bấm nhãn <a class="ref" href="#" onclick="return false">Bài 16 · …</a> trong lời giải để mở đúng mục lý thuyết ở khung bên phải.</span>
+  <span class="small audioctl">🔊 <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="stopAll" type="button">■ Dừng</button> <span id="voiceNote"></span></span>
+</header>
+
+<div class="wrap">
+<main>
+<div class="box small" style="font-size:14.5px">
+<b>Câu 7 thay thế theo sách mới.</b> Câu 7 trong đề chính thức 2025–2026 dùng góc nội tiếp và tứ giác nội tiếp, là nội dung tập 2 (bài 27, 29) của sách Kết nối tri thức, nên không còn thuộc phạm vi kỳ I từ năm 2026–2027. Câu dưới đây do phụ huynh soạn, cùng mức 3,0 điểm, chỉ dùng chương V tập 1 (tiếp tuyến, góc ở tâm, dây, hình quạt) và chương IV (tỉ số lượng giác). Lời giải câu 7 gốc vẫn có trong <code>90_ban-cu/</code>.
+<details><summary>Xem đề câu 7 gốc (để biết, không ôn)</summary>Cho tam giác ABC nhọn nội tiếp (O; R), AB &lt; AC. Vẽ đường kính BD và đường cao BH. a) Chứng minh CD ⊥ BC và HB·DB = AB·BC. b) Vẽ CF ⊥ BD tại F; chứng minh BC² = BF·BD và HF ∥ AD. c) Vẽ CK ⊥ AB tại K, CK cắt BH tại I; tiếp tuyến tại B cắt tia DC tại T; góc BAC = 60°. Tính AI và diện tích phần hình phẳng giới hạn bởi BT, CT và cung nhỏ BC theo R.</details>
+</div>
+
+<section class="cau" id="cau7" data-id="cau7" data-parts="a,b,c">
+<div class="head">
+  <h2>Câu 7. Hai tiếp tuyến và hình quạt</h2>
+  <span class="pts">3,0 điểm · Chương V (bài 13, 14, 15, 16) và chương IV</span>
+  <button class="btnAn" type="button">Ẩn lời giải</button>
+  <label class="hoc"><input type="checkbox" class="chkHoc"> Đã học cả câu</label><span class="luc"></span>
+</div>
+<div class="body">
+<div class="de">
+<p>Cho đường tròn <span class="m">(O; R)</span> và điểm A nằm ngoài đường tròn sao cho <span class="m">OA = 2R</span>. Qua A kẻ hai tiếp tuyến AB, AC của đường tròn (B, C là các tiếp điểm).</p>
+<p><span class="t">a)</span> Chứng minh <span class="m">OA ⊥ BC</span>.</p>
+<p><span class="t">b)</span> Tính số đo góc BOC và độ dài dây BC theo R.</p>
+<p><span class="t">c)</span> Tính theo R diện tích phần hình phẳng giới hạn bởi hai đoạn thẳng AB, AC và cung nhỏ BC.</p>
+<figure>
+<svg viewBox="-125 -120 360 240" width="360" height="240" font-family="Arial" font-size="13">
+  <path d="M 200 0 L 50 -86.6 A 100 100 0 0 1 50 86.6 Z" fill="#6b4fbb" fill-opacity=".18" stroke="none"/>
+  <circle cx="0" cy="0" r="100" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  <line x1="200" y1="0" x2="50" y2="-86.6" stroke="currentColor" stroke-width="1.4"/>
+  <line x1="200" y1="0" x2="50" y2="86.6" stroke="currentColor" stroke-width="1.4"/>
+  <line x1="0" y1="0" x2="200" y2="0" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="0" y1="0" x2="50" y2="-86.6" stroke="currentColor" stroke-width="1"/>
+  <line x1="0" y1="0" x2="50" y2="86.6" stroke="currentColor" stroke-width="1"/>
+  <line x1="50" y1="-86.6" x2="50" y2="86.6" stroke="currentColor" stroke-width="1" stroke-dasharray="4,3"/>
+  <path d="M 44 -76 L 56 -76 L 56 -86.6" fill="none" stroke="currentColor" stroke-width="1" transform="rotate(-30 50 -86.6)"/>
+  <path d="M 50 -8 L 58 -8 L 58 0" fill="none" stroke="currentColor" stroke-width="1"/>
+  <circle cx="0" cy="0" r="2.5" fill="currentColor"/><circle cx="200" cy="0" r="2.5" fill="currentColor"/>
+  <circle cx="50" cy="-86.6" r="2.5" fill="currentColor"/><circle cx="50" cy="86.6" r="2.5" fill="currentColor"/><circle cx="50" cy="0" r="2.5" fill="currentColor"/>
+  <text x="-14" y="5" fill="currentColor">O</text><text x="206" y="5" fill="currentColor">A</text>
+  <text x="44" y="-94" fill="currentColor">B</text><text x="44" y="102" fill="currentColor">C</text><text x="54" y="16" fill="currentColor">H</text>
+  <text x="18" y="-30" fill="currentColor">R</text>
+</svg>
+<figcaption>Hình vẽ đúng tỉ lệ với <span class="m">OA = 2R</span>; phần tô màu là miền cần tính ở câu c.</figcaption>
+</figure>
+<button type="button" class="speak" data-audio="10_audio/cau7-de.mp3" data-say="Câu 7, ba điểm. Cho đường tròn tâm O bán kính R và điểm A nằm ngoài đường tròn sao cho OA bằng 2R. Qua A kẻ hai tiếp tuyến AB, AC của đường tròn, với B, C là các tiếp điểm. a) Chứng minh OA vuông góc với BC. b) Tính số đo góc BOC và độ dài dây BC theo R. c) Tính theo R diện tích phần hình phẳng giới hạn bởi hai đoạn thẳng AB, AC và cung nhỏ BC.">🔊 Nghe đề</button>
+</div>
+
+<!-- ① -->
+<div class="tier t1">
+<h3><span class="n">1</span>Phân tích đề</h3>
+<button type="button" class="speak" data-audio="10_audio/cau7-t1.mp3" data-say="Phân tích đề. Hình vẽ trước: đường tròn, điểm A ngoài với OA bằng 2R, hai tiếp tuyến, nối OB, OC, OA và dây BC. Câu a: muốn chứng minh OA vuông góc BC, dùng đường trung trực: O cách đều B và C vì OB bằng OC bằng R; A cách đều B và C vì hai tiếp tuyến cắt nhau. Câu b: tam giác OBA vuông tại B vì tiếp tuyến vuông góc bán kính; biết OB bằng R và OA bằng 2R nên cos góc BOA bằng một phần hai, góc BOA bằng 60 độ; OA là phân giác góc BOC nên góc BOC bằng 120 độ. Dây BC: dùng tam giác vuông OHB với H là trung điểm BC, hoặc dùng công thức BC bằng 2R sin của nửa góc BOC. Câu c: miền cần tính là tứ giác OBAC bỏ đi hình quạt OBC cung nhỏ 120 độ; tứ giác OBAC gồm hai tam giác vuông bằng nhau OBA và OCA. Dự kiến: a 1 điểm, b 1 điểm, c 1 điểm. Hình vẽ sai hoặc thiếu có thể mất điểm cả câu.">🔊 Nghe phân tích</button>
+<div class="de-nhac"><span class="lbl">Đề</span><span class="t">a)</span> Chứng minh <span class="m">OA ⊥ BC</span>.</div>
+<ul>
+<li>Vẽ hình trước: (O), A ngoài với <span class="m">OA = 2R</span>, hai tiếp tuyến, nối OB, OC, OA, dây BC. Hình sai hoặc thiếu có thể mất điểm cả câu.</li>
+<li>Chứng minh vuông góc qua <b>đường trung trực</b>: O cách đều B, C (<span class="m">OB = OC = R</span>); A cách đều B, C (hai tiếp tuyến cắt nhau). <a class="ref" href="05-duong-tron/16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html#hai-tiep-tuyen-cat-nhau">Bài 16 · hai tiếp tuyến cắt nhau</a> <a class="ref" href="05-duong-tron/13-mo-dau-ve-duong-tron.html#doi-xung">Bài 13 · O trên trung trực của dây</a></li>
+</ul>
+<div class="de-nhac"><span class="lbl">Đề</span><span class="t">b)</span> Tính góc BOC và dây BC theo R.</div>
+<ul>
+<li>ΔOBA vuông tại B (tiếp tuyến ⊥ bán kính). Biết <span class="m">OB = R</span>, <span class="m">OA = 2R</span> ⇒ <span class="m">cos BOA = 1/2</span> ⇒ góc BOA = 60°. <a class="ref" href="05-duong-tron/16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html#tiep-tuyen">Bài 16 · tiếp tuyến ⊥ bán kính</a> <a class="ref" href="04-he-thuc-luong-trong-tam-giac-vuong/11-ti-so-luong-giac-cua-goc-nhon.html#goc-dac-biet">Bài 11 · cos 60° = 1/2</a></li>
+<li>OA là phân giác góc BOC ⇒ góc BOC = 2·60° = 120°. Dây BC: ΔOHB vuông tại H (H là trung điểm BC) hoặc <span class="m">BC = 2R·sin(½·BOC)</span>. <a class="ref" href="05-duong-tron/14-cung-va-day-cua-mot-duong-tron.html#day-cung">Bài 14 · dây theo góc ở tâm</a></li>
+</ul>
+<div class="de-nhac"><span class="lbl">Đề</span><span class="t">c)</span> Diện tích miền giới hạn bởi AB, AC và cung nhỏ BC.</div>
+<ul>
+<li>Miền cần tính = tứ giác OBAC <b>trừ</b> hình quạt OBC (cung nhỏ, 120°). Tứ giác OBAC = 2 tam giác vuông bằng nhau OBA, OCA. <a class="ref" href="05-duong-tron/15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html#dien-tich-hinh-tron-quat">Bài 15 · hình quạt</a> <a class="ref" href="05-duong-tron/14-cung-va-day-cua-mot-duong-tron.html#goc-o-tam-so-do-cung">Bài 14 · số đo cung nhỏ</a></li>
+<li>Dự kiến: a) 1,0; b) 1,0; c) 1,0 (ước lượng).</li>
+</ul>
+</div>
+
+<!-- ② -->
+<div class="tier t2">
+<h3><span class="n">2</span>Gợi ý từng bước <span class="small">(tự làm trước, kẹt ở đâu mở gợi ý ở đó)</span></h3>
+<button type="button" class="speak" data-audio="10_audio/cau7-t2.mp3" data-say="Gợi ý từng bước. Câu a. Gợi ý một: OB và OC cùng bằng R, vậy O nằm trên đường nào của đoạn BC? Gợi ý hai: AB và AC bằng nhau vì sao? A nằm trên đường nào của BC? Gợi ý ba: hai điểm cùng thuộc một đường thẳng thì đường thẳng đó là gì của BC. Câu b. Gợi ý một: AB là tiếp tuyến tại B nên góc OBA bằng bao nhiêu? Gợi ý hai: trong tam giác vuông OBA, tỉ số OB chia OA là cos của góc nào, bằng bao nhiêu? Gợi ý ba: OA là phân giác góc BOC. Gợi ý bốn: gọi H là giao của OA và BC; trong tam giác OHB vuông tại H, BH bằng OB nhân sin góc BOH; BC bằng 2BH. Câu c. Gợi ý một: miền cần tính bằng tứ giác OBAC trừ hình quạt OBC. Gợi ý hai: diện tích tứ giác OBAC bằng 2 lần diện tích tam giác OBA; AB bằng OB nhân tan 60 độ. Gợi ý ba: hình quạt OBC ứng với cung 120 độ, dùng công thức pi R bình phương n chia 360.">🔊 Nghe cả gợi ý</button>
+<div class="de-nhac"><span class="lbl">Đề</span><span class="t">a)</span> Chứng minh <span class="m">OA ⊥ BC</span>.</div>
+<details><summary>Gợi ý 1</summary><span class="m">OB = OC = R</span> ⇒ O nằm trên đường nào của đoạn BC?</details>
+<details><summary>Gợi ý 2</summary>Vì sao <span class="m">AB = AC</span>? Khi đó A nằm trên đường nào của BC?</details>
+<details><summary>Gợi ý 3</summary>Hai điểm O, A cùng thuộc đường trung trực của BC ⇒ OA là đường trung trực ⇒ vuông góc.</details>
+<div class="de-nhac" style="margin-top:14px"><span class="lbl">Đề</span><span class="t">b)</span> Tính góc BOC và dây BC theo R.</div>
+<details><summary>Gợi ý 1</summary>AB là tiếp tuyến tại B ⇒ góc OBA = ?</details>
+<details><summary>Gợi ý 2</summary>Trong ΔOBA vuông tại B: <span class="m">OB/OA</span> là cos của góc nào? Bằng bao nhiêu?</details>
+<details><summary>Gợi ý 3</summary>OA là tia phân giác của góc BOC ⇒ góc BOC = 2·góc BOA.</details>
+<details><summary>Gợi ý 4</summary>Gọi H = OA ∩ BC. ΔOHB vuông tại H: <span class="m">BH = OB·sin BOH</span>; <span class="m">BC = 2·BH</span>.</details>
+<div class="de-nhac" style="margin-top:14px"><span class="lbl">Đề</span><span class="t">c)</span> Diện tích miền giới hạn bởi AB, AC và cung nhỏ BC.</div>
+<details><summary>Gợi ý 1</summary>Miền cần tính = S(OBAC) − S(quạt OBC).</details>
+<details><summary>Gợi ý 2</summary><span class="m">S(OBAC) = 2·S(OBA) = 2·½·OB·AB</span>; <span class="m">AB = OB·tan 60°</span>.</details>
+<details><summary>Gợi ý 3</summary>Quạt OBC ứng với cung nhỏ 120°: <span class="m">πR²·120/360</span>.</details>
+</div>
+
+<p class="tier34-note small">Lời giải đang ẩn để em tự làm. Làm xong bấm <b>Hiện lời giải</b> ở đầu thẻ để đối chiếu.</p>
+
+<!-- ③ -->
+<div class="tier t3">
+<h3><span class="n">3</span>Lời giải trình bày chuẩn</h3>
+<div class="de-nhac"><span class="lbl">Đề</span><span class="t">a)</span> Chứng minh <span class="m">OA ⊥ BC</span>. <span class="diem">1,0 điểm</span></div>
+<button type="button" class="speak" data-audio="10_audio/cau7-t3a.mp3" data-say="Lời giải câu a, 1 điểm. Ta có OB bằng OC bằng R, nên O thuộc đường trung trực của BC. Vì AB và AC là hai tiếp tuyến của đường tròn O cắt nhau tại A nên AB bằng AC, do đó A thuộc đường trung trực của BC. Suy ra OA là đường trung trực của BC, vậy OA vuông góc với BC. Căn cứ: bài 16, tính chất hai tiếp tuyến cắt nhau; bài 13, O cách đều hai đầu dây.">🔊 Nghe lời giải a</button>
+<div class="step"><span class="m">OB = OC = R</span> ⇒ O thuộc đường trung trực của BC. <a class="ref" href="05-duong-tron/13-mo-dau-ve-duong-tron.html#doi-xung">Bài 13 · O cách đều B, C</a></div>
+<div class="step">AB, AC là hai tiếp tuyến của (O) cắt nhau tại A ⇒ <span class="m">AB = AC</span> ⇒ A thuộc đường trung trực của BC. <a class="ref" href="05-duong-tron/16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html#hai-tiep-tuyen-cat-nhau">Bài 16 · hai tiếp tuyến cắt nhau</a></div>
+<div class="step">⇒ OA là đường trung trực của BC ⇒ <span class="kq m">OA ⊥ BC</span> (tại trung điểm H của BC).</div>
+<div class="hocbar" data-part="a" data-label="Câu 7a"></div>
+
+<div class="de-nhac" style="margin-top:16px"><span class="lbl">Đề</span><span class="t">b)</span> Tính số đo góc BOC và độ dài dây BC theo R. <span class="diem">1,0 điểm</span></div>
+<button type="button" class="speak" data-audio="10_audio/cau7-t3b.mp3" data-say="Lời giải câu b, 1 điểm. AB là tiếp tuyến tại B nên AB vuông góc OB, tam giác OBA vuông tại B. Căn cứ: bài 16, tiếp tuyến vuông góc bán kính. Trong tam giác vuông OBA: cos góc BOA bằng OB chia OA bằng R chia 2R bằng một phần hai, suy ra góc BOA bằng 60 độ. Căn cứ: bài 11, cos 60 độ bằng một phần hai. Vì OA là tia phân giác của góc BOC, theo tính chất hai tiếp tuyến cắt nhau, nên góc BOC bằng 2 nhân 60 độ bằng 120 độ. Gọi H là giao điểm của OA và BC; theo câu a, H là trung điểm BC và OH vuông góc BC. Trong tam giác OHB vuông tại H, góc BOH bằng 60 độ, nên BH bằng OB nhân sin 60 độ bằng R căn 3 trên 2. Vậy BC bằng 2 BH bằng R căn 3. Căn cứ: bài 12, hệ thức cạnh góc; bài 14, dây theo góc ở tâm.">🔊 Nghe lời giải b</button>
+<div class="step">AB là tiếp tuyến tại B ⇒ <span class="m">AB ⊥ OB</span> ⇒ ΔOBA vuông tại B. <a class="ref" href="05-duong-tron/16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html#tiep-tuyen">Bài 16 · tiếp tuyến ⊥ bán kính</a></div>
+<div class="step"><span class="m">cos BOA = <span class="frac"><span>OB</span><span>OA</span></span> = <span class="frac"><span>R</span><span>2R</span></span> = <span class="frac"><span>1</span><span>2</span></span></span> ⇒ góc BOA = 60°. <a class="ref" href="04-he-thuc-luong-trong-tam-giac-vuong/11-ti-so-luong-giac-cua-goc-nhon.html#dinh-nghia">Bài 11 · cos = kề/huyền</a> <a class="ref" href="04-he-thuc-luong-trong-tam-giac-vuong/11-ti-so-luong-giac-cua-goc-nhon.html#goc-dac-biet">Bài 11 · cos 60°</a></div>
+<div class="step">OA là tia phân giác của góc BOC (hai tiếp tuyến cắt nhau) ⇒ <span class="kq m">góc BOC = 2·60° = 120°</span>. <a class="ref" href="05-duong-tron/16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html#hai-tiep-tuyen-cat-nhau">Bài 16 · OA là phân giác góc BOC</a></div>
+<div class="step">Gọi <span class="m">H = OA ∩ BC</span>; theo câu a, H là trung điểm BC và <span class="m">OH ⊥ BC</span>. ΔOHB vuông tại H, góc BOH = 60°: <span class="m">BH = OB·sin 60° = <span class="frac"><span>R<span class="sq"><span>3</span></span></span><span>2</span></span></span>. <a class="ref" href="04-he-thuc-luong-trong-tam-giac-vuong/12-mot-so-he-thuc-giua-canh-goc-trong-tam-giac-vuong-va-ung-dung.html#he-thuc">Bài 12 · cạnh = huyền · sin góc đối</a></div>
+<div class="step">Vậy <span class="kq m">BC = 2·BH = R<span class="sq"><span>3</span></span></span>. <a class="ref" href="05-duong-tron/14-cung-va-day-cua-mot-duong-tron.html#day-cung">Bài 14 · BC = 2R·sin(½·BOC)</a></div>
+<div class="hocbar" data-part="b" data-label="Câu 7b"></div>
+
+<div class="de-nhac" style="margin-top:16px"><span class="lbl">Đề</span><span class="t">c)</span> Tính theo R diện tích phần hình phẳng giới hạn bởi AB, AC và cung nhỏ BC. <span class="diem">1,0 điểm</span></div>
+<button type="button" class="speak" data-audio="10_audio/cau7-t3c.mp3" data-say="Lời giải câu c, 1 điểm. Trong tam giác OBA vuông tại B: AB bằng OB nhân tan góc BOA bằng R tan 60 độ bằng R căn 3. Căn cứ: bài 12. Diện tích tam giác OBA bằng một phần hai OB nhân AB bằng một phần hai R nhân R căn 3 bằng R bình phương căn 3 trên 2. Tam giác OCA bằng tam giác OBA, nên diện tích tứ giác OBAC bằng 2 lần, bằng R bình phương căn 3. Hình quạt OBC ứng với cung nhỏ BC số đo 120 độ có diện tích pi R bình phương nhân 120 chia 360 bằng pi R bình phương trên 3. Căn cứ: bài 15, hình quạt; bài 14, số đo cung nhỏ bằng góc ở tâm. Phần hình phẳng giới hạn bởi AB, AC và cung nhỏ BC là tứ giác OBAC bỏ đi hình quạt OBC, nên diện tích bằng R bình phương căn 3 trừ pi R bình phương trên 3, bằng R bình phương nhân, căn 3 trừ pi trên 3, xấp xỉ 0,685 R bình phương.">🔊 Nghe lời giải c</button>
+<div class="step">ΔOBA vuông tại B: <span class="m">AB = OB·tan BOA = R·tan 60° = R<span class="sq"><span>3</span></span></span>. <a class="ref" href="04-he-thuc-luong-trong-tam-giac-vuong/12-mot-so-he-thuc-giua-canh-goc-trong-tam-giac-vuong-va-ung-dung.html#he-thuc">Bài 12 · cạnh = cạnh kia · tan góc đối</a></div>
+<div class="step"><span class="m">S<sub>OBA</sub> = ½·OB·AB = ½·R·R<span class="sq"><span>3</span></span> = <span class="frac"><span>R²<span class="sq"><span>3</span></span></span><span>2</span></span></span>. ΔOCA = ΔOBA ⇒ <span class="m">S<sub>OBAC</sub> = 2·S<sub>OBA</sub> = R²<span class="sq"><span>3</span></span></span>.</div>
+<div class="step">Hình quạt OBC ứng với cung nhỏ BC (120°): <span class="m">S<sub>quạt</sub> = <span class="frac"><span>πR²·120</span><span>360</span></span> = <span class="frac"><span>πR²</span><span>3</span></span></span>. <a class="ref" href="05-duong-tron/15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html#dien-tich-hinh-tron-quat">Bài 15 · hình quạt</a> <a class="ref" href="05-duong-tron/14-cung-va-day-cua-mot-duong-tron.html#goc-o-tam-so-do-cung">Bài 14 · cung nhỏ = góc ở tâm</a></div>
+<div class="step">Miền cần tính = tứ giác OBAC bỏ đi hình quạt OBC: <span class="m">S = R²<span class="sq"><span>3</span></span> − <span class="frac"><span>πR²</span><span>3</span></span> = </span><span class="kq m">R²(<span class="sq"><span>3</span></span> − <span class="frac"><span>π</span><span>3</span></span>) ≈ 0,685R²</span>. <a class="ref" href="05-duong-tron/15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html#hinh-vanh-khuyen">Bài 15 · "phần còn lại"</a></div>
+<div class="hocbar" data-part="c" data-label="Câu 7c"></div>
+</div>
+
+<!-- ④ -->
+<div class="tier t4">
+<h3><span class="n">4</span>Kiểm tra, lỗi hay gặp, bài tương tự</h3>
+<button type="button" class="speak" data-audio="10_audio/cau7-t4.mp3" data-say="Kiểm tra, lỗi hay gặp, bài tương tự. Kiểm tra câu b bằng Pythagore: AB bình phương bằng OA bình phương trừ OB bình phương bằng 4R bình phương trừ R bình phương bằng 3R bình phương, nên AB bằng R căn 3, khớp với cách dùng tan. Kiểm tra câu c: với R bằng 1, tứ giác 1,732, quạt 1,047, hiệu 0,685, dương và nhỏ hơn tứ giác, hợp lý. Lỗi hay gặp. Một: câu a chỉ nói OA là phân giác góc BOC rồi kết luận vuông góc, thiếu bước trung trực hoặc thiếu lập luận tam giác cân OBC. Hai: đặt góc vuông ở A thay vì ở tiếp điểm B. Ba: lấy góc BOC bằng 60 độ, quên nhân đôi. Bốn: tính BC bằng R nhân 120, hoặc quên chia đôi góc khi dùng tam giác OHB. Năm: câu c lấy hình quạt cung lớn, hoặc cộng quạt thay vì trừ; quên đơn vị diện tích theo R bình phương. Bài tương tự: cũng đường tròn O bán kính R, điểm A với OA bằng R căn 2, hai tiếp tuyến AB, AC. a phẩy: chứng minh OA vuông góc BC. b phẩy: tính góc BOC và BC. c phẩy: tính diện tích miền giới hạn bởi AB, AC và cung nhỏ BC.">🔊 Nghe kiểm tra và lỗi</button>
+<div class="de-nhac"><span class="lbl">Đề</span><span class="m">(O; R)</span>, <span class="m">OA = 2R</span>, hai tiếp tuyến AB, AC. a) <span class="m">OA ⊥ BC</span>; b) góc BOC, BC; c) diện tích miền giữa AB, AC và cung nhỏ BC.</div>
+<p><b>Kiểm tra:</b> Pythagore trong ΔOBA: <span class="m">AB² = OA² − OB² = 4R² − R² = 3R²</span> ⇒ <span class="m">AB = R<span class="sq"><span>3</span></span></span> ✓ (khớp cách dùng tan). Câu c với <span class="m">R = 1</span>: <span class="m">1,732 − 1,047 = 0,685 &gt; 0</span> và nhỏ hơn diện tích tứ giác ✓.</p>
+<p class="loi"><b>Lỗi hay gặp ở câu này:</b></p>
+<ul class="loi">
+<li>Câu a: chỉ nói "OA là phân giác góc BOC" rồi kết luận vuông góc, thiếu bước trung trực (hoặc thiếu "ΔOBC cân tại O").</li>
+<li>Đặt góc vuông ở A thay vì ở tiếp điểm B. <a class="ref" href="05-duong-tron/16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html#tiep-tuyen">Bài 16 · tiếp tuyến</a></li>
+<li>Lấy góc BOC = 60°, quên nhân đôi.</li>
+<li>Tính <span class="m">BC = R·120</span>, hoặc quên chia đôi góc khi dùng ΔOHB. <a class="ref" href="05-duong-tron/14-cung-va-day-cua-mot-duong-tron.html#day-cung">Bài 14 · dây theo góc ở tâm</a></li>
+<li>Câu c: lấy quạt cung lớn (240°), hoặc <b>cộng</b> quạt thay vì trừ; thiếu "theo R²".</li>
+</ul>
+<p><b>Bài tương tự</b> (đổi số; làm trong 20 phút):</p>
+<div class="de"><p>Cho <span class="m">(O; R)</span> và điểm A với <span class="m">OA = R<span class="sq"><span>2</span></span></span>; hai tiếp tuyến AB, AC. a') Chứng minh <span class="m">OA ⊥ BC</span>. b') Tính góc BOC và BC. c') Tính diện tích miền giới hạn bởi AB, AC và cung nhỏ BC.</p></div>
+<details><summary>Đáp số bài tương tự</summary>
+<p>a') Như trên. b') <span class="m">cos BOA = R/(R<span class="sq"><span>2</span></span>) = <span class="sq"><span>2</span></span>/2</span> ⇒ góc BOA = 45° ⇒ <span class="kq">góc BOC = 90°</span>; <span class="m">BC = 2R·sin 45° = </span><span class="kq m">R<span class="sq"><span>2</span></span></span>. c') <span class="m">AB = R·tan 45° = R</span>; <span class="m">S<sub>OBAC</sub> = R²</span>; quạt 90°: <span class="m">πR²/4</span>; <span class="kq m">S = R²(1 − π/4) ≈ 0,215R²</span>.</p>
+</details>
+</div>
+
+<div class="hocbar" data-part="" data-label="Câu 7 (ghi chú chung)"></div>
+</div><!-- /body -->
+</section>
+
+<p class="small" style="margin-top:30px">Câu 7 do phụ huynh soạn 14/10/2026 theo phạm vi học kỳ I sách Kết nối tri thức, thay cho câu 7 của đề chính thức (kiến thức tập 2). Không phải hướng dẫn chấm của nhà trường.</p>
+</main>
+
+<aside id="side">
+  <div class="bar">
+    <select id="pick"><option value="">Lý thuyết liên quan…</option></select>
+    <a id="openNew" href="#" target="_blank" title="Mở lý thuyết trong thẻ mới">↗ mở riêng</a>
+    <a id="printTheory" href="#" target="_blank" title="Mở bài lý thuyết này trong thẻ mới và in">🖨 in</a>
+  </div>
+  <iframe id="theory" title="Lý thuyết liên quan"></iframe>
+  <div class="hint"><span>Bấm vào một nhãn <b>Bài …</b> trong lời giải, mục lý thuyết tương ứng sẽ hiện ở đây.</span></div>
+</aside>
+<button class="toggle" id="toggle">📖 Lý thuyết</button>
+</div>
+<script src="00_cau-hinh.js"></script>
+<script src="../../00_chung/de-thi.js"></script>
+</body>
+</html>

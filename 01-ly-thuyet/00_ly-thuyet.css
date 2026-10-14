@@ -1,0 +1,111 @@
+/* Kiểu dùng chung cho các file lý thuyết Toán 9 (Kết nối tri thức)
+   Màu theo loại nội dung: sách giáo khoa = xanh dương, khi nào dùng = xanh ngọc, quy trình = tím,
+   ví dụ = xanh lá, lỗi hay gặp = cam, tự luyện = tím đậm, ghi chú = vàng. */
+:root { --ink:#1b1b1b; --muted:#555; --line:#d9d9d9; --bg:#fff; --box:#f5f7fa; --accent:#1f5fa8; --ok:#1d7a3a; --okbg:#e8f5ec; --warn:#b9530f; --hl:#fff3c4;
+  --c-sgk:#1f5fa8; --c-sgk-bg:#eaf1fb; --c-dung:#0f7c86; --c-dung-bg:#e6f5f6; --c-qt:#6b4fbb; --c-qt-bg:#f0ecfa; --c-vd:#1d7a3a; --c-vd-bg:#e8f5ec; --c-loi:#b9530f; --c-loi-bg:#fdf0e6; --c-tl:#8a2d6e; --c-tl-bg:#f8e9f3; --c-note:#8a6d00; --c-note-bg:#fffbe6; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --ink:#eee; --muted:#bbb; --line:#444; --bg:#161a1f; --box:#1f252c; --accent:#7fb3ff; --ok:#7bd48f; --okbg:#1e2f24; --warn:#f0a36a; --hl:#4a3f10;
+  --c-sgk:#7fb3ff; --c-sgk-bg:#1c2738; --c-dung:#6fd3dc; --c-dung-bg:#16303a; --c-qt:#b9a3f0; --c-qt-bg:#28223a; --c-vd:#7bd48f; --c-vd-bg:#1e2f24; --c-loi:#f0a36a; --c-loi-bg:#3a2a1c; --c-tl:#e08ac7; --c-tl-bg:#36203000; --c-note:#f0d060; --c-note-bg:#2e2a18; } }
+* { box-sizing: border-box; }
+body { margin:0; font-family:"Times New Roman","Noto Serif",serif; font-size:17px; line-height:1.55; color:var(--ink); background:var(--bg); }
+header { background:var(--bg); border-bottom:1px solid var(--line); padding:10px 16px; font-family:Arial,sans-serif; font-size:14px; }
+header .crumb { color:var(--muted); display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; }
+header nav a { color:var(--accent); text-decoration:none; margin-right:14px; }
+label.hoc { margin-left:auto; cursor:pointer; color:var(--accent); font-weight:bold; white-space:nowrap; }
+label.hoc input { vertical-align:middle; }
+#hocCount { color:var(--muted); }
+button { font:13px Arial,sans-serif; border:1px solid var(--accent); color:var(--accent); background:var(--bg); border-radius:14px; padding:3px 10px; cursor:pointer; }
+body.da-hoc label.hoc { color:var(--ok); }
+body.da-hoc h1::after { content:" ✓ đã học"; color:var(--ok); font-size:14px; font-family:Arial,sans-serif; vertical-align:middle; }
+main { max-width:860px; margin:0 auto; padding:16px; }
+h1 { font-family:Arial,sans-serif; font-size:23px; margin:8px 0 4px; }
+h2 { font-family:Arial,sans-serif; font-size:19px; margin:0 0 8px; padding:6px 10px; border-left:5px solid var(--accent); background:var(--box); border-radius:3px; }
+h2:target, section:target > h2 { background:var(--hl); }
+h3 { font-family:Arial,sans-serif; font-size:14px; margin:14px 0 4px; text-transform:uppercase; letter-spacing:.04em; }
+p { margin:0 0 8px; }
+ul, ol { margin:0 0 8px; padding-left:24px; }
+.sub { color:var(--muted); font-style:italic; }
+.m { font-family:"Cambria Math","Times New Roman",serif; }
+.frac { display:inline-block; vertical-align:middle; text-align:center; line-height:1.1; margin:0 2px; }
+.frac > span { display:block; padding:0 3px; }
+.frac > span:first-child { border-bottom:1px solid currentColor; }
+.sq { white-space:nowrap; }
+.sq::before { content:"√"; }
+.sq > span { display:inline; border-top:1px solid currentColor; padding:0 1px; }
+table { border-collapse:collapse; margin:8px 0; font-size:16px; }
+th, td { border:1px solid var(--line); padding:4px 10px; text-align:center; }
+th { background:var(--box); font-family:Arial,sans-serif; font-size:14px; }
+details { margin:6px 0; }
+summary { cursor:pointer; font-family:Arial,sans-serif; font-size:14.5px; color:var(--accent); }
+.small { font-size:14px; color:var(--muted); font-family:Arial,sans-serif; }
+
+/* ===== Mỗi mục là một thẻ ===== */
+section[id] { border:2px solid var(--line); border-radius:8px; padding:0 0 10px; margin:22px 0; scroll-margin-top:8px; }
+section[id] > h2 { border-radius:6px 6px 0 0; border-left:0; border-bottom:2px solid var(--line); margin:0 0 10px; padding:8px 14px; }
+section[id] > *:not(h2) { margin-left:14px; margin-right:14px; }
+section.da-hoc { border-color:var(--ok); }
+section.da-hoc > h2 { background:var(--okbg); border-bottom-color:var(--ok); }
+section.da-hoc > h2::after { content:" ✓"; color:var(--ok); }
+
+/* ===== Màu theo loại nội dung ===== */
+.sgk { border:1px solid var(--c-sgk); border-left-width:5px; background:var(--c-sgk-bg); padding:10px 14px; margin:8px 0 12px; border-radius:4px; }
+.sgk .t { font-family:Arial,sans-serif; font-size:12.5px; color:var(--c-sgk); text-transform:uppercase; letter-spacing:.04em; margin-bottom:2px; }
+h3.dung, .dung > h3 { color:var(--c-dung); }
+.dung { border-left:5px solid var(--c-dung); background:var(--c-dung-bg); padding:6px 14px; margin:8px 0 12px; border-radius:4px; }
+.dung h3 { margin-top:2px; }
+h3.qt, .qt > h3 { color:var(--c-qt); }
+.qt { border-left:5px solid var(--c-qt); background:var(--c-qt-bg); padding:6px 14px; margin:8px 0 12px; border-radius:4px; }
+.qt h3 { margin-top:2px; }
+.vd { border-left:5px solid var(--c-vd); background:var(--c-vd-bg); padding:10px 14px; margin:8px 0 12px; border-radius:4px; }
+.vd > b:first-child { color:var(--c-vd); font-family:Arial,sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:.04em; }
+.loi { border-left:5px solid var(--c-loi); background:var(--c-loi-bg); color:var(--c-loi); padding:10px 14px; margin:8px 0 12px; border-radius:4px; }
+.loi > b:first-child { font-family:Arial,sans-serif; font-size:13px; text-transform:uppercase; letter-spacing:.04em; }
+section#tu-luyen > h2 { border-bottom-color:var(--c-tl); background:var(--c-tl-bg); color:var(--c-tl); }
+section#tu-luyen { border-color:var(--c-tl); }
+.kq { color:var(--ok); font-weight:bold; }
+
+/* ===== Đã học + ghi chú của mỗi mục ===== */
+.hocbar { border-top:1px dashed var(--line); margin-top:12px; padding-top:8px; font-family:Arial,sans-serif; font-size:13.5px; display:flex; flex-wrap:wrap; gap:6px 14px; align-items:center; }
+.hocbar label { cursor:pointer; color:var(--accent); font-weight:bold; }
+.hocbar .saved { color:var(--muted); }
+.hocbar textarea { flex-basis:100%; min-height:44px; font:15px/1.5 "Times New Roman",serif; color:var(--ink); background:var(--c-note-bg); border:1px dashed var(--c-note); border-radius:4px; padding:6px 8px; resize:vertical; }
+.hocbar textarea:focus { outline:2px solid var(--accent); }
+section.da-hoc .hocbar label { color:var(--ok); }
+
+/* Khi được nhúng trong khung bên phải của bài giải */
+body.embedded header nav, body.embedded #btnIn { display:none; }
+body.embedded main { padding:10px 12px; }
+body.embedded { font-size:15.5px; }
+body.embedded h1 { font-size:18px; }
+body.embedded h2 { font-size:16.5px; }
+body.embedded section[id] { margin:14px 0; }
+@media (max-width:600px) { body { font-size:16px; } section[id] > *:not(h2) { margin-left:10px; margin-right:10px; } }
+@media print {
+  header nav, button, .hocbar .saved { display:none; }
+  body { font-size:12.5pt; }
+  section[id] { break-inside:avoid; }
+  details { border:0; } details > * { display:block; } summary { display:none; }
+  .hocbar textarea { border:1px solid #999; min-height:30px; }
+  .hocbar textarea:placeholder-shown { display:none; }
+}
+/* ===== Âm thanh ===== */
+.speak { font:13px Arial,sans-serif; background:var(--accent); color:#fff; border:0; border-radius:14px; padding:3px 12px; cursor:pointer; margin:0 0 8px 14px; }
+.speak.on { background:var(--warn); }
+header .audioctl { display:flex; gap:8px; align-items:center; margin-top:6px; }
+header .audioctl select { font:13px Arial,sans-serif; }
+body.embedded header .audioctl { margin-top:2px; }
+@media print { .speak, header .audioctl { display:none; } }
+
+/* ===== Đầu trang ở màn hình hẹp: dải nút bài lên đầu, ẩn tên chương, hai hàng điều khiển ===== */
+header nav { display:flex; flex-wrap:wrap; gap:4px 10px; align-items:center; }
+@media (max-width: 700px) {
+  header { padding:6px 10px; display:flex; flex-direction:column; gap:4px; }
+  header nav { order:-1; flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; padding:2px 0; }
+  header nav::-webkit-scrollbar { display:none; }
+  header nav a { margin:0; padding:4px 10px; border:1px solid var(--line); border-radius:14px; white-space:nowrap; font-size:13px; flex:0 0 auto; text-decoration:none; }
+  header nav a b { color:var(--accent); }
+  body.da-hoc header nav a b { color:var(--ok); }
+  header .crumb { font-size:13px; gap:4px 10px; }
+  header .crumbtxt { display:none; }
+  label.hoc { margin-left:0; }
+  header .audioctl { margin-top:0; flex-wrap:wrap; font-size:13px; }
+}

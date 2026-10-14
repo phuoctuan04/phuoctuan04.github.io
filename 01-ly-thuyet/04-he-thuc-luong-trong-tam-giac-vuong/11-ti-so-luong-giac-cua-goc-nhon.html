@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 11 – Tỉ số lượng giác của góc nhọn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương IV. Hệ thức lượng trong tam giác vuông</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="11-ti-so-luong-giac-cua-goc-nhon.html"><b>Bài 11</b></a>
+    <a href="12-mot-so-he-thuc-giua-canh-goc-trong-tam-giac-vuong-va-ung-dung.html">Bài 12</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 11. Tỉ số lượng giác của góc nhọn</h1>
+<p class="sub">Chương IV trong sách mới chỉ còn tỉ số lượng giác và hệ thức giữa cạnh và góc; không còn các hệ thức <span class="m">b² = ab'</span>, <span class="m">h² = b'c'</span> của chương trình cũ.</p>
+
+<section id="dinh-nghia" data-say="Mục 11.1, định nghĩa. Trong tam giác vuông, với góc nhọn alpha: sin alpha bằng cạnh đối chia cạnh huyền; cos alpha bằng cạnh kề chia cạnh huyền; tan alpha bằng cạnh đối chia cạnh kề; cot alpha bằng cạnh kề chia cạnh đối. Cạnh đối là cạnh đối diện góc alpha, cạnh kề là cạnh góc vuông còn lại, cạnh huyền là cạnh đối diện góc vuông. Cách nhớ: sin đi học, cos không hư, tan đoàn kết, cot kết đoàn: sin là đối trên huyền, cos là kề trên huyền, tan là đối trên kề, cot là kề trên đối. Dùng khi tam giác vuông biết một góc nhọn và một cạnh, cần cạnh khác; hoặc biết hai cạnh cần góc. Ví dụ: tam giác ABC vuông tại A, góc C bằng 30 độ, thì tan C bằng AB chia AC, vì AB đối diện góc C, AC kề góc C. Lỗi hay gặp: xác định sai cạnh đối và cạnh kề, nhất là khi tam giác vẽ nghiêng; dùng tỉ số với góc vuông." data-audio="audio/11-dinh-nghia.mp3">
+<h2>11.1. Định nghĩa</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Trong tam giác vuông, với góc nhọn <span class="m">α</span>:</p>
+<table>
+<tr><td class="m">sin α = <span class="frac"><span>đối</span><span>huyền</span></span></td><td class="m">cos α = <span class="frac"><span>kề</span><span>huyền</span></span></td><td class="m">tan α = <span class="frac"><span>đối</span><span>kề</span></span></td><td class="m">cot α = <span class="frac"><span>kề</span><span>đối</span></span></td></tr>
+</table>
+<p>Cạnh <b>đối</b>: đối diện góc <span class="m">α</span>; cạnh <b>kề</b>: cạnh góc vuông còn lại; <b>huyền</b>: đối diện góc vuông. Nhớ: "sin đi học, cos không hư, tan đoàn kết, cot kết đoàn".</p></div>
+<h3>Khi nào dùng</h3>
+<p>Tam giác vuông biết một góc nhọn và một cạnh, cần cạnh khác; hoặc biết hai cạnh, cần góc. Trước khi viết tỉ số, chỉ rõ: vuông tại đâu, góc nào, cạnh đối và kề của góc đó.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">ΔABC</span> vuông tại A, góc C = 30°: cạnh đối của góc C là AB, cạnh kề là AC ⇒ <span class="m">tan C = AB/AC</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> xác định sai cạnh đối, cạnh kề (nhất là khi tam giác vẽ nghiêng); áp dụng tỉ số cho góc vuông.</div>
+</section>
+
+<section id="goc-dac-biet" data-say="Mục 11.2, góc đặc biệt và hai góc phụ nhau. Bảng giá trị: sin 30 độ bằng một phần hai, cos 30 độ bằng căn 3 trên 2, tan 30 độ bằng căn 3 trên 3, xấp xỉ 0,577. Sin 45 độ bằng cos 45 độ bằng căn 2 trên 2, tan 45 độ bằng 1. Sin 60 độ bằng căn 3 trên 2, cos 60 độ bằng một phần hai, tan 60 độ bằng căn 3, xấp xỉ 1,732. Hai góc phụ nhau, tổng 90 độ: sin góc này bằng cos góc kia, tan góc này bằng cot góc kia. Dùng khi đề cho góc 30, 45, 60 độ: viết giá trị chính xác bằng căn trước, rồi mới lấy gần đúng nếu đề yêu cầu làm tròn. Ví dụ: tan 30 độ bằng căn 3 trên 3; 1707 nhân căn 3 trên 3 xấp xỉ 985,6. Lỗi hay gặp: lẫn sin 30 với sin 60; tan 30 viết thành căn 3." data-audio="audio/11-goc-dac-biet.mp3">
+<h2>11.2. Góc đặc biệt; hai góc phụ nhau</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<table>
+<tr><th>α</th><th>30°</th><th>45°</th><th>60°</th></tr>
+<tr><td>sin</td><td class="m">1/2</td><td class="m"><span class="sq"><span>2</span></span>/2</td><td class="m"><span class="sq"><span>3</span></span>/2</td></tr>
+<tr><td>cos</td><td class="m"><span class="sq"><span>3</span></span>/2</td><td class="m"><span class="sq"><span>2</span></span>/2</td><td class="m">1/2</td></tr>
+<tr><td>tan</td><td class="m"><span class="sq"><span>3</span></span>/3 ≈ 0,577</td><td class="m">1</td><td class="m"><span class="sq"><span>3</span></span> ≈ 1,732</td></tr>
+<tr><td>cot</td><td class="m"><span class="sq"><span>3</span></span></td><td class="m">1</td><td class="m"><span class="sq"><span>3</span></span>/3</td></tr>
+</table>
+<p>Hai góc phụ nhau (<span class="m">α + β = 90°</span>): <span class="m">sin α = cos β</span>, <span class="m">tan α = cot β</span>.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Đề cho góc 30°, 45°, 60°: viết giá trị chính xác (có căn) trước, rồi mới lấy gần đúng khi đề yêu cầu làm tròn.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">1707 · tan 30° = 1707 · <span class="sq"><span>3</span></span>/3 ≈ 985,6</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> lẫn sin 30° với sin 60°; <span class="m">tan 30°</span> viết thành <span class="m"><span class="sq"><span>3</span></span></span>.</div>
+</section>
+
+<section id="may-tinh" data-say="Mục 11.3, dùng máy tính cầm tay. Trước hết kiểm tra máy đang ở chế độ độ, trên màn hình có chữ D, không phải R hay G. Tính tỉ số: bấm tan, 30, bằng. Tìm góc khi biết tỉ số: bấm shift tan, rồi nhập tỉ số, bằng; ví dụ shift tan 0,75 cho góc xấp xỉ 36 độ 52 phút. Chuyển kết quả sang độ phút giây bằng phím độ phút giây. Làm tròn theo yêu cầu của đề: hàng đơn vị, một chữ số thập phân, hay đến phút. Lỗi hay gặp: máy ở chế độ radian cho kết quả sai hoàn toàn; làm tròn giữa chừng rồi tính tiếp gây sai số." data-audio="audio/11-may-tinh.mp3">
+<h2>11.3. Dùng máy tính cầm tay</h2>
+<div class="sgk"><div class="t">Thao tác</div>
+<ul>
+<li>Kiểm tra chế độ <b>độ</b> (màn hình hiện D, không phải R hay G).</li>
+<li>Tính tỉ số: <code>tan 30 =</code>. Tìm góc: <code>SHIFT tan 0,75 =</code> ⇒ ≈ 36°52′; đổi sang độ-phút-giây bằng phím <code>°′″</code>.</li>
+<li>Làm tròn theo đúng yêu cầu của đề (hàng đơn vị, một chữ số thập phân, đến phút…).</li>
+</ul></div>
+<h3>Khi nào dùng</h3>
+<p>Mọi bài có góc không đặc biệt, hoặc yêu cầu kết quả gần đúng. Chỉ làm tròn ở bước cuối.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">AB = 1707 · tan 30°</span>: bấm <code>1707 × tan 30 =</code> ⇒ 985,53… ⇒ làm tròn hàng đơn vị: 986.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> máy ở chế độ radian; làm tròn giữa chừng rồi tính tiếp.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 11. Câu một: tam giác MNP vuông tại M, MN bằng 3, MP bằng 4. Tính NP rồi tính sin, cos, tan của góc N. Câu hai: không dùng máy tính, tính 2 sin 30 độ cộng tan 45 độ trừ cos 60 độ. Câu ba: dùng máy tính, tìm góc nhọn alpha biết tan alpha bằng 2,5, làm tròn đến phút." data-audio="audio/11-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">ΔMNP</span> vuông tại M, <span class="m">MN = 3, MP = 4</span>. Tính NP rồi tính <span class="m">sin N, cos N, tan N</span>.</li>
+<li>Không dùng máy tính: <span class="m">2 sin 30° + tan 45° − cos 60°</span>.</li>
+<li>Dùng máy tính: tìm góc nhọn <span class="m">α</span> biết <span class="m">tan α = 2,5</span> (làm tròn đến phút).</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">NP = 5</span>; <span class="m">sin N = MP/NP = 4/5</span>, <span class="m">cos N = 3/5</span>, <span class="m">tan N = 4/3</span>.</li>
+<li><span class="m">1 + 1 − 0,5 = 1,5</span>.</li>
+<li><span class="m">α ≈ 68°12′</span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 3 – Giải bài toán bằng cách lập hệ phương trình</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương I. Phương trình và hệ hai phương trình bậc nhất hai ẩn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="01-khai-niem-phuong-trinh-va-he-hai-phuong-trinh-bac-nhat-hai-an.html">Bài 1</a>
+    <a href="02-giai-he-hai-phuong-trinh-bac-nhat-hai-an.html">Bài 2</a>
+    <a href="03-giai-bai-toan-bang-cach-lap-he-phuong-trinh.html"><b>Bài 3</b></a>
+  </nav>
+</header>
+<main>
+<h1>Bài 3. Giải bài toán bằng cách lập hệ phương trình</h1>
+<p class="sub">Dạng "toán thực tế" 1 điểm trong đề. Điểm mất nhiều nhất không phải ở phép tính mà ở ba chỗ: gọi ẩn thiếu điều kiện, lập phương trình không giải thích, và không trả lời bằng câu văn có đơn vị.</p>
+
+<section id="ba-buoc" data-say="Mục 3.1, ba bước giải bài toán bằng cách lập hệ phương trình. Bước một, lập hệ: chọn hai ẩn, đặt điều kiện và đơn vị cho ẩn; biểu diễn các đại lượng chưa biết theo ẩn; lập hai phương trình từ hai mối quan hệ trong đề. Bước hai: giải hệ. Bước ba: đối chiếu nghiệm với điều kiện, rồi trả lời bằng một câu văn có đơn vị. Dùng cho mọi bài toán có lời văn mà đề hỏi hai đại lượng chưa biết và cho hai mối quan hệ giữa chúng. Lỗi hay gặp: bỏ bước ba, viết x bằng 15 rồi dừng; hoặc trả lời mà không đối chiếu điều kiện." data-audio="audio/03-ba-buoc.mp3">
+<h2>3.1. Ba bước</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ol>
+<li><b>Lập hệ phương trình:</b> chọn hai ẩn, đặt điều kiện và đơn vị; biểu diễn các đại lượng chưa biết theo ẩn; lập hai phương trình từ hai mối quan hệ trong đề.</li>
+<li><b>Giải hệ</b> (bài 2).</li>
+<li><b>Đối chiếu</b> điều kiện và <b>trả lời</b> bằng câu văn có đơn vị.</li>
+</ol></div>
+<h3>Khi nào dùng</h3>
+<p>Bài toán có lời văn hỏi <b>hai</b> đại lượng chưa biết và cho <b>hai</b> mối quan hệ giữa chúng (ví dụ: tổng số lượng và tổng số tiền). Nếu chỉ có một đại lượng chưa biết thì lập phương trình một ẩn.</p>
+<div class="vd"><b>Ví dụ.</b> "Mua 20 cây bút và móc khóa hết 180 000 đồng, bút 7 000 đồng, móc khóa 15 000 đồng" → hai ẩn (số bút, số móc khóa), hai quan hệ (tổng số lượng 20, tổng tiền 180 000).</div>
+<div class="loi"><b>Lỗi hay gặp:</b> bỏ bước 3, viết "<span class="m">x = 15</span>" rồi dừng; trả lời mà không đối chiếu điều kiện.</div>
+</section>
+
+<section id="chon-an" data-say="Mục 3.2, chọn ẩn và đặt điều kiện. Thường chọn ẩn là chính đại lượng đề hỏi. Viết rõ: gọi x là số cây bút, y là số móc khóa, điều kiện x, y là số nguyên dương. Điều kiện tùy loại đại lượng: số lượng vật thì là số tự nhiên khác 0; độ dài, khối lượng, thời gian thì là số dương; nếu đề có giới hạn, ví dụ ít hơn 20, thì ghi thêm. Đơn vị ghi ngay khi gọi ẩn. Lỗi hay gặp: quên điều kiện; chọn ẩn là đại lượng trung gian khiến phải tính thêm một bước mới ra câu trả lời." data-audio="audio/03-chon-an.mp3">
+<h2>3.2. Chọn ẩn và đặt điều kiện</h2>
+<div class="sgk"><div class="t">Cách trình bày</div>
+<p>"Gọi <span class="m">x</span> là số cây bút, <span class="m">y</span> là số móc khóa (<span class="m">x, y ∈ ℕ*</span>)." Chọn ẩn là chính đại lượng đề hỏi. Điều kiện theo loại đại lượng: số lượng vật → <span class="m">ℕ*</span>; độ dài, khối lượng, thời gian, giá tiền → <span class="m">&gt; 0</span>; có giới hạn trong đề (ít hơn 20…) thì ghi thêm. Đơn vị ghi ngay khi gọi ẩn.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Đầu mọi bài. Điều kiện này sẽ dùng lại ở bước 3 để loại nghiệm âm, nghiệm lẻ.</p>
+<div class="vd"><b>Ví dụ.</b> "Gọi <span class="m">x</span> (m) là chiều dài, <span class="m">y</span> (m) là chiều rộng của mảnh đất (<span class="m">x &gt; y &gt; 0</span>)."</div>
+<div class="loi"><b>Lỗi hay gặp:</b> quên điều kiện; chọn ẩn là đại lượng trung gian, phải tính thêm một bước mới ra câu trả lời.</div>
+</section>
+
+<section id="lap-he" data-say="Mục 3.3, lập hai phương trình. Mỗi phương trình đến từ một mối quan hệ trong đề; ghi một câu giải thích ngắn trước mỗi phương trình. Các quan hệ hay gặp: tổng số lượng, ví dụ x cộng y bằng 20; tổng số tiền, bằng đơn giá nhân số lượng rồi cộng lại, ví dụ 7000x cộng 15000y bằng 180000; hơn kém, ví dụ x bằng y cộng 3; gấp, ví dụ x bằng 2y; chu vi hình chữ nhật, 2 nhân, x cộng y. Nên chia hai vế cho ước chung để hệ số gọn trước khi giải, ví dụ chia 1000 rồi chia tiếp: 7x cộng 15y bằng 180. Lỗi hay gặp: quên trừ phần đã biết, ví dụ tổng 29 sản phẩm trong đó đã có 9 quyển tập thì x cộng y bằng 20, không phải 29; dùng nhầm đơn vị, nghìn đồng lẫn với đồng." data-audio="audio/03-lap-he.mp3">
+<h2>3.3. Lập hai phương trình</h2>
+<div class="sgk"><div class="t">Các quan hệ hay gặp</div>
+<table>
+<tr><th>Đề nói</th><th>Phương trình</th></tr>
+<tr><td>tổng số lượng là 20</td><td class="m">x + y = 20</td></tr>
+<tr><td>tổng tiền 180 000, đơn giá 7 000 và 15 000</td><td class="m">7 000x + 15 000y = 180 000</td></tr>
+<tr><td>x nhiều hơn y là 3</td><td class="m">x = y + 3</td></tr>
+<tr><td>x gấp đôi y</td><td class="m">x = 2y</td></tr>
+<tr><td>chu vi hình chữ nhật 50</td><td class="m">2(x + y) = 50</td></tr>
+</table>
+<p>Trước mỗi phương trình ghi một câu giải thích ngắn ("Vì tổng số sản phẩm là 29 nên…"). Chia hai vế cho ước chung để hệ số gọn trước khi giải.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Sau khi gọi ẩn. Đọc đề hai lần, gạch chân hai mối quan hệ, mỗi quan hệ một phương trình.</p>
+<div class="vd"><b>Ví dụ.</b> 29 sản phẩm gồm 9 quyển tập, <span class="m">x</span> bút, <span class="m">y</span> móc khóa: <span class="m">9 + x + y = 29 ⇒ x + y = 20</span>. Tiền: <span class="m">9·12 000 + 7 000x + 15 000y = 288 000 ⇒ 7x + 15y = 180</span> (chia hai vế cho 1 000).</div>
+<div class="loi"><b>Lỗi hay gặp:</b> quên trừ phần đã biết (viết <span class="m">x + y = 29</span>); lẫn đơn vị nghìn đồng với đồng; lập hai phương trình từ cùng một quan hệ.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 3. Câu một: một lớp có 40 học sinh, số nữ nhiều hơn số nam là 4. Hỏi lớp có bao nhiêu nam, bao nhiêu nữ? Câu hai: mua 12 quyển vở và bút hết 92 nghìn đồng; vở 9 nghìn một quyển, bút 5 nghìn một cây. Hỏi mua mấy quyển vở, mấy cây bút? Câu ba: một hình chữ nhật có chu vi 56 mét, chiều dài hơn chiều rộng 8 mét. Tính các kích thước." data-audio="audio/03-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li>Lớp có 40 học sinh, số nữ nhiều hơn số nam là 4. Hỏi có bao nhiêu nam, bao nhiêu nữ?</li>
+<li>Mua 12 quyển vở và bút hết 92 000 đồng; vở 9 000 đồng/quyển, bút 5 000 đồng/cây. Hỏi mua mấy quyển vở, mấy cây bút?</li>
+<li>Hình chữ nhật chu vi 56 m, chiều dài hơn chiều rộng 8 m. Tính các kích thước.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">x + y = 40, y = x + 4</span> ⇒ 18 nam, 22 nữ.</li>
+<li><span class="m">x + y = 12, 9x + 5y = 92 ⇒ 9x + 5(12 − x) = 92 ⇒ 4x = 32 ⇒ x = 8, y = 4</span>: 8 quyển vở, 4 cây bút. (Nếu nghiệm không nguyên mà ẩn là số lượng thì phải xem lại phép tính.)</li>
+<li><span class="m">2(x + y) = 56, x = y + 8</span> ⇒ dài 18 m, rộng 10 m.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 14 – Cung và dây của một đường tròn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương V. Đường tròn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="13-mo-dau-ve-duong-tron.html">Bài 13</a>
+    <a href="14-cung-va-day-cua-mot-duong-tron.html"><b>Bài 14</b></a>
+    <a href="15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html">Bài 15</a>
+    <a href="16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html">Bài 16</a>
+    <a href="17-vi-tri-tuong-doi-cua-hai-duong-tron.html">Bài 17</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 14. Cung và dây của một đường tròn</h1>
+<p class="sub">Góc ở tâm và số đo cung là đầu vào cho công thức độ dài cung, diện tích hình quạt (bài 15). Góc nội tiếp chưa học ở kỳ I (bài 27, tập 2).</p>
+
+<section id="goc-o-tam-so-do-cung" data-say="Mục 14.1, góc ở tâm và số đo cung. Góc có đỉnh trùng với tâm đường tròn gọi là góc ở tâm. Hai điểm B, C trên đường tròn chia đường tròn thành hai cung: cung nhỏ nằm trong góc ở tâm BOC, cung lớn nằm ngoài. Số đo của cung nhỏ BC bằng số đo góc ở tâm BOC; số đo cung lớn bằng 360 độ trừ số đo cung nhỏ; nửa đường tròn có số đo 180 độ. Dùng khi cần số đo cung để tính độ dài cung hoặc diện tích hình quạt: luôn tìm góc ở tâm trước. Ví dụ: góc BOC bằng 120 độ thì cung nhỏ BC bằng 120 độ, cung lớn BC bằng 240 độ. Lỗi hay gặp: lấy góc không có đỉnh ở tâm làm số đo cung; quên phân biệt cung nhỏ và cung lớn." data-audio="audio/14-goc-o-tam-so-do-cung.mp3">
+<h2>14.1. Góc ở tâm; số đo cung</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Góc có đỉnh trùng tâm đường tròn là <b>góc ở tâm</b>. Hai điểm B, C trên (O) chia đường tròn thành <b>cung nhỏ</b> (nằm trong góc BOC) và <b>cung lớn</b>. Số đo cung nhỏ BC = số đo góc BOC; số đo cung lớn = 360° − số đo cung nhỏ; nửa đường tròn = 180°.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Trước khi tính độ dài cung hoặc diện tích hình quạt (bài 15): tìm góc ở tâm chắn cung đó. Ghi rõ đang xét cung nhỏ hay cung lớn.</p>
+<div class="vd"><b>Ví dụ.</b> Góc BOC = 120° ⇒ cung nhỏ BC = 120°, cung lớn BC = 240°. Hình quạt OBC ứng với cung nhỏ có diện tích <span class="m">πR²·120/360 = πR²/3</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> lấy góc không có đỉnh ở tâm làm số đo cung; không nói rõ cung nhỏ hay cung lớn.</div>
+</section>
+
+<section id="day-cung" data-say="Mục 14.2, dây cung và liên hệ với cung. Đoạn thẳng nối hai điểm trên đường tròn gọi là dây; dây đi qua tâm là đường kính, và đường kính là dây lớn nhất. Trong một đường tròn: hai cung nhỏ bằng nhau khi và chỉ khi hai dây căng chúng bằng nhau; cung nhỏ lớn hơn khi và chỉ khi dây lớn hơn. Để tính độ dài dây BC khi biết góc ở tâm: tam giác OBC cân tại O, hạ OH vuông góc BC thì H là trung điểm BC và OH là phân giác góc BOC; trong tam giác vuông OHB, BH bằng R nhân sin của nửa góc BOC, nên BC bằng 2R nhân sin của nửa góc BOC. Ví dụ: góc BOC bằng 120 độ thì BC bằng 2R sin 60 độ bằng R căn 3. Lỗi hay gặp: dùng BC bằng R nhân góc; quên chia đôi góc khi dùng tam giác vuông OHB." data-audio="audio/14-day-cung.mp3">
+<h2>14.2. Dây cung; tính độ dài dây theo góc ở tâm</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Đoạn thẳng nối hai điểm trên đường tròn là <b>dây</b>; dây qua tâm là <b>đường kính</b>, là dây lớn nhất. Trong một đường tròn: hai cung nhỏ bằng nhau ⇔ hai dây bằng nhau; cung nhỏ lớn hơn ⇔ dây lớn hơn.</p>
+<p><b>Tính dây theo góc ở tâm:</b> ΔOBC cân tại O, hạ <span class="m">OH ⊥ BC</span> ⇒ H là trung điểm BC, OH là phân giác góc BOC ⇒ <span class="m">BH = R·sin(½·BOC)</span> ⇒ <span class="m">BC = 2R·sin(½·BOC)</span>.</p></div>
+<h3>Khi nào dùng</h3>
+<p>Đề hỏi độ dài dây khi biết góc ở tâm (hoặc ngược lại). Kết hợp tỉ số lượng giác (bài 11).</p>
+<div class="vd"><b>Ví dụ.</b> Góc BOC = 120°: <span class="m">BC = 2R·sin 60° = 2R·<span class="sq"><span>3</span></span>/2 = R<span class="sq"><span>3</span></span></span>. Góc BOC = 90°: <span class="m">BC = 2R·sin 45° = R<span class="sq"><span>2</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> viết <span class="m">BC = R·góc</span>; quên chia đôi góc khi dùng tam giác vuông OHB.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 14. Câu một: trên đường tròn O lấy hai điểm B, C sao cho góc BOC bằng 80 độ. Tính số đo cung nhỏ và cung lớn BC. Câu hai: đường tròn O bán kính 6 xăng ti mét, dây BC căng cung 60 độ. Tính BC. Câu ba: đường tròn O bán kính R, dây BC bằng R căn 2. Tính góc BOC." data-audio="audio/14-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li>Góc BOC = 80°. Tính số đo cung nhỏ, cung lớn BC.</li>
+<li><span class="m">(O; 6)</span> cm, dây BC căng cung 60°. Tính BC.</li>
+<li><span class="m">(O; R)</span>, dây <span class="m">BC = R<span class="sq"><span>2</span></span></span>. Tính góc BOC.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li>80° và 280°.</li>
+<li>ΔOBC đều ⇒ <span class="m">BC = 6</span> cm (hoặc <span class="m">2·6·sin 30° = 6</span>).</li>
+<li><span class="m">sin(½·BOC) = BC/(2R) = <span class="sq"><span>2</span></span>/2</span> ⇒ nửa góc = 45° ⇒ góc BOC = 90°.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

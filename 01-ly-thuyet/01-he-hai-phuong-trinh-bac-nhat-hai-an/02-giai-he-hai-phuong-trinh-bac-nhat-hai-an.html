@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 2 – Giải hệ hai phương trình bậc nhất hai ẩn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương I. Phương trình và hệ hai phương trình bậc nhất hai ẩn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="01-khai-niem-phuong-trinh-va-he-hai-phuong-trinh-bac-nhat-hai-an.html">Bài 1</a>
+    <a href="02-giai-he-hai-phuong-trinh-bac-nhat-hai-an.html"><b>Bài 2</b></a>
+    <a href="03-giai-bai-toan-bang-cach-lap-he-phuong-trinh.html">Bài 3</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 2. Giải hệ hai phương trình bậc nhất hai ẩn</h1>
+<p class="sub">Hai phương pháp, cùng một ý: biến hệ hai ẩn thành một phương trình một ẩn. Câu "giải hệ" trong đề kiểm tra (0,75 đến 1 điểm) dùng trọn bài này.</p>
+
+<section id="phuong-phap-the" data-say="Mục 2.1, phương pháp thế. Ba bước. Bước một: từ một phương trình, rút một ẩn theo ẩn kia; chọn phương trình có hệ số 1 hoặc trừ 1 để không xuất hiện phân số. Bước hai: thế biểu thức vừa rút vào phương trình còn lại, được phương trình một ẩn; giải nó. Bước ba: thay giá trị vừa tìm vào biểu thức đã rút để tìm ẩn kia; kết luận nghiệm của hệ. Dấu hiệu nên dùng: một ẩn có hệ số 1 hoặc trừ 1. Ví dụ: hệ 2x trừ 5y bằng 17 và x cộng 2y bằng trừ 5. Từ phương trình thứ hai, x bằng trừ 5 trừ 2y. Thế vào phương trình thứ nhất: 2 nhân, trừ 5 trừ 2y, trừ 5y bằng 17, tức là trừ 10 trừ 4y trừ 5y bằng 17, suy ra trừ 9y bằng 27, y bằng trừ 3. Khi đó x bằng trừ 5 trừ 2 nhân trừ 3, bằng 1. Lỗi hay gặp: rút ẩn sai dấu, ví dụ từ x cộng 2y bằng trừ 5 viết x bằng trừ 5 cộng 2y; thế vào lại chính phương trình vừa rút, ra 0 bằng 0; quên nhân hệ số với cả hai hạng tử trong ngoặc." data-audio="audio/02-phuong-phap-the.mp3">
+<h2>2.1. Phương pháp thế</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ol>
+<li>Từ một phương trình của hệ, <b>rút</b> một ẩn theo ẩn kia.</li>
+<li><b>Thế</b> biểu thức vừa rút vào phương trình còn lại, được phương trình một ẩn; giải phương trình đó.</li>
+<li>Thay giá trị vừa tìm vào biểu thức đã rút để tìm ẩn kia; kết luận nghiệm của hệ.</li>
+</ol></div>
+<h3>Khi nào dùng</h3>
+<p>Khi một ẩn có hệ số <span class="m">1</span> hoặc <span class="m">−1</span> (rút ra không bị phân số). Đây là cách hay dùng nhất trong đề kiểm tra.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">{ 2x − 5y = 17 ; x + 2y = −5 }</span>. Từ (2): <span class="m">x = −5 − 2y</span>. Thế vào (1): <span class="m">2(−5 − 2y) − 5y = 17 ⇔ −10 − 9y = 17 ⇔ y = −3</span>. Suy ra <span class="m">x = −5 − 2·(−3) = 1</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> rút ẩn sai dấu (từ <span class="m">x + 2y = −5</span> viết <span class="m">x = −5 + 2y</span>); thế vào lại chính phương trình vừa rút (ra <span class="m">0 = 0</span>); quên nhân hệ số với cả hai hạng tử trong ngoặc.</div>
+</section>
+
+<section id="phuong-phap-cong" data-say="Mục 2.2, phương pháp cộng đại số. Ba bước. Bước một: nhân hai vế của mỗi phương trình với số thích hợp để hệ số của một ẩn ở hai phương trình đối nhau, hoặc bằng nhau. Bước hai: cộng vế theo vế nếu hệ số đối nhau, trừ vế theo vế nếu bằng nhau, được phương trình một ẩn; giải nó. Bước ba: thay vào một phương trình ban đầu để tìm ẩn kia; kết luận. Dấu hiệu nên dùng: không có hệ số 1, hoặc hệ số một ẩn dễ làm đối nhau. Ví dụ với hệ 2x trừ 5y bằng 17 và x cộng 2y bằng trừ 5: nhân phương trình thứ hai với 2 được 2x cộng 4y bằng trừ 10; lấy phương trình thứ nhất trừ phương trình này: trừ 9y bằng 27, y bằng trừ 3; thay vào x cộng 2y bằng trừ 5 được x bằng 1. Lỗi hay gặp: nhân chỉ một vế; trừ vế theo vế mà quên đổi dấu cả hai hạng tử của phương trình bị trừ." data-audio="audio/02-phuong-phap-cong.mp3">
+<h2>2.2. Phương pháp cộng đại số</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ol>
+<li>Nhân hai vế của mỗi phương trình với số thích hợp để hệ số của một ẩn ở hai phương trình <b>đối nhau</b> (hoặc bằng nhau).</li>
+<li><b>Cộng</b> vế theo vế (nếu đối nhau) hoặc <b>trừ</b> (nếu bằng nhau), được phương trình một ẩn; giải.</li>
+<li>Thay vào một phương trình ban đầu để tìm ẩn kia; kết luận.</li>
+</ol></div>
+<h3>Khi nào dùng</h3>
+<p>Khi không có hệ số 1, hoặc khi hệ số của một ẩn dễ làm đối nhau (ví dụ <span class="m">3y</span> và <span class="m">−3y</span>, hoặc <span class="m">2x</span> và <span class="m">x</span>).</p>
+<div class="vd"><b>Ví dụ.</b> Cùng hệ trên: nhân (2) với 2 được <span class="m">2x + 4y = −10</span>. Lấy (1) trừ phương trình này: <span class="m">−9y = 27 ⇔ y = −3</span>. Thay vào (2): <span class="m">x = 1</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> nhân chỉ một vế; trừ vế theo vế mà quên đổi dấu cả hai hạng tử của phương trình bị trừ.</div>
+</section>
+
+<section id="thu-lai-ket-luan" data-say="Mục 2.3, thử lại và kết luận. Sau khi tìm được x và y, thay vào cả hai phương trình ban đầu, cả hai đều đúng mới chắc. Kết luận viết đầy đủ: hệ phương trình có nghiệm duy nhất x, y bằng 1, trừ 3. Máy tính cầm tay giải được hệ ở chế độ phương trình, nhưng chỉ dùng để kiểm tra; bài thi vẫn phải trình bày các bước. Lỗi hay gặp: viết nghiệm ngược thứ tự x, y; viết kết luận thành x bằng 1, y bằng trừ 3 mà không nói đó là nghiệm của hệ." data-audio="audio/02-thu-lai-ket-luan.mp3">
+<h2>2.3. Thử lại và kết luận</h2>
+<div class="sgk"><div class="t">Trình bày bài thi</div>
+<p>Thử lại: thay <span class="m">(x; y)</span> vào <b>cả hai</b> phương trình ban đầu. Kết luận: "Hệ phương trình có nghiệm duy nhất <span class="m">(x; y) = (1; −3)</span>".</p></div>
+<h3>Khi nào dùng</h3>
+<p>Luôn luôn, ở cuối mỗi bài giải hệ. Máy tính cầm tay (chế độ giải hệ phương trình) chỉ dùng để kiểm tra; bài thi vẫn phải trình bày các bước.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">(1; −3)</span>: <span class="m">2·1 − 5·(−3) = 17</span> ✓; <span class="m">1 + 2·(−3) = −5</span> ✓. Vậy hệ có nghiệm duy nhất <span class="m">(x; y) = (1; −3)</span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> viết nghiệm ngược thứ tự; chỉ ghi <span class="m">x = 1, y = −3</span> mà không có câu kết luận.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 2. Câu một: giải hệ x trừ y bằng 3 và 3x cộng 2y bằng 4 bằng phương pháp thế. Câu hai: giải hệ 2x cộng 3y bằng 7 và 4x trừ 3y bằng 5 bằng phương pháp cộng đại số. Câu ba: giải hệ 3x trừ 2y bằng 11 và 2x cộng 5y bằng trừ 18 bằng cách em thấy tiện." data-audio="audio/02-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li>Giải bằng phương pháp thế: <span class="m">{ x − y = 3 ; 3x + 2y = 4 }</span>.</li>
+<li>Giải bằng phương pháp cộng đại số: <span class="m">{ 2x + 3y = 7 ; 4x − 3y = 5 }</span>.</li>
+<li>Giải bằng cách em thấy tiện: <span class="m">{ 3x − 2y = 11 ; 2x + 5y = −18 }</span>.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li><span class="m">x = y + 3 ⇒ 3(y + 3) + 2y = 4 ⇒ y = −1, x = 2</span>. Nghiệm <span class="m">(2; −1)</span>.</li>
+<li>Cộng vế theo vế: <span class="m">6x = 12 ⇒ x = 2</span>; <span class="m">y = 1</span>. Nghiệm <span class="m">(2; 1)</span>.</li>
+<li>Nhân (1) với 2, (2) với 3 rồi trừ: <span class="m">−19y = 76 ⇒ y = −4</span>; <span class="m">x = 1</span>. Nghiệm <span class="m">(1; −4)</span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>

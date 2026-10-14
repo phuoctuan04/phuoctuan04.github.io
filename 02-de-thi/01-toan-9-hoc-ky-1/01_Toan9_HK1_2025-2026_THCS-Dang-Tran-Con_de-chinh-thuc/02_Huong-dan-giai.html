@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hướng dẫn giải đề Toán 9 cuối kỳ I 2025–2026 – THCS Đặng Trần Côn</title>
+<link rel="stylesheet" href="../../00_chung/de-thi.css">
+</head>
+<body>
+<header>
+  <b>Đề Toán 9 cuối kỳ I 2025–2026 – THCS Đặng Trần Côn</b>
+  <nav></nav>
+</header>
+
+<div class="wrap one">
+<main>
+<h1>Hướng dẫn giải chi tiết – tổng quan</h1>
+<p class="sub">Đề kiểm tra cuối kỳ I môn Toán 9, năm học 2025–2026, Trường THCS Đặng Trần Côn (đề chính thức, 90 phút, file PDF cùng thư mục). Tài liệu do phụ huynh biên soạn để ôn tập cho học sinh lớp 9/6, bám sách <b>Kết nối tri thức với cuộc sống</b> (bộ sách dùng thống nhất từ năm học 2026–2027). Không phải hướng dẫn chấm của nhà trường.</p>
+
+<div class="tiendo" id="tiendo">
+  <div class="row hs"><b>Học sinh</b> <input id="hsTen" placeholder="Họ và tên" size="22"> <input id="hsLop" placeholder="Lớp" size="5"> <input id="hsNam" placeholder="Năm học" size="10"> <span id="hsTomTat" class="small"></span></div>
+  <div class="row"><b>Tiến độ</b> <span class="bar"><i id="tdBar"></i></span> <span id="tdText"></span> <button id="btnInTienDo" type="button">🖨 In tiến độ</button></div>
+  <div class="row"><span>Câu:</span> <span id="tdCau"></span></div>
+  <div class="row"><span>Lý thuyết:</span> <span id="tdBai"></span> <span class="small">(bấm để mở bài; đánh dấu từng mục ngay trong trang lý thuyết)</span></div>
+  <div class="row small">Tiến độ và ghi chú lưu trong trình duyệt này (localStorage), kèm ngày giờ, không gửi đi đâu. Dùng cố định một trình duyệt (Chrome hoặc Edge). Để chuyển máy hoặc phòng xoá nhầm dữ liệu:
+    <button id="btnXuat" type="button">⬇ Xuất ra file</button> <button id="btnNhap" type="button">⬆ Nhập từ file</button> <input type="file" id="fileNhap" accept=".json" hidden>
+  </div>
+</div>
+
+<h2>Các câu</h2>
+<div class="menu" id="menu"></div>
+
+<div class="box">
+<b>Phạm vi học kỳ I theo sách mới.</b> Tập 1 gồm 5 chương: hệ hai phương trình bậc nhất hai ẩn; phương trình và bất phương trình bậc nhất một ẩn; căn bậc hai và căn bậc ba; hệ thức lượng trong tam giác vuông; đường tròn (cung, dây, hình quạt, hình vành khuyên, tiếp tuyến, vị trí tương đối). Câu 1 đến 6 của đề này nằm trọn trong tập 1. Câu 7 gốc dùng góc nội tiếp và tứ giác nội tiếp, là nội dung <b>chương IX, tập 2</b> (bài 27, 29), nên <b>đã được thay bằng câu 7 mới</b> cùng mức 3,0 điểm, chỉ dùng chương V tập 1 (tiếp tuyến, góc ở tâm, dây, hình quạt). Đề gốc câu 7 vẫn xem được trong trang câu 7. Nên xác nhận phạm vi với giáo viên bộ môn.
+</div>
+
+<h2>Cấu trúc đề và phân bố điểm</h2>
+<table>
+<tr><th>Câu</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th></tr>
+<tr><td>Nội dung</td><td>Phương trình, hệ phương trình</td><td>Rút gọn căn thức</td><td>Thực tế: lập hệ</td><td>Thực tế: bất phương trình</td><td>Diện tích theo x</td><td>Tỉ số lượng giác</td><td>Đường tròn</td></tr>
+<tr><td>Điểm</td><td>2,0</td><td>1,75</td><td>1,0</td><td>0,75</td><td>1,0</td><td>0,5</td><td>3,0</td></tr>
+<tr><td>Sách (tập 1)</td><td>Ch. I, II</td><td>Ch. III</td><td>Ch. I</td><td>Ch. II</td><td>Ch. II</td><td>Ch. IV</td><td>Ch. V + tập 2</td></tr>
+</table>
+<p>Đại số và toán thực tế chiếm 6,5 điểm, hình học 3,5 điểm. Nên làm chắc câu 1 đến 6 và 7a, 7b trước (8 điểm), câu 7c làm sau cùng. Thời gian gợi ý: câu 1 đến 6 khoảng 50 phút, câu 7 khoảng 35 phút, 5 phút kiểm tra.</p>
+
+<h2>Cách dùng</h2>
+<ul>
+<li>Mỗi câu một trang, mở từ menu trên hoặc thanh điều hướng đầu trang. Trong trang câu: bên trái là bài giải, bên phải là lý thuyết; bấm nhãn <a class="ref" href="#" onclick="return false">Bài 9 · …</a> trong lời giải để mở đúng mục.</li>
+<li>Mỗi câu có bốn tầng màu: <span style="color:var(--t1)"><b>① Phân tích đề</b></span> → <span style="color:var(--t2)"><b>② Gợi ý từng bước</b></span> (ẩn, tự thử trước) → <span style="color:var(--t3)"><b>③ Lời giải trình bày chuẩn</b></span> (mỗi bước có căn cứ) → <span style="color:var(--t4)"><b>④ Kiểm tra, lỗi hay gặp, bài tương tự</b></span>. Nút "Ẩn lời giải" để tự làm trước khi xem.</li>
+<li>Mỗi câu nhỏ có ô "Đã học" và ghi chú riêng, mỗi mục lý thuyết cũng vậy; tất cả lưu kèm ngày giờ và hiện lại ở trang này. Nút "🔊 Nghe" ở từng tầng và từng mục lý thuyết.</li>
+<li>In: "In tiến độ" ở trên in bảng tổng hợp; trong trang câu, Ctrl+P in cả câu kèm ghi chú; trong khung lý thuyết, nút "🖨 in" in bài lý thuyết.</li>
+</ul>
+
+<div id="baoCao"></div>
+<p class="small" style="margin-top:40px">Bản hướng dẫn cũ (13/10/2026, đủ 7 câu một trang, có âm thanh) giữ ở <code>90_ban-cu/</code> để đối chiếu; sẽ xoá khi bản mới đủ 7 câu.</p>
+</main>
+</div>
+<script src="00_cau-hinh.js"></script>
+<script src="../../00_chung/de-thi.js"></script>
+</body>
+</html>

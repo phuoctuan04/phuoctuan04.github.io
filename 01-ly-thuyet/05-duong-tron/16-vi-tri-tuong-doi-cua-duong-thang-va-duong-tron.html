@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bài 16 – Vị trí tương đối của đường thẳng và đường tròn</title>
+<link rel="stylesheet" href="../00_ly-thuyet.css">
+</head>
+<body>
+<header>
+  <div class="crumb"><span class="crumbtxt">Toán 9 · Tập 1 · Kết nối tri thức với cuộc sống · Chương V. Đường tròn</span> <span id="hocCount"></span> <label class="hoc"><input type="checkbox" id="daHoc"> Đã học cả bài</label> <button id="btnIn" type="button">🖨 In bài này</button></div>
+  <div class="audioctl">🔊 Âm thanh: <select id="rate"><option value="0.8">chậm</option><option value="1" selected>vừa</option><option value="1.2">nhanh</option></select> <button id="readAll" type="button">▶ Đọc cả bài</button> <span id="voiceNote" class="small"></span></div>
+  <nav>
+    <a href="13-mo-dau-ve-duong-tron.html">Bài 13</a>
+    <a href="14-cung-va-day-cua-mot-duong-tron.html">Bài 14</a>
+    <a href="15-do-dai-cung-tron-dien-tich-hinh-quat-va-hinh-vanh-khuyen.html">Bài 15</a>
+    <a href="16-vi-tri-tuong-doi-cua-duong-thang-va-duong-tron.html"><b>Bài 16</b></a>
+    <a href="17-vi-tri-tuong-doi-cua-hai-duong-tron.html">Bài 17</a>
+  </nav>
+</header>
+<main>
+<h1>Bài 16. Vị trí tương đối của đường thẳng và đường tròn</h1>
+<p class="sub">Tiếp tuyến là nhân vật chính của câu hình kỳ I theo sách mới: tiếp tuyến vuông góc bán kính, và hai tiếp tuyến cắt nhau thì bằng nhau.</p>
+
+<section id="vi-tri-tuong-doi" data-say="Mục 16.1, ba vị trí tương đối. Gọi d là khoảng cách từ tâm O đến đường thẳng a, R là bán kính. Nếu d nhỏ hơn R: đường thẳng cắt đường tròn tại hai điểm. Nếu d bằng R: đường thẳng tiếp xúc với đường tròn tại một điểm, gọi là tiếp tuyến, điểm chung gọi là tiếp điểm. Nếu d lớn hơn R: đường thẳng và đường tròn không giao nhau. Dùng khi đề cho khoảng cách và bán kính, hỏi số điểm chung. Ví dụ: R bằng 5, d bằng 3 thì cắt tại hai điểm; d bằng 5 thì tiếp xúc; d bằng 7 thì không giao nhau. Lỗi hay gặp: lấy d là khoảng cách từ O đến một điểm bất kỳ của đường thẳng thay vì khoảng cách vuông góc." data-audio="audio/16-vi-tri-tuong-doi.mp3">
+<h2>16.1. Ba vị trí tương đối</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p><span class="m">d</span> là khoảng cách từ O đến đường thẳng a, R là bán kính:</p>
+<table>
+<tr><th>So sánh</th><th>Vị trí</th><th>Số điểm chung</th></tr>
+<tr><td class="m">d &lt; R</td><td>cắt nhau</td><td>2</td></tr>
+<tr><td class="m">d = R</td><td>tiếp xúc (a là <b>tiếp tuyến</b>, điểm chung là <b>tiếp điểm</b>)</td><td>1</td></tr>
+<tr><td class="m">d &gt; R</td><td>không giao nhau</td><td>0</td></tr>
+</table></div>
+<h3>Khi nào dùng</h3>
+<p>Đề cho khoảng cách từ tâm đến đường thẳng và bán kính, hỏi số điểm chung hoặc chứng minh tiếp xúc.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">R = 5</span>: <span class="m">d = 3</span> cắt, <span class="m">d = 5</span> tiếp xúc, <span class="m">d = 7</span> không giao.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> lấy <span class="m">d</span> là khoảng cách từ O đến một điểm tùy ý trên đường thẳng, không phải khoảng cách vuông góc.</div>
+</section>
+
+<section id="tiep-tuyen" data-say="Mục 16.2, tiếp tuyến. Tính chất: tiếp tuyến vuông góc với bán kính đi qua tiếp điểm. Dấu hiệu nhận biết: đường thẳng đi qua một điểm của đường tròn và vuông góc với bán kính tại điểm đó là tiếp tuyến. Dùng ngay khi đề nói AB là tiếp tuyến tại B: suy ra AB vuông góc OB, tam giác OBA vuông tại B, từ đó dùng Pythagore hoặc tỉ số lượng giác. Ví dụ: AB tiếp tuyến của O bán kính R, OA bằng 2R, thì tam giác OBA vuông tại B, cos góc BOA bằng OB chia OA bằng một phần hai, nên góc BOA bằng 60 độ, và AB bằng OB nhân tan 60 độ bằng R căn 3. Lỗi hay gặp: viết góc vuông ở A thay vì ở tiếp điểm B; không nêu lý do tiếp tuyến vuông góc bán kính." data-audio="audio/16-tiep-tuyen.mp3">
+<h2>16.2. Tiếp tuyến: tính chất và dấu hiệu nhận biết</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<ul>
+<li><b>Tính chất:</b> tiếp tuyến vuông góc với bán kính đi qua tiếp điểm.</li>
+<li><b>Dấu hiệu:</b> đường thẳng đi qua một điểm của đường tròn và vuông góc với bán kính tại điểm đó là tiếp tuyến.</li>
+</ul></div>
+<h3>Khi nào dùng</h3>
+<p>Đề nói "AB là tiếp tuyến tại B" ⇒ viết ngay <span class="m">AB ⊥ OB</span> ⇒ ΔOBA vuông tại B ⇒ dùng Pythagore hoặc tỉ số lượng giác (bài 11, 12).</p>
+<div class="vd"><b>Ví dụ.</b> AB tiếp tuyến của <span class="m">(O; R)</span>, <span class="m">OA = 2R</span>: ΔOBA vuông tại B, <span class="m">cos BOA = OB/OA = 1/2</span> ⇒ góc BOA = 60°; <span class="m">AB = OB·tan 60° = R<span class="sq"><span>3</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> đặt góc vuông ở A thay vì ở tiếp điểm B; dùng "vuông góc" mà không nêu căn cứ tiếp tuyến.</div>
+</section>
+
+<section id="hai-tiep-tuyen-cat-nhau" data-say="Mục 16.3, hai tiếp tuyến cắt nhau. Nếu từ điểm A ngoài đường tròn kẻ hai tiếp tuyến AB và AC, với B, C là tiếp điểm, thì: AB bằng AC; tia AO là tia phân giác của góc BAC; tia OA là tia phân giác của góc BOC. Hệ quả hay dùng: OA là đường trung trực của BC, nên OA vuông góc với BC tại trung điểm H của BC. Chứng minh hệ quả: OB bằng OC bằng R và AB bằng AC nên O và A cùng cách đều B, C. Dùng trong hầu hết bài hình có hai tiếp tuyến: để chứng minh vuông góc, tính góc BOC bằng 2 lần góc BOA, và tính diện tích tứ giác OBAC bằng 2 lần diện tích tam giác OBA. Lỗi hay gặp: dùng AB bằng AC mà không ghi căn cứ tính chất hai tiếp tuyến cắt nhau; nhầm phân giác ở A với phân giác ở O." data-audio="audio/16-hai-tiep-tuyen-cat-nhau.mp3">
+<h2>16.3. Hai tiếp tuyến cắt nhau</h2>
+<div class="sgk"><div class="t">Sách giáo khoa</div>
+<p>Từ A ngoài (O) kẻ hai tiếp tuyến AB, AC (B, C là tiếp điểm) thì: <span class="m">AB = AC</span>; AO là tia phân giác của góc BAC; OA là tia phân giác của góc BOC.</p>
+<p><b>Hệ quả hay dùng:</b> OA là đường trung trực của BC ⇒ <span class="m">OA ⊥ BC</span> tại trung điểm H của BC (vì <span class="m">OB = OC</span> và <span class="m">AB = AC</span>).</p></div>
+<h3>Khi nào dùng</h3>
+<p>Hầu hết bài có hai tiếp tuyến: chứng minh vuông góc; góc BOC = 2·góc BOA; diện tích tứ giác OBAC = 2·diện tích ΔOBA.</p>
+<div class="vd"><b>Ví dụ.</b> <span class="m">OA = 2R</span>: góc BOA = 60° ⇒ góc BOC = 120°; <span class="m">S<sub>OBAC</sub> = 2·½·OB·AB = R·R<span class="sq"><span>3</span></span> = R²<span class="sq"><span>3</span></span></span>.</div>
+<div class="loi"><b>Lỗi hay gặp:</b> dùng <span class="m">AB = AC</span> mà không ghi căn cứ; nhầm phân giác ở A với phân giác ở O.</div>
+</section>
+
+<section id="tu-luyen" data-say="Tự luyện bài 16. Câu một: đường tròn O bán kính 6 xăng ti mét, điểm A cách O 10 xăng ti mét; kẻ tiếp tuyến AB. Tính AB. Câu hai: từ A kẻ hai tiếp tuyến AB, AC tới đường tròn O; biết góc BAC bằng 60 độ. Tính góc BOC và chứng minh tam giác ABC đều. Câu ba: cho đường tròn O bán kính R và điểm A với OA bằng R căn 2. Kẻ hai tiếp tuyến AB, AC. Tính góc BOC và độ dài BC." data-audio="audio/16-tu-luyen.mp3">
+<h2>Tự luyện</h2>
+<ol>
+<li><span class="m">(O; 6)</span> cm, <span class="m">OA = 10</span> cm, tiếp tuyến AB. Tính AB.</li>
+<li>Hai tiếp tuyến AB, AC; góc BAC = 60°. Tính góc BOC; chứng minh ΔABC đều.</li>
+<li><span class="m">(O; R)</span>, <span class="m">OA = R<span class="sq"><span>2</span></span></span>, hai tiếp tuyến AB, AC. Tính góc BOC và BC.</li>
+</ol>
+<details><summary>Đáp số</summary>
+<ol>
+<li>ΔOBA vuông tại B: <span class="m">AB = <span class="sq"><span>10² − 6²</span></span> = 8</span> cm.</li>
+<li>Tứ giác OBAC có hai góc vuông ở B, C ⇒ góc BOC = 360° − 90° − 90° − 60° = 120°. <span class="m">AB = AC</span> và góc BAC = 60° ⇒ ΔABC đều.</li>
+<li><span class="m">cos BOA = R/(R<span class="sq"><span>2</span></span>) = <span class="sq"><span>2</span></span>/2</span> ⇒ góc BOA = 45° ⇒ góc BOC = 90°; <span class="m">BC = R<span class="sq"><span>2</span></span></span>.</li>
+</ol></details>
+</section>
+</main>
+<script src="../00_ly-thuyet.js"></script>
+</body>
+</html>
